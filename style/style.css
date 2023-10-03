@@ -552,7 +552,7 @@ input:checked + .slider:before {
 		top: 0;
 		width: 100%;
 		height: 100%;
-		font-size:30%;
+		font-size:70%;
 	}
 
 	#controls {
@@ -584,7 +584,7 @@ input:checked + .slider:before {
 		display: none;
 	}
 	#crt {
-	  font-size: 30% !important;
+	  font-size: 70% !important;
 	}
 	#power {
 		width: 100%;
