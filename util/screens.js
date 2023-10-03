@@ -2,7 +2,7 @@ import { parse, type, prompt, input } from "./io.js";
 import pause from "./pause.js";
 import alert from "./alert.js";
 import say from "./speak.js";
-
+import { intro } from '../commands/fallout/index.mjs'
 const USER = "admin";
 const PW = "admin";
 
@@ -27,43 +27,9 @@ function addStylesheet(href) {
 
 /** Boot screen */
 export async function boot() {
-	clear();
 
 
-	let intro = getScreen("intro");
-
-	await type("Welcome to ROBCO Industries (TM) Termlink", FAST, intro);
-
-	await type(">SET TERMINAL/INQUIRE", {}, intro);
-
-await	 type("RIT-V300", FAST, intro);
-
-await	 type(
-     		[
-     			">SET FILE/PROTECTION=OWNER:RWED ACCOUNTS.F",
-     			">SET HALT RESTART/MAINT"
-     		],
-     		{ newlineWait: 200 },
-     		intro
-     	);
-
-await	 type(
-     		[
-     			"Initializing Robco Industries(TM) MF Boot Agent v2.3.0",
-     			"RETROS BIOS",
-     			"RBIOS-4.02.08.00 52EE5.E7.E8",
-     			"Copyright 2201-2203 Robco Ind.",
-     			"Uppermem: 64 KB",
-     			"Root (5A8)",
-     			"Maintenance Mode"
-     		],
-     		FAST,
-     		intro
-     	);
-
-await	 type(">RUN DEBUG/ACCOUNTS.F", { finalWait: 1000 }, intro);
-
-	intro.remove();
+intro();
 }
 
 /** Login screen */
