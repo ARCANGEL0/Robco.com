@@ -66,7 +66,7 @@ export async function intro() {
 	intro.remove();
 }
 
-async function locked() {
+export async function locked() {
 	let locked = getScreen("locked");
 
 	await type(
@@ -82,7 +82,7 @@ async function locked() {
 }
 
 // Outro shows screen with buttons to restart (calls game()) or exit
-async function outro() {
+export async function outro() {
 	let outro = getScreen("outro");
 
 	await new Promise(async resolve => {
