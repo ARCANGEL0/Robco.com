@@ -6,64 +6,70 @@ import say from "./speak.js";
 const USER = "admin";
 const PW = "admin";
 
+
+
+
+function addStylesheet(href) {
+	let head = document.getElementsByTagName("HEAD")[0];
+
+	// Create new link Element
+	let link = document.createElement("link");
+
+	// set the attributes for link element
+	link.rel = "stylesheet";
+	link.type = "text/css";
+	link.href = href;
+
+	// Append link element to HTML head
+	head.appendChild(link);
+}
+
+
 /** Boot screen */
 export async function boot() {
 	clear();
 
-	await type("Welcome to ECMA industries(TM) terminal", {
-		initialWait: 3000
-	});
+type("test")
 
-	await type(["> SET TERMINAL/BOOT", "Loading........................"], {
-		lineWait: 1000
-	});
-	await type(
+	let intro = getScreen("intro");
+
+	 type("Welcome to ROBCO Industries (TM) Termlink", FAST, intro);
+
+	 type(">SET TERMINAL/INQUIRE", {}, intro);
+
+	 type("RIT-V300", FAST, intro);
+
+	 type(
 		[
-			".....",
-			"Please wait........",
-			"..........",
-			"...",
-			".",
-			".",
-			".",
-			".",
-			"."
+			">SET FILE/PROTECTION=OWNER:RWED ACCOUNTS.F",
+			">SET HALT RESTART/MAINT"
 		],
-		{ lineWait: 250 }
+		{ newlineWait: 200 },
+		intro
 	);
 
-	await type(["OK.", " "]);
+	 type(
+		[
+			"Initializing Robco Industries(TM) MF Boot Agent v2.3.0",
+			"RETROS BIOS",
+			"RBIOS-4.02.08.00 52EE5.E7.E8",
+			"Copyright 2201-2203 Robco Ind.",
+			"Uppermem: 64 KB",
+			"Root (5A8)",
+			"Maintenance Mode"
+		],
+		FAST,
+		intro
+	);
 
-	await type(["> SET TERMINAL/LOGON", "USER AUTHENTICATION CHECK"], {
-		lineWait: 1000,
-		finalWait: 3000
-	});
+	 type(">RUN DEBUG/ACCOUNTS.F", { finalWait: 1000 }, intro);
 
-	await pause();
-	return login();
+	intro.remove();
 }
 
 /** Login screen */
 export async function login() {
-	clear();
-	let user = await prompt("Username:");
-	let password = await prompt("Password:", true);
-
-	if (user === USER && password === PW) {
-		await pause();
-		say("AUTHENTICATION SUCCESSFUL");
-		await alert("AUTHENTICATION SUCCESSFUL");
-		clear();
-		return main();
-	} else {
-		await type([
-			"Incorrect user and/or password.",
-			"Please try again"
-		]);
-		await pause(3);
-		clear();
-		return login();
-	}
+	
 }
 
 /** Main input terminal, recursively calls itself */

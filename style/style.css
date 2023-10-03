@@ -246,6 +246,7 @@ body.fullscreen #crt {
 	position: fixed;
 	width: 100%;
 	left: 0;
+	height:100vh;
 	top: 0;
 	z-index: 999;
 }
