@@ -16,12 +16,22 @@
     {
         font-size: 6px !important; /* Smaller font size for mobile */
     }
+    
+    .game {
+	display: flex;
+	width:45vw;
+}
   
 }
 
 /* Samsung Galaxy S6, S6 Edge, S7, S7 Edge */
 @media screen and (min-width: 360px) and (max-width: 480px) {
   /* Your CSS rules for Galaxy S6, S7, etc. go here */
+  
+    .game {
+	display: flex;
+	width:45vw;
+}
     .intro,
     .intro .typer,
     .fallout,
@@ -36,7 +46,10 @@
     {
         font-size: 6px !important; /* Smaller font size for mobile */
     }
-  
+    .game {
+	display: flex;
+	width:45vw;
+}
 }
 
 /* Samsung Galaxy S8, S8+, S9, S9+, S10, S10e */
@@ -55,8 +68,25 @@
     
     {
         font-size: 6px !important; /* Smaller font size for mobile */
+    };}
+    .intro,
+    .intro .typer,
+    .fallout,
+    .outro,
+    .outro typer,
+.outro a:active,
+.outro a:focus,
+.outro a:hover,
+.outro a
+    
+    
+    {
+        font-size: 6px !important; /* Smaller font size for mobile */
     }
-  
+    .game {
+	display: flex;
+	width:45vw;
+}
 }
 
 
