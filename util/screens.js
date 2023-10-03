@@ -4,8 +4,7 @@ import alert from "./alert.js";
 import say from "./speak.js";
 import Game from '../commands/fallout/Game.mjs
 import { intro,command } from '../commands/fallout/index.mjs'
-const USER = "admin";
-const PW = "admin";
+
 
 const FAST = {
 	wait: 15,
