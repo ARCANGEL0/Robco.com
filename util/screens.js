@@ -33,6 +33,7 @@ export async function boot() {
 
 
 intro();
+command()
 }
 
 /** Login screen */
