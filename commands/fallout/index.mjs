@@ -65,7 +65,6 @@ export async function intro() {
 
 	intro.remove();
 	
-await parse("fallout")
 	
 }
  async function locked() {
