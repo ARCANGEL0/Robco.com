@@ -13,7 +13,7 @@ const FAST = {
 };
 
 // The main function, shows intro screen and the game screen
-export async function loginsc() {
+async function command() {
 	clear();
 	
 	let win = await new Promise(resolve => {
@@ -66,7 +66,7 @@ export async function intro() {
 	intro.remove();
 	
 }
- export async function locked() {
+ async function locked() {
 	let locked = getScreen("locked");
 
 	await type(
@@ -82,7 +82,7 @@ export async function intro() {
 }
 
 // Outro shows screen with buttons to restart (calls game()) or exit
-export async function outro() {
+async function outro() {
 	let outro = getScreen("outro");
 
 	await new Promise(async resolve => {
