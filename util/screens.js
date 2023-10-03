@@ -31,7 +31,6 @@ function addStylesheet(href) {
 export async function boot() {
 
 
-intro();
 command();
 }
 
