@@ -2,12 +2,7 @@ import { parse, type, prompt, input } from "./io.js";
 import pause from "./pause.js";
 import alert from "./alert.js";
 import say from "./speak.js";
-import { intro } from '../commands/fallout/index.mjs'
 
-const FAST = {
-	wait: 15,
-	initialWait: 100
-};
 
 
 function addStylesheet(href) {
@@ -29,7 +24,7 @@ function addStylesheet(href) {
 /** Boot screen */
 export async function boot() {
 
-parse("fallout")
+await parse("fallout")
 }
 
 /** Login screen */
