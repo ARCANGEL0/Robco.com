@@ -29,7 +29,7 @@ async function command() {
 	return Promise.resolve();
 }
 
-async function intro() {
+export async function intro() {
 	let intro = getScreen("intro");
 
 	await type("Welcome to ROBCO Industries (TM) Termlink", FAST, intro);
