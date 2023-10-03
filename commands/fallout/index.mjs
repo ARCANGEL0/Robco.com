@@ -81,7 +81,7 @@ export async function intro() {
 }
 
 // Outro shows screen with buttons to restart (calls game()) or exit
-async function outro() {
+export async function outro() {
 	let outro = getScreen("outro");
 
 	await new Promise(async resolve => {
