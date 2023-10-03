@@ -11,7 +11,7 @@ async function onLoad() {
 	const fullscreen = urlParams.get("fullscreen");
 
 	// Set up click event handlers for UI buttons
-	registerHandlers();
+	
 
 	if(fullscreen) {
 		toggleFullscreen(true);
