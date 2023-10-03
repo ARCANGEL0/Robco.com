@@ -29,39 +29,39 @@ function addStylesheet(href) {
 export async function boot() {
 	clear();
 
-type("test")
 
 	let intro = getScreen("intro");
 
-	 type("Welcome to ROBCO Industries (TM) Termlink");
+	await type("Welcome to ROBCO Industries (TM) Termlink", FAST, intro);
 
-	 type(">SET TERMINAL/INQUIRE");
+	await type(">SET TERMINAL/INQUIRE", {}, intro);
 
-	 type("RIT-V300");
+await	 type("RIT-V300", FAST, intro);
 
-	 type(
-		[
-			">SET FILE/PROTECTION=OWNER:RWED ACCOUNTS.F",
-			">SET HALT RESTART/MAINT"
-		],
-		{ newlineWait: 200 }
-	
-	);
+await	 type(
+     		[
+     			">SET FILE/PROTECTION=OWNER:RWED ACCOUNTS.F",
+     			">SET HALT RESTART/MAINT"
+     		],
+     		{ newlineWait: 200 },
+     		intro
+     	);
 
-	 type(
-		[
-			"Initializing Robco Industries(TM) MF Boot Agent v2.3.0",
-			"RETROS BIOS",
-			"RBIOS-4.02.08.00 52EE5.E7.E8",
-			"Copyright 2201-2203 Robco Ind.",
-			"Uppermem: 64 KB",
-			"Root (5A8)",
-			"Maintenance Mode"
-		],
-		FAST
-	);
+await	 type(
+     		[
+     			"Initializing Robco Industries(TM) MF Boot Agent v2.3.0",
+     			"RETROS BIOS",
+     			"RBIOS-4.02.08.00 52EE5.E7.E8",
+     			"Copyright 2201-2203 Robco Ind.",
+     			"Uppermem: 64 KB",
+     			"Root (5A8)",
+     			"Maintenance Mode"
+     		],
+     		FAST,
+     		intro
+     	);
 
-	 type(">RUN DEBUG/ACCOUNTS.F", { finalWait: 1000 });
+await	 type(">RUN DEBUG/ACCOUNTS.F", { finalWait: 1000 }, intro);
 
 	intro.remove();
 }
