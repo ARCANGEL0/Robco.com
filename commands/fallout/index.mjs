@@ -65,7 +65,7 @@ export async function intro() {
 
 	intro.remove();
 }
- async function locked() {
+ export async function locked() {
 	let locked = getScreen("locked");
 
 	await type(
