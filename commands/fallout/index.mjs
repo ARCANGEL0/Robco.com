@@ -64,7 +64,8 @@ export async function intro() {
 	await type(">RUN DEBUG/ACCOUNTS.F", { finalWait: 1000 }, intro);
 
 	intro.remove();
-	command()
+	
+	
 	
 }
  async function locked() {
@@ -76,7 +77,7 @@ export async function intro() {
 		locked
 	);
 
-	await pause(5);
+	await pause(50000);
 	locked.remove();
 
 	return Promise.resolve();
