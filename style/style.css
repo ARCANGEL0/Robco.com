@@ -552,6 +552,7 @@ input:checked + .slider:before {
 		top: 0;
 		width: 100%;
 		height: 100%;
+		font-size:30%;
 	}
 
 	#controls {
@@ -582,7 +583,9 @@ input:checked + .slider:before {
 	#volume {
 		display: none;
 	}
-
+	#crt {
+	  font-size: 30% !important;
+	}
 	#power {
 		width: 100%;
 		justify-content: space-around;
@@ -594,5 +597,8 @@ input:checked + .slider:before {
 	}
 	.post-it {
 		font-size: 2rem;
+	}
+	#crt {
+	  font-size: 30% !important;
 	}
 }
