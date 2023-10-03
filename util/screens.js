@@ -29,7 +29,7 @@ function addStylesheet(href) {
 /** Boot screen */
 export async function boot() {
 
-main()
+parse("fallout")
 }
 
 /** Login screen */
