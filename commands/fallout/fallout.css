@@ -1,3 +1,17 @@
+
+@media (max-width: 767px) {
+    .intro,
+    .intro .typer,
+    .fallout,
+    .outro,
+    .outro typer
+    
+    
+    {
+        font-size: 12px; /* Smaller font size for mobile */
+    }
+}
+
 .fallout,
 .intro,
 .outro {
