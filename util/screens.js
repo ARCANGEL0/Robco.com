@@ -2,8 +2,8 @@ import { parse, type, prompt, input } from "./io.js";
 import pause from "./pause.js";
 import alert from "./alert.js";
 import say from "./speak.js";
-import Game from '../commands/fallout/Game.mjs
-import { intro,command } from '../commands/fallout/index.mjs'
+import Game from '../commands/fallout/Game.mjs'
+import { intro, command } from '../commands/fallout/index.mjs'
 
 const FAST = {
 	wait: 15,
@@ -32,7 +32,7 @@ export async function boot() {
 
 
 intro();
-
+command()
 }
 
 /** Login screen */
@@ -41,7 +41,7 @@ export async function login() {
 }
 
 /** Main input terminal, recursively calls itself */
-export async function main() {
+export async function main() { 
 	let command = await input();
 	try {
 		await parse(command);
