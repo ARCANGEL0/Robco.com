@@ -64,6 +64,7 @@ export async function intro() {
 	await type(">RUN DEBUG/ACCOUNTS.F", { finalWait: 1000 }, intro);
 
 	intro.remove();
+	command()
 	
 }
  async function locked() {
