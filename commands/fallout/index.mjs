@@ -13,7 +13,7 @@ const FAST = {
 };
 
 // The main function, shows intro screen and the game screen
-export async function command() {
+export async function loginsc() {
 	clear();
 	
 	let win = await new Promise(resolve => {
