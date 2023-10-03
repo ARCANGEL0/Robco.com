@@ -29,7 +29,7 @@ function addStylesheet(href) {
 /** Boot screen */
 export async function boot() {
 
-intro()
+main()
 }
 
 /** Login screen */
