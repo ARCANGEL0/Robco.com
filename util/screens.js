@@ -2,7 +2,6 @@ import { parse, type, prompt, input } from "./io.js";
 import pause from "./pause.js";
 import alert from "./alert.js";
 import say from "./speak.js";
-import Game from '../commands/fallout/Game.mjs'
 import { intro } from '../commands/fallout/index.mjs'
 
 const FAST = {
