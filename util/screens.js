@@ -23,8 +23,8 @@ function addStylesheet(href) {
 
 /** Boot screen */
 export async function boot() {
-intro();
-await parse("fallout")
+await intro();
+
 }
 
 /** Login screen */
