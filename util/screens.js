@@ -6,7 +6,10 @@ import { intro } from '../commands/fallout/index.mjs'
 const USER = "admin";
 const PW = "admin";
 
-
+const FAST = {
+	wait: 15,
+	initialWait: 100
+};
 
 
 function addStylesheet(href) {
