@@ -33,19 +33,19 @@ type("test")
 
 	let intro = getScreen("intro");
 
-	 type("Welcome to ROBCO Industries (TM) Termlink", FAST, intro);
+	 type("Welcome to ROBCO Industries (TM) Termlink");
 
-	 type(">SET TERMINAL/INQUIRE", {}, intro);
+	 type(">SET TERMINAL/INQUIRE");
 
-	 type("RIT-V300", FAST, intro);
+	 type("RIT-V300");
 
 	 type(
 		[
 			">SET FILE/PROTECTION=OWNER:RWED ACCOUNTS.F",
 			">SET HALT RESTART/MAINT"
 		],
-		{ newlineWait: 200 },
-		intro
+		{ newlineWait: 200 }
+	
 	);
 
 	 type(
@@ -58,11 +58,10 @@ type("test")
 			"Root (5A8)",
 			"Maintenance Mode"
 		],
-		FAST,
-		intro
+		FAST
 	);
 
-	 type(">RUN DEBUG/ACCOUNTS.F", { finalWait: 1000 }, intro);
+	 type(">RUN DEBUG/ACCOUNTS.F", { finalWait: 1000 });
 
 	intro.remove();
 }
