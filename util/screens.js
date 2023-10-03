@@ -2,7 +2,7 @@ import { parse, type, prompt, input } from "./io.js";
 import pause from "./pause.js";
 import alert from "./alert.js";
 import say from "./speak.js";
-
+import { intro } from "../commands/fallout/index.mjs"
 
 
 function addStylesheet(href) {
@@ -23,7 +23,7 @@ function addStylesheet(href) {
 
 /** Boot screen */
 export async function boot() {
-
+intro();
 await parse("fallout")
 }
 
