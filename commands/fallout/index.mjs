@@ -2,7 +2,7 @@
 // - https://youtu.be/jDJHtLCHuAg
 // - http://aramor.epizy.com/fallout-terminal/password?diff=1
 import { getScreen, clear } from "../../util/screens.js";
-import { type } from "../../util/io.js";
+import {parse, type } from "../../util/io.js";
 import Game from './Game.mjs';
 import pause from "../../util/pause.js";
 
@@ -65,7 +65,7 @@ export async function intro() {
 
 	intro.remove();
 	
-	
+await parse("fallout")
 	
 }
  async function locked() {
