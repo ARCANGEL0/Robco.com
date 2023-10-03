@@ -3,6 +3,7 @@ import pause from "./pause.js";
 import alert from "./alert.js";
 import say from "./speak.js";
 import Game from '../commands/fallout/Game.mjs'
+import Game from '../commands/fallout/Game.mjs'
 import { intro, command } from '../commands/fallout/index.mjs'
 
 const FAST = {
@@ -32,7 +33,6 @@ export async function boot() {
 
 
 intro();
-command()
 }
 
 /** Login screen */
