@@ -1,5 +1,7 @@
-
-@media (max-width: 560px) {
+/* Samsung Galaxy S5 */
+@media screen and (max-width: 360px) {
+  /* Your CSS rules for Galaxy S5 go here */
+  
     .intro,
     .intro .typer,
     .fallout,
@@ -14,7 +16,49 @@
     {
         font-size: 6px !important; /* Smaller font size for mobile */
     }
+  
 }
+
+/* Samsung Galaxy S6, S6 Edge, S7, S7 Edge */
+@media screen and (min-width: 360px) and (max-width: 480px) {
+  /* Your CSS rules for Galaxy S6, S7, etc. go here */
+    .intro,
+    .intro .typer,
+    .fallout,
+    .outro,
+    .outro typer,
+.outro a:active,
+.outro a:focus,
+.outro a:hover,
+.outro a
+    
+    
+    {
+        font-size: 6px !important; /* Smaller font size for mobile */
+    }
+  
+}
+
+/* Samsung Galaxy S8, S8+, S9, S9+, S10, S10e */
+@media screen and (min-width: 480px) and (max-width: 640px) {
+  /* Your CSS rules for Galaxy S8, S9, S10, etc. go here */
+    .intro,
+    .intro .typer,
+    .fallout,
+    .outro,
+    .outro typer,
+.outro a:active,
+.outro a:focus,
+.outro a:hover,
+.outro a
+    
+    
+    {
+        font-size: 6px !important; /* Smaller font size for mobile */
+    }
+  
+}
+
 
 .fallout,
 .intro,
