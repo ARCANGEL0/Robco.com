@@ -599,6 +599,6 @@ input:checked + .slider:before {
 		font-size: 2rem;
 	}
 	#crt {
-	  font-size: 30% !important;
+	  font-size: 65% !important;
 	}
 }
