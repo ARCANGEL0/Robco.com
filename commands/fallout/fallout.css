@@ -203,3 +203,17 @@
 .locked .typer {
 	margin-top: 5rem;
 }
+#btnhack {
+    background-color: #000;
+    color: #00FF00;
+    border: 1px solid #00FF00;
+    padding: 10px 20px;
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#btnhack:hover {
+    background-color: #00FF00;
+    color: #000;
+}
