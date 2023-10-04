@@ -18,7 +18,7 @@
         font-size: 16px !important; /* Smaller font size for mobile */
     }
     .cypher {
-   height: 64vh !important;
+   height: 60vh !important;
     }
     .output{ 
       justify-content: center !important;
@@ -35,7 +35,7 @@
 @media screen and (min-width: 360px) and (max-width: 480px) {
   /* Your CSS rules for Galaxy S6, S7, etc. go here */
  .cypher {
-   height: 64vh !important;
+   height: 60vh !important;
     }
     .output{ 
       justify-content: center !important;
@@ -61,7 +61,7 @@
     }
     
  .cypher {
-   height: 64vh !important;
+   height: 60vh !important;
     }
     .output{ 
       justify-content: center !important;
