@@ -2,6 +2,7 @@
 @media screen and (max-width: 360px) {
   /* Your CSS rules for Galaxy S5 go here */
   
+  .cypher,
     .intro,
     .intro .typer,
     .fallout,
@@ -32,6 +33,7 @@
 	display: flex;
 	width:120vw;
 }
+.cypher,
     .intro,
     .intro .typer,
     .fallout,
@@ -55,6 +57,7 @@
 /* Samsung Galaxy S8, S8+, S9, S9+, S10, S10e */
 @media screen and (min-width: 480px) and (max-width: 640px) {
   /* Your CSS rules for Galaxy S8, S9, S10, etc. go here */
+  .cypher,
     .intro,
     .intro .typer,
     .fallout,
