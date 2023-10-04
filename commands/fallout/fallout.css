@@ -212,12 +212,8 @@
 	 color: #4e4e4e;
 }
  .glitch-btn {
-	 display: inline-block;
-	 position: absolute;
-	 top: 50%;
-	 left: 50%;
 	 transform: translate(-50%, -50%);
-	 font-size: 36px;
+
 	 transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
  .glitch-btn:hover {
@@ -229,13 +225,8 @@
 }
  .glitch-btn:before {
 	 content: "";
-	 position: absolute;
-	 left: -10%;
-	 top: -10%;
 	 background: #00ffb4;
-	 width: 4px;
-	 height: 120%;
-	 padding: 0px;
+
 	 z-index: -1;
 	 transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -320,34 +311,7 @@
 		 transform: translate(-0.95px, -0.95px);
 	}
 }
- .glitch-btn .mask {
-	 position: absolute;
-	 -webkit-backface-visibility: hidden;
-	 height: 20%;
-	 width: 100%;
-	 overflow: hidden;
-	 display: none;
-}
- .glitch-btn .mask span {
-	 position: absolute;
-	 left: 50%;
-	 -webkit-transform: translateX(-50%);
-	 transform: translateX(-50%);
-	 width: 100%;
-	 top: -100%;
-}
- .glitch-btn .mask {
-	 top: 20%;
-}
- .glitch-btn:hover .mask {
-	 animation: glitchin 0.2s both;
-}
- .glitch-btn:hover .text {
-	 animation: fade-in 0.8s forwards;
-}
- .glitch-btn:hover .mask {
-	 display: block;
-}
+ 
  @keyframes fade-in {
 	 from {
 		 opacity: 0;
