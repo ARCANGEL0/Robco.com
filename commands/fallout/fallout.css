@@ -219,13 +219,13 @@
 }
  .glitch-btn:hover:before {
 	 background: #4e4e4e;
-	 transform: translateX(2250%) scaleX(50) scaleY(0.2);
+	 
 }
  .glitch-btn:before {
 	 content: "";
 	 background: #00ffb4;
 
-	 z-index: -1;
+	 
 	 
 }
  @keyframes glitchin {
