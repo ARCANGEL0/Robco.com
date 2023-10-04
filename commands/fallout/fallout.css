@@ -19,7 +19,7 @@
     
     .game {
 	display: flex;
-	width:80vw;
+	width:120vw;
 }
   
 }
@@ -30,7 +30,7 @@
   
     .game {
 	display: flex;
-	width:80vw;
+	width:120vw;
 }
     .intro,
     .intro .typer,
@@ -48,7 +48,7 @@
     }
     .game {
 	display: flex;
-	width:80vw;
+	width:120vw;
 }
 }
 
@@ -85,7 +85,7 @@
     }
     .game {
 	display: flex;
-	width:80vw;
+	width:120vw;
 }
 }
 
