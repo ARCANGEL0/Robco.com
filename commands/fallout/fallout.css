@@ -21,6 +21,7 @@
     .game {
 	display: flex;
 	width:120vw;
+	height:90vh;
 }
   
 }
@@ -51,6 +52,7 @@
     .game {
 	display: flex;
 	width:120vw;
+	height:90vh;
 }
 }
 
@@ -89,6 +91,7 @@
     .game {
 	display: flex;
 	width:120vw;
+	height: 90vh;
 }
 }
 
