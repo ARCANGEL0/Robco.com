@@ -212,9 +212,7 @@
 	 color: #4e4e4e;
 }
  .glitch-btn {
-	 transform: translate(-50%, -50%);
-
-	 transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+	 
 }
  .glitch-btn:hover {
 	 color: #00ffb4;
@@ -228,7 +226,7 @@
 	 background: #00ffb4;
 
 	 z-index: -1;
-	 transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+	 
 }
  @keyframes glitchin {
 	 100% {
