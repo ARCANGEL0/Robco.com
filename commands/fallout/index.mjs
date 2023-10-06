@@ -89,8 +89,9 @@ async function outro() {
 	await new Promise(async resolve => {
 		await type(
 			[
-				"Welcome to ROBCO Industries (TM) Termlink",
-				`"We're in the business of happiness"`
+				"ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
+				`COPYRIGHT 2075-2077 ROBCO INDUSTRIES`, `-SERVER 6- `, 
+				`__________________________________`
 			],
 			FAST,
 			outro
@@ -98,20 +99,17 @@ async function outro() {
 
 		await type("> Password accepted", { typerClass: "end" }, outro);
 
-		let restart = document.createElement("a");
-		restart.innerText = "[Restart]";
+		let logout = document.createElement("a");
+		restart.innerText = "[Logout]";
 		restart.href = "#";
 		restart.onclick = () => {
 			outro.remove();
 			new Game({onQuit: resolve});
 		};
 
-		let exit = document.createElement("a");
-		exit.innerText = "[Exit terminal]";
-		exit.href = "#";
-		exit.onclick = resolve;
+	;
 
-		await type([restart, exit], { processChars: false, wait: 100 }, outro);
+		await type([logout], { processChars: false, wait: 100 }, outro);
 
 		restart.focus();
 	});
