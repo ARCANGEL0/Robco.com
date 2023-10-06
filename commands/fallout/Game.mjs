@@ -351,6 +351,14 @@ Game.prototype.start = async function() {
 document.querySelector("#btnhack").addEventListener("click", event => (
 alert(tst)
 	
+		let outpt = document.querySelector(".output");
+	let re = document.createElement("pre");
+	let activ = output.querySelector(".active-word");
+	
+	
+re.textContent = `>// HACKING TERMINAL. . . .`;
+
+outpt.insertBefore(re, activ);
   ));
     // Click listeners for specials
     let specials = [...cypher.querySelectorAll("[data-special]")];
