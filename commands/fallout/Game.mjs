@@ -354,11 +354,7 @@ document.querySelector("#btnhack").addEventListener("click", event => (
 	let active = output.querySelector(".active-word");
 	
 	
-	
-pre.textContent = `>// HACKING TERMINAL. . . .`;
 
-output.insertBefore(pre, active);
-	
   ));
     // Click listeners for specials
     let specials = [...cypher.querySelectorAll("[data-special]")];
