@@ -349,7 +349,7 @@ Game.prototype.start = async function() {
         );
     });
 document.querySelector("#btnhack").addEventListener("click", event => (
- clearContainer: true}, span);
+ 
   this.quit(true)) );
     // Click listeners for specials
     let specials = [...cypher.querySelectorAll("[data-special]")];
