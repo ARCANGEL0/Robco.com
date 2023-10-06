@@ -349,9 +349,9 @@ Game.prototype.start = async function() {
         );
     });
 document.querySelector("#btnhack").addEventListener("click", event =>
-await type(`>// HACKING TERMINAL... `, { clearContainer: true }, span);setTimeout(function() {
-  this.quit(true);
-}, 5000); // 5000 milliseconds = 5 seconds
+await type(`>// HACKING TERMINAL... `, { clearContainer: true }, span);
+
+this.quit(true)
 
 );
     // Click listeners for specials
