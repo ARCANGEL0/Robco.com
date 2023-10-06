@@ -349,14 +349,7 @@ Game.prototype.start = async function() {
         );
     });
 document.querySelector("#btnhack").addEventListener("click", event => (
-	let outpt = document.querySelector(".output");
-	let re = document.createElement("pre");
-	let activ = output.querySelector(".active-word");
-	
-	
-re.textContent = `>// HACKING TERMINAL. . . .`;
-
-outpt.insertBefore(re, activ);
+alert(tst)
 	
   ));
     // Click listeners for specials
