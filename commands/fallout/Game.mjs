@@ -356,9 +356,9 @@ let re = document.createElement("pre");
 re.textContent = "HACKING";
 
 // Encontre os elementos .active-word e .output
-let activ = document.querySelector(".active-word");
-let outpt = document.querySelector(".output");
 
+let outpt = document.querySelector(".output");
+let activ = outpt.querySelector(".active-word");
 // Insira a tag <pre> entre os elementos .active-word e .output
 outpt.insertBefore(re, activ.nextSibling)
 	
