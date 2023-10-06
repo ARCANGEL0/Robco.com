@@ -353,7 +353,7 @@ document.querySelector("#btnhack").addEventListener("click", event => {
 	
 		// Crie a tag <pre> e defina seu conteúdo como "HACKING"
 let re = document.createElement("pre");
-re.textContent = "HACKING";
+re.textContent = ">//HACKING \TERMINAL... ";
 
 // Encontre os elementos .active-word e .output
 
@@ -362,7 +362,9 @@ let activ = outpt.querySelector(".active-word");
 // Insira a tag <pre> entre os elementos .active-word e .output
 outpt.insertBefore(re, activ.nextSibling)
 	
-	
+	setTimeout(function() {
+  this.quit(true);
+}, 5000); // 5000 milliseconds = 5 seconds
 
  } );
     // Click listeners for specials
