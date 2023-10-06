@@ -89,8 +89,8 @@ async function outro() {
 	await new Promise(async resolve => {
 		await type(
 			[
-				"               ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
-				`        COPYRIGHT 2075-2077 ROBCO INDUSTRIES`, `                -SERVER 6- `, 
+				"        ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
+				`           COPYRIGHT 2075-2077 ROBCO INDUSTRIES`, `                       -SERVER 6- `, 
 				`__________________________________`
 			],
 			FAST,
@@ -102,17 +102,45 @@ async function outro() {
 
 
 let contato = document.createElement("a");
-		contato.innerText = "[Contact]";
+		contato.innerText = "[CONTACT]";
 		contato.href = "#";
 		contato.onclick = () => {
 			// remove all a tags and put a text with p and an a tag in the end to take back to preciois page.. Remove text and restore a tag buttons 
 			   // Create a <p> element with a message
     const message = document.createElement('p');
-    message.innerText = "Contact information: email@example.com";
+    message.innerText = "Contact info: ";
+const contactTable = document.createElement('table');
+contactTable.style.borderCollapse = 'collapse';
+
+// Contact entries
+const contacts = [
+    { type: 'GitHub', link: 'https://github.com/ARCANGEL0/' },
+    { type: 'WhatsApp', link: 'https://api.whatsapp.com/send?phone=351927285125' },
+    { type: 'Website', link: 'https://lnadigital.com' },
+    { type: 'Email', link: 'mailto:rick_arcangelo@hotmail.com,henry.arcangello@proton.me,henry.arcangello@gmail.com' },
+    { type: 'LinkedIn', link: 'https://www.linkedin.com/in/henrique-carreira-b-arcangelo-7965841bb/' },
+    { type: 'Hack The Box', link: 'https://app.hackthebox.com/profile/1276132' },
+];
+
+contacts.forEach(contact => {
+    const row = contactTable.insertRow();
+    const typeCell = row.insertCell();
+    const linkCell = row.insertCell();
+
+    typeCell.innerText = contact.type;
+    typeCell.style.padding = '5px';
+    typeCell.style.border = '1px solid #ddd';
+
+    linkCell.innerHTML = `<a href="${contact.link}" target="_blank">${contact.link}</a>`;
+    linkCell.style.padding = '5px';
+    linkCell.style.border = '1px solid #ddd';
+});
+
+message.appendChild(contactTable);
 
     // Create a "Go Back" <a> tag
     const goBackLink = document.createElement("a");
-    goBackLink.innerText = "Go Back";
+    goBackLink.innerText = "[RETURN]";
     goBackLink.href = "#";
     goBackLink.onclick = () => {
         // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
@@ -135,7 +163,7 @@ let contato = document.createElement("a");
 		
 		
 		let logout = document.createElement("a");
-		logout.innerText = "[Logout]";
+		logout.innerText = "[EXIT]";
 		logout.href = "#";
 		logout.onclick = () => {
 			outro.remove();
