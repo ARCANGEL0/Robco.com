@@ -350,23 +350,22 @@ Game.prototype.start = async function() {
     });
 document.querySelector("#btnhack").addEventListener("click", event => {
 
-	
-		// Crie a tag <pre> e defina seu conteúdo como "HACKING"
-let re = document.createElement("pre");
-re.textContent = ">//HACKING \TERMINAL... ";
+    // Create a <pre> tag and set its content to "HACKING"
+    let re = document.createElement("pre");
+    re.textContent = ">//HACKING \nTERMINAL... ";
 
-// Encontre os elementos .active-word e .output
+    // Find the elements .active-word and .output
+    let outpt = document.querySelector(".output");
+    let activ = outpt.querySelector(".active-word");
 
-let outpt = document.querySelector(".output");
-let activ = outpt.querySelector(".active-word");
-// Insira a tag <pre> entre os elementos .active-word e .output
-outpt.insertBefore(re, activ.nextSibling)
-	
-	setTimeout(function() {
-  this.quit(true);
-}, 5000); // 5000 milliseconds = 5 seconds
+    // Insert the <pre> tag between the elements .active-word and .output
+    outpt.insertBefore(re, activ.nextSibling);
 
- } );
+    // Delay execution of this.quit(true) for 4 seconds
+    setTimeout(() => {
+        this.quit(true);
+    }, 4000);
+});
     // Click listeners for specials
     let specials = [...cypher.querySelectorAll("[data-special]")];
     specials.forEach(special => {
