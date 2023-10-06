@@ -114,11 +114,11 @@ contactTable.style.borderCollapse = 'collapse';
 
 // Contact entries
 const contacts = [
-    { type: 'GitHub', link: 'https://github.com/ARCANGEL0/' },
-    { type: 'WhatsApp', link: 'https://api.whatsapp.com/send?phone=351927285125' },
-    { type: 'Website', link: 'https://lnadigital.com' },
-    { type: 'Email', link: 'mailto:rick_arcangelo@hotmail.com,henry.arcangello@proton.me,henry.arcangello@gmail.com' },
-    { type: 'LinkedIn', link: 'https://www.linkedin.com/in/henrique-carreira-b-arcangelo-7965841bb/' },
+    { type: 'GitHub', name:'ARCANGEL0', link: 'https://github.com/ARCANGEL0/' },
+    { type: 'WhatsApp/Phone ', name: '+351 927 285 125', link: 'https://api.whatsapp.com/send?phone=351927285125' },
+    { type: 'Website',name: 'LNA Digital', link: 'https://lnadigital.com' },
+    { type: 'Email',name:'Henry.arcangello@gmail.com*', link: 'mailto:rick_arcangelo@hotmail.com,henry.arcangello@proton.me,henry.arcangello@gmail.com' },
+    { type: 'LinkedIn', name:'Luis Henrique CB Arcangelo', link: 'https://www.linkedin.com/in/henrique-carreira-b-arcangelo-7965841bb/' },
     { type: 'Hack The Box', link: 'https://app.hackthebox.com/profile/1276132' },
 ];
 
