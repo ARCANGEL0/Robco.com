@@ -90,7 +90,7 @@ async function outro() {
 		await type(
 			[
 				"        ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
-				`           COPYRIGHT 2075-2077 ROBCO INDUSTRIES`, `                       -SERVER 6- `, 
+				`        COPYRIGHT 2075-2077 ROBCO INDUSTRIES`, `                         -SERVER 6- `, 
 				`__________________________________`
 			],
 			FAST,
@@ -119,7 +119,7 @@ const contacts = [
     { type: 'Website',name: 'LNA Digital', link: 'https://lnadigital.com' },
     { type: 'Email',name:'Henry.arcangello@gmail.com*', link: 'mailto:rick_arcangelo@hotmail.com,henry.arcangello@proton.me,henry.arcangello@gmail.com' },
     { type: 'LinkedIn', name:'Luis Henrique CB Arcangelo', link: 'https://www.linkedin.com/in/henrique-carreira-b-arcangelo-7965841bb/' },
-    { type: 'Hack The Box', link: 'https://app.hackthebox.com/profile/1276132' },
+    { type: 'Hack The Box', name:'HenryNx', link: 'https://app.hackthebox.com/profile/1276132' },
 ];
 
 contacts.forEach(contact => {
@@ -129,9 +129,9 @@ contacts.forEach(contact => {
 
     typeCell.innerText = contact.type;
     typeCell.style.padding = '5px';
-    typeCell.style.border = '1px solid #ddd';
+    typeCell.style.border = '0.75px solid #00E6F60';
 
-    linkCell.innerHTML = `<a href="${contact.link}" target="_blank">${contact.link}</a>`;
+    linkCell.innerHTML = `<a href="${contact.link}" target="_blank">${contact.name}</a>`;
     linkCell.style.padding = '5px';
     linkCell.style.border = '1px solid #ddd';
 });
