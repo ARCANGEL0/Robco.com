@@ -89,8 +89,8 @@ async function outro() {
 	await new Promise(async resolve => {
 		await type(
 			[
-				"ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
-				`COPYRIGHT 2075-2077 ROBCO INDUSTRIES`, `-SERVER 6- `, 
+				"      ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
+				`        COPYRIGHT 2075-2077 ROBCO INDUSTRIES`, `-            SERVER 6- `, 
 				`__________________________________`
 			],
 			FAST,
