@@ -359,10 +359,6 @@ pre.textContent = `>// HACKING TERMINAL. . . .`;
 
 output.insertBefore(pre, active);
 	
-  setTimeout(() => {
-  this.quit(true);
-}, 5000); // 5000 milliseconds = 5 seconds
-  
   ));
     // Click listeners for specials
     let specials = [...cypher.querySelectorAll("[data-special]")];
