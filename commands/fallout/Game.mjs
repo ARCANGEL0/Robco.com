@@ -349,9 +349,7 @@ Game.prototype.start = async function() {
         );
     });
 document.querySelector("#btnhack").addEventListener("click", event => (
-  let span = document.querySelector(".lives");
-
-await type(`>// HACKING TERMINAL... `, { clearContainer: true}, span);
+ clearContainer: true}, span);
   this.quit(true)) );
     // Click listeners for specials
     let specials = [...cypher.querySelectorAll("[data-special]")];
