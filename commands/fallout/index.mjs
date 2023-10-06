@@ -133,7 +133,7 @@ contacts.forEach(contact => {
 
     linkCell.innerHTML = `<a href="${contact.link}" target="_blank">${contact.name}</a>`;
     linkCell.style.padding = '5px';
-    linkCell.style.border = '1px solid #ddd';
+    linkCell.style.border = '0.70px solid #00E6F60';
 });
 
 message.appendChild(contactTable);
