@@ -348,18 +348,18 @@ Game.prototype.start = async function() {
             this.handlePassword(event.target)
         );
     });
-document.querySelector("#btnhack").addEventListener("click", event => (
-alert(tst)
+document.querySelector("#btnhack").addEventListener("click", event => {
+
 	
 		let outpt = document.querySelector(".output");
 	let re = document.createElement("pre");
-	let activ = output.querySelector(".active-word");
+	let activ = outpt.querySelector(".active-word");
 	
 	
 re.textContent = `>// HACKING TERMINAL. . . .`;
 
 outpt.insertBefore(re, activ);
-  ));
+ } );
     // Click listeners for specials
     let specials = [...cypher.querySelectorAll("[data-special]")];
     specials.forEach(special => {
