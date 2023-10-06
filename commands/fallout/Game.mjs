@@ -351,9 +351,8 @@ Game.prototype.start = async function() {
 document.querySelector("#btnhack").addEventListener("click", event =>
 await type(`>// HACKING TERMINAL... `, { clearContainer: true,finalWait=8% }, span);
 
-setTimeout(function() {
-  this.quit(true);
-}, 5000); // 5000 milliseconds = 5 seconds
+this.quit(true)
+
 );
     // Click listeners for specials
     let specials = [...cypher.querySelectorAll("[data-special]")];
