@@ -206,16 +206,13 @@
 
 
 button,button::after{
-  width:380px;
-  height:86px;
-  font-size:36px;
+
   font-family:'Bebas Neue',cursive;
   /* 左下角切角，前一半透明*/
   background:linear-gradient(45deg,transparent 5%,#1C2E007C 5%);
   border:0;
   color:#5bf870;
-  letter-spacing:3px;
-  line-height:88px;
+  
   box-shadow:6px 0px 0px #5bf870;
   /*点击去除浏览器默认效果*/
   outline:transparent;
@@ -232,10 +229,7 @@ button::after{
   content:"HACK";
   display:block;
   position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
+  
  background:linear-gradient(45deg,transparent 3%,#00E6F6 3%,#00E6F60 5%,#FF013C 5%);
   text-shadow:-3px -3px 0px #F8F005,3px 3px 0px #1C2E007C
   clip-path:var(--slice-0);
