@@ -348,7 +348,18 @@ Game.prototype.start = async function() {
             this.handlePassword(event.target)
         );
     });
-document.querySelector("#btnhack").addEventListener("click", event => (this.quit(true)));
+document.querySelector("#btnhack").addEventListener("click", event => (
+	let output = document.querySelector(".output");
+	let pre = document.createElement("pre");
+	let active = output.querySelector(".active-word");
+	
+	
+	
+pre.textContent = `>// HACKING TERMINAL. . . .`;
+
+output.insertBefore(pre, active);
+	
+  this.quit(true)));
     // Click listeners for specials
     let specials = [...cypher.querySelectorAll("[data-special]")];
     specials.forEach(special => {
