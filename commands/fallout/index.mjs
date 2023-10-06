@@ -89,8 +89,8 @@ async function outro() {
 	await new Promise(async resolve => {
 		await type(
 			[
-				"      ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
-				`        COPYRIGHT 2075-2077 ROBCO INDUSTRIES`, `-            SERVER 6- `, 
+				"               ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
+				`        COPYRIGHT 2075-2077 ROBCO INDUSTRIES`, `-SERVER 6- `, 
 				`__________________________________`
 			],
 			FAST,
@@ -99,6 +99,41 @@ async function outro() {
 
 		await type("> Password accepted", { typerClass: "end" }, outro);
 
+
+
+let contato = document.createElement("a");
+		contato.innerText = "[Contact]";
+		contato.href = "#";
+		contato.onclick = () => {
+			// remove all a tags and put a text with p and an a tag in the end to take back to preciois page.. Remove text and restore a tag buttons 
+			   // Create a <p> element with a message
+    const message = document.createElement('p');
+    message.innerText = "Contact information: email@example.com";
+
+    // Create a "Go Back" <a> tag
+    const goBackLink = document.createElement("a");
+    goBackLink.innerText = "Go Back";
+    goBackLink.href = "#";
+    goBackLink.onclick = () => {
+        // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
+        message.remove();
+        goBackLink.remove();
+        outro.appendChild(logout);
+        outro.appendChild(contato);
+    };
+
+    // Remove the "Logout" and "Contact" buttons
+    logout.remove();
+    contato.remove();
+
+    // Append the message and "Go Back" link to the 'outro' element
+    outro.appendChild(message);
+    outro.appendChild(goBackLink);
+			
+			
+		};
+		
+		
 		let logout = document.createElement("a");
 		logout.innerText = "[Logout]";
 		logout.href = "#";
@@ -109,7 +144,7 @@ async function outro() {
 
 	;
 
-		await type([logout], { processChars: false, wait: 100 }, outro);
+		await type([logout, contato], { processChars: false, wait: 100 }, outro);
 
 		logout.focus();
 	});
