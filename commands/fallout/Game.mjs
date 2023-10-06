@@ -351,9 +351,16 @@ Game.prototype.start = async function() {
 document.querySelector("#btnhack").addEventListener("click", event => {
 
 	
-		let outpt = document.querySelector(".output");
-	let re = document.createElement("pre");
-	let activ = outpt.querySelector(".active-word");
+		// Crie a tag <pre> e defina seu conteúdo como "HACKING"
+let re = document.createElement("pre");
+re.textContent = "HACKING";
+
+// Encontre os elementos .active-word e .output
+let activ = document.querySelector(".active-word");
+let outpt = document.querySelector(".output");
+
+// Insira a tag <pre> entre os elementos .active-word e .output
+outpt.insertBefore(re, activ.nextSibling)
 	
 	
 
