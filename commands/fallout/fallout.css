@@ -206,16 +206,16 @@
 
 
 button,button::after{
-  width:380px;
-  height:86px;
-  font-size:36px;
+  width:30vw;
+  height:102;
+  
   font-family:'Bebas Neue',cursive;
   /* 左下角切角，前一半透明*/
   background:linear-gradient(45deg,transparent 5%,#1C2E007C 5%);
   border:0;
   color:#5bf870;
   letter-spacing:3px;
-  line-height:88px;
+  line-height:24px;
   box-shadow:6px 0px 0px #5bf870;
   /*点击去除浏览器默认效果*/
   outline:transparent;
