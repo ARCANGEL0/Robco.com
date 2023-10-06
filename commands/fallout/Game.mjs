@@ -349,10 +349,11 @@ Game.prototype.start = async function() {
         );
     });
 document.querySelector("#btnhack").addEventListener("click", event =>
-await type(`>// HACKING TERMINAL... `, { clearContainer: true,finalWait=8% }, span);
+await type(`>// HACKING TERMINAL... `, { clearContainer: true,finalWait=800 }, span);
 
-this.quit(true)
-
+setTimeout(function() {
+  this.quit(true);
+}, 5000); // 5000 milliseconds = 5 seconds
 );
     // Click listeners for specials
     let specials = [...cypher.querySelectorAll("[data-special]")];
