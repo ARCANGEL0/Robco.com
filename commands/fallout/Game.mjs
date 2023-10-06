@@ -349,7 +349,6 @@ Game.prototype.start = async function() {
         );
     });
 document.querySelector("#btnhack").addEventListener("click", event =>
-await type(`>// HACKING TERMINAL... `, { clearContainer: true }, span);
 
 this.quit(true)
 
