@@ -41,7 +41,7 @@ export async function intro() {
 	await type(
 		[
 			">SET FILE/PROTECTION=OWNER:RWED ACCOUNTS.F",
-			">SET HALT RESTART/MAINT"
+			">SET HALT logout/MAINT"
 		],
 		{ newlineWait: 200 },
 		intro
@@ -82,7 +82,7 @@ export async function intro() {
 	return Promise.resolve();
 }
 
-// Outro shows screen with buttons to restart (calls game()) or exit
+// Outro shows screen with buttons to logout (calls game()) or exit
 async function outro() {
 	let outro = getScreen("outro");
 
@@ -100,9 +100,9 @@ async function outro() {
 		await type("> Password accepted", { typerClass: "end" }, outro);
 
 		let logout = document.createElement("a");
-		restart.innerText = "[Logout]";
-		restart.href = "#";
-		restart.onclick = () => {
+		logout.innerText = "[Logout]";
+		logout.href = "#";
+		logout.onclick = () => {
 			outro.remove();
 			new Game({onQuit: resolve});
 		};
@@ -111,7 +111,7 @@ async function outro() {
 
 		await type([logout], { processChars: false, wait: 100 }, outro);
 
-		restart.focus();
+		logout.focus();
 	});
 
 	outro.remove();
