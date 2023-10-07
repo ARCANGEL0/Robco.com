@@ -329,12 +329,11 @@ button:hover::after{
   margin-top: 7.5px;
   Margin-left: 5px;
   position: relative; /* Make it relative to its container */
-  overflow: hidden; 
-  clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 15% 25%);
+  overflow: hidden; 0 clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 15% 100%);
 /* Cyberpunk-style clipped shape input for small screens */
 } 
 input[type="text"]:focus, .form-input, input[type="tel"]:focus, input[type="email"]:focus,.txtarea:focus, textarea {
-  background-color: #55ff00; /* Neon pink color on focus */
+  background-color: #55ff00; /*Neon pink color on focus */
   color: #fff;
   outline: none;
 }
