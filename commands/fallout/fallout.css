@@ -333,7 +333,7 @@ button:hover::after{
   overflow: hidden; 
   background-color: rgba(0,123,0,0.4)
 -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 100%, 0% 25%);
-clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 100%, 0% 25%);
+clip-path: polygon(0 0, 100% 0, 100% 50%, 80% 100%, 0 100%, 0% 25%);
 /* Cyberpunk-style clipped shape input for small screens */
 } 
 input[type="text"]:focus, .form-input, input[type="tel"]:focus, input[type="email"]:focus,.txtarea:focus, textarea {
