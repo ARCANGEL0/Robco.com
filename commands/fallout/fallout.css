@@ -226,7 +226,7 @@ margin-bottom: 7px;
   --slice-4:inset(40% -6px 43% 0);
   --slice-5:inset(80% -6px 5% 0);
 }
-button ,button::after{
+#btnhack  ,#btnhack::after{
   width:30vw;
   height:102;
   /* 左下角切角，前一半透明*/
@@ -240,7 +240,7 @@ button ,button::after{
   outline:transparent;
   position:relative;
 }
-button::after{
+#btnhack::after{
   --slice-0:inset(50% 50% 50% 50%);
   --slice-1:inset(80% -6px 0 0);
   --slice-2:inset(50% -6px 30% 0);
@@ -343,7 +343,7 @@ input[type="text"], input[type="phone"], input[type="email"], textarea {
  margin-top: 7.5px;
 
   Margin-left: 5px
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 15% 100%);
+  clip-path: polygon(0% 0%, 0% 0%, 100% 100%, 15% 100%);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
