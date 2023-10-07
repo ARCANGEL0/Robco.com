@@ -90,7 +90,7 @@ async function outro() {
 		await type(
 			[
 				"        ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
-				`          COPYRIGHT 2075-2077 ROBCO INDUSTRIES`, `                         -SERVER 6- `, 
+				`          COPYRIGHT 2075-2077 ROBCO INDUSTRIES`, `                           -SERVER 6- `, 
 				`____________________________________________________`
 			],
 			FAST,
@@ -189,7 +189,7 @@ messageLabel.classList.add('form-label'); // Add a class for the label
 const messageTextarea = document.createElement('textarea');
 messageTextarea.setAttribute('name', 'message');
 messageTextarea.required = true;
-messageTextarea.classList.add('form-input'); // Add a class for the input textarea
+messageTextarea.classList.add('form-input, txtarea'); // Add a class for the input textarea
 // Create a submit button
 const submitButton = document.createElement('input');
 submitButton.setAttribute('type', 'submit');
