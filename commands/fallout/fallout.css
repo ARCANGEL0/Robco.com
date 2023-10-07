@@ -214,7 +214,7 @@ margin-bottom: 7px;
   letter-spacing:3px;
   line-height:24px;
   box-shadow:6px 0px 0px #5bf870;
-  /*点击去除浏览器默认效果*/
+
   outline:transparent;
   position:relative;
     --slice-0:inset(50% 50% 50% 50%);
@@ -226,7 +226,7 @@ margin-bottom: 7px;
   --slice-4:inset(40% -6px 43% 0);
   --slice-5:inset(80% -6px 5% 0);
 }
-#btnhack ,#btnhack::after{
+button ,button::after{
   width:30vw;
   height:102;
   /* 左下角切角，前一半透明*/
@@ -240,8 +240,7 @@ margin-bottom: 7px;
   outline:transparent;
   position:relative;
 }
-
-#btnhack ::after{
+button::after{
   --slice-0:inset(50% 50% 50% 50%);
   --slice-1:inset(80% -6px 0 0);
   --slice-2:inset(50% -6px 30% 0);
@@ -335,10 +334,10 @@ button:hover::after{
 }
 input[type="text"], input[type="phone"], input[type="email"], textarea {
   
-  border: 30px solid #000;
-  border-left: 5px solid #000;
-  border-right: 5px solid #000;
-  border-bottom: 15px solid #000;
-  clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px calc(100% - 0px), 0% calc(100% - 10px));
-  padding: 12px;
+  border: 30px solid #008000 ;
+  border-left: 5px solid #008000 ;
+  border-right: 5px solid #008000 ;
+  border-bottom: 15px solid #008000 ;
+  clip-path: polygon(0px 5px, 4.5px 0px, calc(60% - 5px) 0px, 60% 5px, 100% 5px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px calc(100% - 0px), 0% calc(100% - 10px));
+ 
 }
