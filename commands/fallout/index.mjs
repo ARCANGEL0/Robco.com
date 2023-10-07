@@ -186,6 +186,7 @@ messageLabel.innerText = 'Message:';
 messageLabel.classList.add('form-label'); // Add a class for the label
 const messageTextarea = document.createElement('textarea');
 messageTextarea.setAttribute('name', 'message');
+messageTextarea.rows ="1";
 messageTextarea.required = true;
 messageTextarea.classList.add('form-input');
 messageTextarea.classList.add('txtarea') 
