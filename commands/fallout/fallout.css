@@ -332,7 +332,7 @@ button:hover::after{
   Margin-left: 5px;pos
   overflow: hidden; 
   
-  background:transparent;
+  background:none;
   
   box-shadow:6px 0px 0px #5bf870;
   
@@ -342,7 +342,7 @@ clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0% 25%);
 /* Cyberpunk-style clipped shape input for small screens */
 } 
 .txtarea{
-  Height:10px;
+  Height:15px;
 }
 .form-input::after{
   -slice-0:inset(50% 50% 50% 50%);
@@ -354,8 +354,6 @@ clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0% 25%);
   --slice-4:inset(40% -6px 43% 0);
   --slice-5:inset(80% -6px 5% 0 );
   
-  
-  text-shadow:-3px -3px 0px #F8F005,3px 3px 0px #1C2E007;
 
   clip-path:var(--slice-0);
   
