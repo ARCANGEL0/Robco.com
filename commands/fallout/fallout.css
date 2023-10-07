@@ -227,7 +227,7 @@ margin-bottom: 7px;
   --slice-5:inset(80% -6px 5% 0);
 }
 #btnhack ,#btnhack::after{
-  width:30vw;
+  width:20vw;
   height:102;
   /* 左下角切角，前一半透明*/
   background:linear-gradient(45deg,transparent 5%,#1C2E007C 5%);
@@ -329,7 +329,8 @@ button:hover::after{
   margin-top: 7.5px;
   Margin-left: 5px;
   position: relative; /* Make it relative to its container */
-  overflow: hidden; 0 clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 15% 100%);
+  overflow: hidden; 
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 15% 100%);
 /* Cyberpunk-style clipped shape input for small screens */
 } 
 input[type="text"]:focus, .form-input, input[type="tel"]:focus, input[type="email"]:focus,.txtarea:focus, textarea {
