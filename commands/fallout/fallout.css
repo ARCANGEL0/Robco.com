@@ -226,7 +226,7 @@ margin-bottom: 7px;
   --slice-4:inset(40% -6px 43% 0);
   --slice-5:inset(80% -6px 5% 0);
 }
-#btnhack  ,#btnhack::after{
+#btnhack ,#btnhack::after{
   width:30vw;
   height:102;
   /* 左下角切角，前一半透明*/
