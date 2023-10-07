@@ -129,11 +129,11 @@ contacts.forEach(contact => {
 
     typeCell.innerText = contact.type;
     typeCell.style.padding = '5px';
-    typeCell.style.border = '0.75px solid #00E6F60';
+    typeCell.style.border = '0.75px solid #00E6F6';
 
     linkCell.innerHTML = `<a href="${contact.link}" target="_blank">${contact.name}</a>`;
     linkCell.style.padding = '5px';
-    linkCell.style.border = '0.70px solid #00E6F60';
+    linkCell.style.border = '0.70px solid #00E6F6';
 });
 
 message.appendChild(contactTable);
