@@ -292,3 +292,43 @@ button:hover::after{
     transform:translate(-20px,-10px);
   }
 }
+
+
+
+
+
+
+
+
+/* Styling for the form elements */
+.form-label {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  color: #008000; /* Green color */
+  margin-right: 10px;
+}
+
+.form-input {
+  padding: 5px;
+  border: 1px solid #008000; /* Green border */
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Styling for the submit button */
+input[type="submit"] {
+  background-color: #008000; /* Green background color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #005000; /* Darker green on hover */
+}
