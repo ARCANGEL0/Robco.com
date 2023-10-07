@@ -332,7 +332,7 @@ button:hover::after{
   Margin-left: 5px;pos
   overflow: hidden; 
   
-  background:linear-gradient(45deg,transparent 5%,#1C2E007C 5%);
+  background:linear-gradient(45deg,transparent 5%,#008000 5%);
   box-shadow:6px 0px 0px #5bf870;
   
   
@@ -352,9 +352,7 @@ clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0% 25%);
   --slice-5:inset(80% -6px 5% 0 );
   
   
-  background:linear-gradient(45deg,transparent 3%,#00E6F6 3%,#00E6F60 5%,#FF013C 5%);
-
-  text-shadow:-3px -3px 0px #F8F005,3px 3px 0px #1C2E007C;
+  text-shadow:-3px -3px 0px #F8F005,3px 3px 0px #1C2E007;
 
   clip-path:var(--slice-0);
   
