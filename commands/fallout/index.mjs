@@ -136,48 +136,60 @@ contacts.forEach(contact => {
     linkCell.style.border = '1px solid #008000';
 });
 
+
+// ... Your existing code ...
+
+// Create a contact form
 // ... Your existing code ...
 
 // Create a contact form
 const contactForm = document.createElement('form');
 contactForm.setAttribute('action', 'mailto:your-email@example.com'); // Replace with your email address
 contactForm.setAttribute('method', 'post');
-contactForm.style.marginTop = '20px';
+contactForm.classList.add('contact-form'); // Add a class for the form
 
 // Create form fields
 const nameLabel = document.createElement('label');
 nameLabel.innerText = 'Name:';
+nameLabel.classList.add('form-label'); // Add a class for the label
 const nameInput = document.createElement('input');
 nameInput.setAttribute('type', 'text');
 nameInput.setAttribute('name', 'name');
 nameInput.required = true;
+nameInput.classList.add('form-input'); // Add a class for the input
 
 const emailLabel = document.createElement('label');
 emailLabel.innerText = 'Email:';
+emailLabel.classList.add('form-label'); // Add a class for the label
 const emailInput = document.createElement('input');
 emailInput.setAttribute('type', 'email');
 emailInput.setAttribute('name', 'email');
 emailInput.required = true;
+emailInput.classList.add('form-input'); // Add a class for the input
 
 const phoneLabel = document.createElement('label');
 phoneLabel.innerText = 'Phone Number:';
+phoneLabel.classList.add('form-label'); // Add a class for the label
 const phoneInput = document.createElement('input');
 phoneInput.setAttribute('type', 'tel');
 phoneInput.setAttribute('name', 'phone');
+phoneInput.classList.add('form-input'); // Add a class for the input
 
 const subjectLabel = document.createElement('label');
 subjectLabel.innerText = 'Subject:';
+subjectLabel.classList.add('form-label'); // Add a class for the label
 const subjectInput = document.createElement('input');
 subjectInput.setAttribute('type', 'text');
 subjectInput.setAttribute('name', 'subject');
 subjectInput.required = true;
-
+subjectInput.classList.add('form-input'); // Add a class for the input
 const messageLabel = document.createElement('label');
 messageLabel.innerText = 'Message:';
+messageLabel.classList.add('form-label'); // Add a class for the label
 const messageTextarea = document.createElement('textarea');
 messageTextarea.setAttribute('name', 'message');
 messageTextarea.required = true;
-
+messageTextarea.classList.add('form-input'); // Add a class for the input textarea
 // Create a submit button
 const submitButton = document.createElement('input');
 submitButton.setAttribute('type', 'submit');
