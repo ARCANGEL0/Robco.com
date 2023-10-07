@@ -207,6 +207,7 @@
 input[type="submit"] {
   background:linear-gradient(45deg,transparent 5%,#1C2E007C 5%);
 margin-top:5px;
+margin-bottom: 7px;
   border:0;
 
   color:#5bf870;
@@ -318,8 +319,8 @@ button:hover::after{
 
 
 
-.contactForm {
-  margin-top: 20px;
+.contact-form {
+  margin-top: 10px;
 }
 
 /* Styling for the form elements */
@@ -327,7 +328,7 @@ button:hover::after{
 .form-input {
   border: 1px solid #008000; /* Green border */
   background: linear-gradient(45deg, transparent 5%, #1C2E007C 5%);
-  margin-top: 5px;
+  margin-top: 7.5px;
   position: relative; /* Make it relative to its container */
   overflow: hidden; /* Hide overflow */
   padding-left: 30px; /* Adjust to control the size of the triangle on the left */
