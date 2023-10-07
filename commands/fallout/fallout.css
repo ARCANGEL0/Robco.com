@@ -326,8 +326,8 @@ button:hover::after{
 /* Styling for the form elements */
 .form-input {
   /* Green border */
-  border: 1px solid #008000 ;
-  background: linear-gradient(45deg, transparent 5%, #1C2E007C 5%);
+  border: 1px solid #008000;
+  background: #00640070;;
   margin-top: 7.5px;
   Margin-left: 5px;
   position: relative; /* Make it relative to its container */
