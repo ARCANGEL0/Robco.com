@@ -227,14 +227,14 @@ message.appendChild(contactForm);
         goBackLink.remove();
         // outro.appendChild(logout);
         // outro.appendChild(contato);
-type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: true, wait: 10 }, outro);
+type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
     };
 
     // Remove the "Logout" and "Contact" buttons
 
 
     // Append the message and "Go Back" link to the 'outro' element
-type([message, goBackLink], { processChars: true, wait: 10 }, outro);
+type([message, goBackLink], { processChars: false , wait: 10 }, outro);
     
 			
 			
@@ -305,7 +305,7 @@ type([message, goBackLink], { processChars: true, wait: 10 }, outro);
 
 	;
 
-		 type([inicio, sobre, galeria, contato,idioma, terminal, logout], { processChars: true, wait: 5 }, outro);
+		 type([inicio, sobre, galeria, contato,idioma, terminal, logout], { processChars: false , wait: 5 }, outro);
 
 		logout.focus();
 	});
