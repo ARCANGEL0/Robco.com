@@ -129,11 +129,11 @@ contacts.forEach(contact => {
 
     typeCell.innerText = contact.type;
     typeCell.style.padding = '5px';
-    typeCell.style.border = '1px solid #00E6F6';
+    typeCell.style.border = '1px solid #008000';
 
     linkCell.innerHTML = `<a href="${contact.link}" target="_blank">${contact.name}</a>`;
     linkCell.style.padding = '5px';
-    linkCell.style.border = '1px solid #00E6F6';
+    linkCell.style.border = '1px solid #008000';
 });
 
 message.appendChild(contactTable);
@@ -146,8 +146,9 @@ message.appendChild(contactTable);
         // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
         message.remove();
         goBackLink.remove();
-        outro.appendChild(logout);
-        outro.appendChild(contato);
+        // outro.appendChild(logout);
+        // outro.appendChild(contato);
+type([contato, logout], { processChars: false, wait: 100 }, outro);
     };
 
     // Remove the "Logout" and "Contact" buttons
