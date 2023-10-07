@@ -327,12 +327,13 @@ button:hover::after{
 .form-input {
   /* Green border */
   border: 1px solid #008000;
-  background: rgba(0,160,0,30)
+  
   margin-top: 7.5px;
   Margin-left: 5px;
   position: relative; /* Make it relative to its container */
   overflow: hidden; 
-clip-path: polygon(0% 0%, 20% 0%, 20% 20%, 15% 20%);
+clip-path: polygon(10.95% 10.18%, 65.68% 10.18%, 90.95% 48%, 90.95% 90.18%, 45.63% 90.18%);
+background-color: rgba(71,123,235,1)
 /* Cyberpunk-style clipped shape input for small screens */
 } 
 input[type="text"]:focus, .form-input, input[type="tel"]:focus, input[type="email"]:focus,.txtarea:focus, textarea {
