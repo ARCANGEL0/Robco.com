@@ -90,8 +90,8 @@ async function outro() {
 		await type(
 			[
 				"        ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
-				`            COPYRIGHT 2075-2077 ROBCO INDUSTRIES`, `                         -SERVER 6- `, 
-				`__________________________________`
+				`        COPYRIGHT 2075-2077 ROBCO INDUSTRIES`, `                         -SERVER 6- `, 
+				`____________________________________________________`
 			],
 			FAST,
 			outro
@@ -172,7 +172,7 @@ message.appendChild(contactTable);
 
 	;
 
-		await type([logout, contato], { processChars: false, wait: 100 }, outro);
+		await type([contato, logout], { processChars: false, wait: 100 }, outro);
 
 		logout.focus();
 	});
