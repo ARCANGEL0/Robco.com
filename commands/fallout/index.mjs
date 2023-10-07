@@ -227,7 +227,7 @@ message.appendChild(contactForm);
         goBackLink.remove();
         // outro.appendChild(logout);
         // outro.appendChild(contato);
-type([contato, logout], { processChars: false, wait: 10 }, outro);
+type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false, wait: 10 }, outro);
     };
 
     // Remove the "Logout" and "Contact" buttons
