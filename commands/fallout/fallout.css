@@ -298,7 +298,9 @@ button:hover::after{
 
 
 
-
+.contactForm {
+  margin-top: 20px;
+}
 
 /* Styling for the form elements */
 .form-label {
@@ -314,6 +316,7 @@ button:hover::after{
   border-radius: 5px;
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
+  Background:none;
   margin-bottom: 10px;
 }
 
