@@ -332,7 +332,8 @@ button:hover::after{
   Margin-left: 5px;pos
   overflow: hidden; 
   
-  background:linear-gradient(45deg,transparent 5%,#008000 5%);
+  background:transparent;
+  
   box-shadow:6px 0px 0px #5bf870;
   
   
