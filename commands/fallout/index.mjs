@@ -231,8 +231,13 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
     };
 
     // Remove the "Logout" and "Contact" buttons
+    inicio.remove();
+    Sobre.remove();
+    Galeria.remove(
     logout.remove();
     contato.remove();
+    Idioma.remove();
+    terminal.remove();
 
     // Append the message and "Go Back" link to the 'outro' element
 type([message, goBackLink], { processChars: false, wait: 10 }, outro);
