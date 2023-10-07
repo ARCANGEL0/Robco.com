@@ -254,7 +254,7 @@ type([message, goBackLink], { processChars: false, wait: 10 }, outro);
 
 	;
 
-		await type([contato, logout], { processChars: false, wait: 10 }, outro);
+		 type([contato, logout], { processChars: false, wait: 10 }, outro);
 
 		logout.focus();
 	});
