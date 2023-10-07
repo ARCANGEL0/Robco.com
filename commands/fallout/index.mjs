@@ -233,7 +233,7 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
     // Remove the "Logout" and "Contact" buttons
     inicio.remove();
     sobre.remove();
-    galeria.remove(
+    galeria.remove();
     logout.remove();
     contato.remove();
     idioma.remove();
