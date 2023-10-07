@@ -332,12 +332,24 @@ button:hover::after{
   overflow: hidden; /* Hide overflow */
   clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%); /* Adjust the polygon shape as needed */
 }
+ {
+
+}
+/* Cyberpunk-style clipped shape input for small screens */
 input[type="text"], input[type="phone"], input[type="email"], textarea {
-  
-  border: 30px solid #008000 ;
-  border-left: 5px solid #008000 ;
-  border-right: 5px solid #008000 ;
-  border-bottom: 15px solid #008000 ;
-  clip-path: polygon(0px 5px, 4.5px 0px, calc(60% - 5px) 0px, 60% 5px, 100% 5px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px calc(100% - 0px), 0% calc(100% - 10px));
- 
+  border: none;
+  background-color: transparent;
+  color: #fff; /* White text color */
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  margin: 10px 0;
+  clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="phone"]:focus, input[type="email"]:focus, textarea {
+  background-color: #ff55b0; /* Neon pink color on focus */
+  color: #fff;
+  outline: none;
 }
