@@ -90,7 +90,7 @@ async function outro() {
 		await type(
 			[
 				"        ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
-				`        COPYRIGHT 2075-2077 ROBCO INDUSTRIES`, `                         -SERVER 6- `, 
+				`          COPYRIGHT 2075-2077 ROBCO INDUSTRIES`, `                         -SERVER 6- `, 
 				`____________________________________________________`
 			],
 			FAST,
@@ -108,7 +108,7 @@ let contato = document.createElement("a");
 			// remove all a tags and put a text with p and an a tag in the end to take back to preciois page.. Remove text and restore a tag buttons 
 			   // Create a <p> element with a message
     const message = document.createElement('p');
-    message.innerText = "Contact info: ";
+    message.innerText = "Contact info:\n\n ";
 const contactTable = document.createElement('table');
 contactTable.style.borderCollapse = 'collapse';
 
@@ -129,11 +129,11 @@ contacts.forEach(contact => {
 
     typeCell.innerText = contact.type;
     typeCell.style.padding = '5px';
-    typeCell.style.border = '0.75px solid #00E6F6';
+    typeCell.style.border = '1px solid #00E6F60';
 
     linkCell.innerHTML = `<a href="${contact.link}" target="_blank">${contact.name}</a>`;
     linkCell.style.padding = '5px';
-    linkCell.style.border = '0.70px solid #00E6F6';
+    linkCell.style.border = '1px solid #00E6F60';
 });
 
 message.appendChild(contactTable);
