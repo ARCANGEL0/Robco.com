@@ -97,8 +97,6 @@ async function outro() {
 			outro
 		);
 
-		await type("> Password accepted", { typerClass: "end" }, outro);
-
 
 
 let contato = document.createElement("a");
