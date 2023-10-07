@@ -329,11 +329,11 @@ button:hover::after{
   border: 1px solid #008000;
   
   margin-top: 7.5px;
-  Margin-left: 5px;
-  position: relative; /* Make it relative to its container */
+  Margin-left: 5px;pos
   overflow: hidden; 
-clip-path: polygon(10.95% 10.18%, 65.68% 10.18%, 90.95% 48%, 90.95% 90.18%, 45.63% 90.18%);
-background-color: rgba(71,123,235,1)
+  background-color: rgba(0,123,0,0.4)
+-webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 100%, 0% 25%);
+clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 100%, 0% 25%);
 /* Cyberpunk-style clipped shape input for small screens */
 } 
 input[type="text"]:focus, .form-input, input[type="tel"]:focus, input[type="email"]:focus,.txtarea:focus, textarea {
