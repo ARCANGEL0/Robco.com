@@ -324,36 +324,11 @@ button:hover::after{
 }
 
 /* Styling for the form elements */
-
 .form-input {
   border: 1px solid #008000; /* Green border */
   background: linear-gradient(45deg, transparent 5%, #1C2E007C 5%);
   margin-top: 7.5px;
   position: relative; /* Make it relative to its container */
   overflow: hidden; /* Hide overflow */
-  padding-left: 30px; /* Adjust to control the size of the triangle on the left */
-}
-
-.form-input::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent; /* Adjust the size of the triangle on the left */
-  border-right: 0;
-  border-top: 20px solid #1C2E007C; /* Adjust the size and color of the triangle on the left */
-}
-
-.form-input::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-left: 0;
-  border-right: 15px solid transparent; /* Adjust the size of the polygonal shape on the right */
-  border-bottom: 20px solid #1C2E007C; /* Adjust the size and color of the polygonal shape on the right */
+  clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%); /* Adjust the polygon shape as needed */
 }
