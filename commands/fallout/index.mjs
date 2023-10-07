@@ -240,8 +240,62 @@ type([message, goBackLink], { processChars: false, wait: 10 }, outro);
 			
 			
 		};
+		let idioma = document.createElement("a");
+
+
+
+		idioma.innerText = "[IDIOMA]";
+
+		idioma.href = "#";
+		idioma.onclick = () => {
+			
 		
+		  
+		};
+		let galeria = document.createElement("a");
+
+
+
+		galeria.innerText = "[GALLERY]";
+
+		galeria.href = "#";
+		galeria.onclick = () => {
+			
 		
+		  
+		
+		  
+		};
+		
+		let sobre = document.createElement("a");
+
+
+
+		sobre.innerText = "[ABOUT ME]";
+
+		sobre.href = "#";
+		sobre.onclick = () => {
+			
+		
+		  
+		
+		  
+		};
+		let terminal = document.createElement("a");
+
+		terminal.innerText = "[TERMINAL]";
+
+		terminal.href = "#";
+		terminal.onclick = () => {		};
+		
+			let inicio = document.createElement("a");
+
+		inicio.innerText = "[HOME]";
+
+		inicio.href = "#";
+		inicio.onclick = () => {		
+		  
+		};
 		let logout = document.createElement("a");
 		logout.innerText = "[EXIT]";
 		logout.href = "#";
@@ -252,7 +306,7 @@ type([message, goBackLink], { processChars: false, wait: 10 }, outro);
 
 	;
 
-		 type([contato, logout], { processChars: false, wait: 10 }, outro);
+		 type([inicio, sobre, galeria, contato,idioma, terminal, logout], { processChars: false, wait: 10 }, outro);
 
 		logout.focus();
 	});
