@@ -136,7 +136,74 @@ contacts.forEach(contact => {
     linkCell.style.border = '1px solid #008000';
 });
 
+// ... Your existing code ...
+
+// Create a contact form
+const contactForm = document.createElement('form');
+contactForm.setAttribute('action', 'mailto:your-email@example.com'); // Replace with your email address
+contactForm.setAttribute('method', 'post');
+contactForm.style.marginTop = '20px';
+
+// Create form fields
+const nameLabel = document.createElement('label');
+nameLabel.innerText = 'Name:';
+const nameInput = document.createElement('input');
+nameInput.setAttribute('type', 'text');
+nameInput.setAttribute('name', 'name');
+nameInput.required = true;
+
+const emailLabel = document.createElement('label');
+emailLabel.innerText = 'Email:';
+const emailInput = document.createElement('input');
+emailInput.setAttribute('type', 'email');
+emailInput.setAttribute('name', 'email');
+emailInput.required = true;
+
+const phoneLabel = document.createElement('label');
+phoneLabel.innerText = 'Phone Number:';
+const phoneInput = document.createElement('input');
+phoneInput.setAttribute('type', 'tel');
+phoneInput.setAttribute('name', 'phone');
+
+const subjectLabel = document.createElement('label');
+subjectLabel.innerText = 'Subject:';
+const subjectInput = document.createElement('input');
+subjectInput.setAttribute('type', 'text');
+subjectInput.setAttribute('name', 'subject');
+subjectInput.required = true;
+
+const messageLabel = document.createElement('label');
+messageLabel.innerText = 'Message:';
+const messageTextarea = document.createElement('textarea');
+messageTextarea.setAttribute('name', 'message');
+messageTextarea.required = true;
+
+// Create a submit button
+const submitButton = document.createElement('input');
+submitButton.setAttribute('type', 'submit');
+submitButton.value = 'Send';
+
+// Append form elements to the form
+contactForm.appendChild(nameLabel);
+contactForm.appendChild(nameInput);
+contactForm.appendChild(document.createElement('br'));
+contactForm.appendChild(emailLabel);
+contactForm.appendChild(emailInput);
+contactForm.appendChild(document.createElement('br'));
+contactForm.appendChild(phoneLabel);
+contactForm.appendChild(phoneInput);
+contactForm.appendChild(document.createElement('br'));
+contactForm.appendChild(subjectLabel);
+contactForm.appendChild(subjectInput);
+contactForm.appendChild(document.createElement('br'));
+contactForm.appendChild(messageLabel);
+contactForm.appendChild(messageTextarea);
+contactForm.appendChild(document.createElement('br'));
+contactForm.appendChild(submitButton);
+
+// Append the contact form to the message
 message.appendChild(contactTable);
+message.appendChild(contactForm); 
 
     // Create a "Go Back" <a> tag
     const goBackLink = document.createElement("a");
@@ -156,8 +223,8 @@ type([contato, logout], { processChars: false, wait: 100 }, outro);
     contato.remove();
 
     // Append the message and "Go Back" link to the 'outro' element
-    outro.appendChild(message);
-    outro.appendChild(goBackLink);
+type([message, goBackLink], { processChars: false, wait: 100 }, outro);
+    
 			
 			
 		};
