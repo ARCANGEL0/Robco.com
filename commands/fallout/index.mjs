@@ -309,7 +309,7 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 		  const divinicio = document.createElement("div")
 		  divinicio.classList.add("divinicio")
 		  const divtextinicio = document.createElement("div")
-		  divtextinicio.classList.add("divtextinicio"
+		  divtextinicio.classList.add("divtextinicio") 
 		  const divgif = document.createElement("div")
 		  divgif.classList.add("divgif")
 const iniciotext = document.createElement("p");
@@ -320,7 +320,7 @@ iniciotext.innerText = "🚀 Welcome to my digital playground! 🌟 I'm not just
 // Assuming you have a container div with an id of "portfolio" to append the <p> element to
 
 const gifImage = document.createElement("img");
-
+gifImage.src = "../../images/Code.gif";
 
 // Append the image to divgif
 divgif.appendChild(gifImage);
@@ -360,7 +360,7 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
     // Append the message and "Go Back" link to the 'outro' element
 type([iniciotext, goBackLinkIn], { processChars: false , wait: 10 }, outro);
     
-			
+		
 		};
 		let logout = document.createElement("a");
 		logout.innerText = "[EXIT]";
