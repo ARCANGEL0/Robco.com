@@ -309,13 +309,21 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 		  const divinicio = document.createElement("div")
 		  divinicio.classList.add("divinicio")
 		  const divtextinicio = document.createElement("div")
-		  divtextinicio.classList.add("divtextinicio")
+		  divtextinicio.classList.add("divtextinicio"
+		  const divgif = document.createElement("div")
+		  divgif.classList.add("divgif")
 const iniciotext = document.createElement("p");
 
 // Set the text for the <p> element
 iniciotext.innerText = "🚀 Welcome to my digital playground! 🌟 I'm not just a developer; I'm a creator of online experiences that leave a mark. With a dash of innovation and a sprinkle of code, I turn dreams into pixels, and pixels into reality.";
 
 // Assuming you have a container div with an id of "portfolio" to append the <p> element to
+
+const gifImage = document.createElement("img");
+gifImage.src = "../../images/Code.gif";
+
+// Append the image to divgif
+divgif.appendChild(gifImage);
 
 
 iniciotext.style.top = "0";
