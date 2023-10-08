@@ -327,6 +327,13 @@ button:hover::after{
 .form-input {
   /* Green border */
   border: 1px solid #008000;
+  background:linear-gradient(45deg,transparent 5%,#1C2E007C 5%);
+
+  
+
+  color:#5bf870;
+  
+  box-shadow:6px 0px 0px #5bf870;
   
   margin-top: 7.5px;
   Margin-left: 5px;pos
