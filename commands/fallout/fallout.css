@@ -347,6 +347,10 @@ clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0% 25%);
 /* Cyberpunk-style clipped shape input for small screens */
 } 
 
+.txtarea{
+  height: auto !important;
+}
+
 .form-input::after{
   
   --slice-0:inset(50% 50% 50% 50%);
