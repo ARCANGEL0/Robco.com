@@ -19,6 +19,7 @@
     }
     .cypher {
    height: 60vh !important;
+   width: 60vw !important ;
     }
     .output{ 
       justify-content: center !important;
@@ -36,6 +37,7 @@
   /* Your CSS rules for Galaxy S6, S7, etc. go here */
  .cypher {
    height: 60vh !important;
+   width: 60vw !important ;
     }
     .output{ 
       justify-content: center !important;
@@ -62,6 +64,7 @@
     
  .cypher {
    height: 60vh !important;
+   width: 60vw !important ;
     }
     .output{ 
       justify-content: center !important;
