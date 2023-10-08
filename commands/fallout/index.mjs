@@ -329,6 +329,7 @@ divtextinicio.appendChild(divinicio)
 
 		  const goBackLinkIn = document.createElement("a");
     goBackLinkIn.innerText = "[RETURN]";
+    goBackLinkIn.style.marginTop = "10px"
     goBackLinkIn.href = "#";
     goBackLinkIn.onclick = () => {
         // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
