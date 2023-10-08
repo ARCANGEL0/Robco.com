@@ -18,8 +18,14 @@
         font-size: 16px !important; /* Smaller font size for mobile */
     }
     .cypher {
-   height: 67.5vh !important;
-   width: 75vw !important ;
+   height: 60vh !important;
+   width: auto !important ;
+   flex: 0 0 auto;
+	column-count: 2;
+	column-gap: 1ch;
+	column-fill: auto;
+	word-break: break-all;
+	outline: none;
     }
     .output{ 
       justify-content: center !important;
@@ -36,8 +42,16 @@
 @media screen and (min-width: 360px) and (max-width: 480px) {
   /* Your CSS rules for Galaxy S6, S7, etc. go here */
  .cypher {
-   height: 67.5vh !important;
-   width: 75vw !important ;
+   height: 60vh !important;
+
+   width: auto !important ;
+
+   flex: 0 0 auto;
+	column-count: 2;
+	column-gap: 1ch;
+	column-fill: auto;
+	word-break: break-all;
+	outline: none;
     }
     .output{ 
       justify-content: center !important;
@@ -63,8 +77,14 @@
     }
     
  .cypher {
-   height: 67.5vh !important;
-   width: 75vw !important ;
+height: 60vh !important;
+   width: auto !important ;
+   flex: 0 0 auto;
+	column-count: 2;
+	column-gap: 1ch;
+	column-fill: auto;
+	word-break: break-all;
+	outline: none;
     }
     .output{ 
       justify-content: center !important;
