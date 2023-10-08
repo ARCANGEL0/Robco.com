@@ -348,7 +348,7 @@ clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0% 25%);
   clip-path:var(--slice-0);
   
 }
-input[type="text"]:focus, .form-input, input[type="tel"]:focus, input[type="email"]:focus,.txtarea:focus, textarea {
+input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus,.txtarea:focus {
   background-color: #55ff00; /*Neon pink color on focus */
   color: #fff;
   outline: none;
