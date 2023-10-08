@@ -306,7 +306,7 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 		  
 		  
 		  // Create a new <p> element
-var iniciotext = document.createElement("p");
+const iniciotext = document.createElement("p");
 
 // Set the text for the <p> element
 iniciotext.innerText = "🚀 Welcome to my digital playground! 🌟 I'm not just a developer; I'm a creator of online experiences that leave a mark. With a dash of innovation and a sprinkle of code, I turn dreams into pixels, and pixels into reality.";
