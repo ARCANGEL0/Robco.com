@@ -305,7 +305,11 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 		inicio.onclick = () => {		
 		  
 		  
-		  // Create a new <p> element
+		  // Create a new <p> elemen
+		  const divinicio = document.createElement("div")
+		  divinicio.classList.add("divinicio")
+		  const divtextinicio = document.createElement("div")
+		  divtextinicio.classList.add("divtextinicio")
 const iniciotext = document.createElement("p");
 
 // Set the text for the <p> element
@@ -313,6 +317,18 @@ iniciotext.innerText = "🚀 Welcome to my digital playground! 🌟 I'm not just
 
 // Assuming you have a container div with an id of "portfolio" to append the <p> element to
 
+iniciotext.style.position = "absolute";
+iniciotext.style.top = "0";
+iniciotext.style.left = "0";
+iniciotext.style.width = "100%";
+iniciotext.style.height = "100%";
+iniciotext.style.margin = "0";
+iniciotext.style.padding = "20px"; // You can adjust padding as needed
+iniciotext.style.boxSizing = "border-box";
+iniciotext.style.overflow = "auto";
+
+iniciotext.appendChild(divtextinicio) 
+divtextinicio.appendChild(divinicio)
 
 		  const goBackLinkIn = document.createElement("a");
     goBackLinkIn.innerText = "[RETURN]";
