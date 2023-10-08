@@ -304,7 +304,7 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 		inicio.href = "#";
 		inicio.onclick = () => {		
 		  
-		  
+		  const gifImage = document.createElement("img");
 		  // Create a new <p> elemen
 		  const divinicio = document.createElement("div")
 		  divinicio.classList.add("divinicio")
@@ -319,11 +319,11 @@ iniciotext.innerText = "🚀 Welcome to my digital playground! 🌟 I'm not just
 
 // Assuming you have a container div with an id of "portfolio" to append the <p> element to
 
-const gifImage = document.createElement("img");
+
 gifImage.src = "../../images/Code.gif";
 
 // Append the image to divgif
-divgif.appendChild(gifImage);
+
 
 
 iniciotext.style.top = "0";
@@ -334,7 +334,8 @@ iniciotext.style.margin = "0";
 
 iniciotext.appendChild(divtextinicio) 
 divtextinicio.appendChild(divinicio)
-
+divgif.appendChild(divinicio)
+gifImage.appendChild(divgif)
 		  const goBackLinkIn = document.createElement("a");
     goBackLinkIn.innerText = "[RETURN]";
     goBackLinkIn.style.marginTop = "10px"
