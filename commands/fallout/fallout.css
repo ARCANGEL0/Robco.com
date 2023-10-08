@@ -155,8 +155,8 @@
 
 .cypher {
 	flex: 0 0 auto;
-	width: 80vw;
-	height: 60vh;
+	width: 20vw;
+	height: 50vh;
 	column-count: 2;
 	column-gap: 1ch;
 	column-fill: auto;
