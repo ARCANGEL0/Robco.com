@@ -39,6 +39,13 @@ export async function login() {
 
 /** Main input terminal, recursively calls itself */
 export async function main() { 
+type(
+			[
+				"        ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
+				`          COPYRIGHT 2075-2077 ROBCO INDUSTRIES`, `                        -SERVER 6- `, 
+				`____________________________________________________`, ` `, `ArcOS Shell`
+			])
+			type(`TYPE HELP TO SEE COMMANDS`)
 	let command = await input();
 	try {
 		await parse(command);
