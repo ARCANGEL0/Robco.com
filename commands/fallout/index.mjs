@@ -320,7 +320,7 @@ iniciotext.innerText = "🚀 Welcome to my digital playground! 🌟 I'm not just
 // Assuming you have a container div with an id of "portfolio" to append the <p> element to
 
 
-gifImage.src = "../../images/Code.gif";
+gifImage.src = "../images/Code.gif";
 
 // Append the image to divgif
 
@@ -336,6 +336,8 @@ iniciotext.appendChild(divtextinicio)
 divtextinicio.appendChild(divinicio)
 divgif.appendChild(divinicio)
 gifImage.appendChild(divgif)
+
+
 		  const goBackLinkIn = document.createElement("a");
     goBackLinkIn.innerText = "[RETURN]";
     goBackLinkIn.style.marginTop = "10px"
