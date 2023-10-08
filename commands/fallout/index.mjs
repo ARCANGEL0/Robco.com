@@ -361,7 +361,7 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
     terminal.remove();
 
     // Append the message and "Go Back" link to the 'outro' element
-type([iniciotext, goBackLinkIn], { processChars: false , wait: 10 }, outro);
+type([divinicio, goBackLinkIn], { processChars: false , wait: 10 }, outro);
     
 		
 		};
