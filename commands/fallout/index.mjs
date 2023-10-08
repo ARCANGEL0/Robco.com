@@ -320,7 +320,7 @@ iniciotext.innerText = "🚀 Welcome to my digital playground! 🌟 I'm not just
 // Assuming you have a container div with an id of "portfolio" to append the <p> element to
 
 
-gifImage.src = "images/Code.gif";
+gifImage.src = "../../images/Code.gif";
 
 // Append the image to divgif
 
@@ -361,7 +361,7 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
     terminal.remove();
 
     // Append the message and "Go Back" link to the 'outro' element
-type([divinicio, goBackLinkIn], { processChars: false , wait: 10 }, outro);
+type([gifImage, goBackLinkIn], { processChars: false , wait: 10 }, outro);
     
 		
 		};
