@@ -304,6 +304,31 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 		inicio.href = "#";
 		inicio.onclick = () => {		
 		  
+		  const goBackLinkIn = document.createElement("a");
+    goBackLinkIn.innerText = "[RETURN]";
+    goBackLinkIn.href = "#";
+    goBackLinkIn.onclick = () => {
+        // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
+        iniciotext.remove();
+        goBackLinkIn.remove();
+        // outro.appendChild(logout);
+        // outro.appendChild(contato);
+type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
+    };
+
+    // Remove the "Logout" and "Contact" buttons
+    inicio.remove();
+    sobre.remove();
+    galeria.remove();
+    logout.remove();
+    contato.remove();
+    idioma.remove();
+    terminal.remove();
+
+    // Append the message and "Go Back" link to the 'outro' element
+type([iniciotext, goBackLinkIn], { processChars: false , wait: 10 }, outro);
+    
+			
 		};
 		let logout = document.createElement("a");
 		logout.innerText = "[EXIT]";
