@@ -317,15 +317,12 @@ iniciotext.innerText = "🚀 Welcome to my digital playground! 🌟 I'm not just
 
 // Assuming you have a container div with an id of "portfolio" to append the <p> element to
 
-iniciotext.style.position = "absolute";
+
 iniciotext.style.top = "0";
 iniciotext.style.left = "0";
-iniciotext.style.width = "100%";
+iniciotext.style.width = "95vw";
 iniciotext.style.height = "100%";
 iniciotext.style.margin = "0";
-iniciotext.style.padding = "20px"; // You can adjust padding as needed
-iniciotext.style.boxSizing = "border-box";
-iniciotext.style.overflow = "auto";
 
 iniciotext.appendChild(divtextinicio) 
 divtextinicio.appendChild(divinicio)
