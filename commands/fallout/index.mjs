@@ -316,13 +316,13 @@ function calculateAge(birthDate) {
 var age = calculateAge(birthDate);
 
 sobretxt.innerText = `>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `;
-await type(sobretxt, { processChars: false , wait: 10 }, FAST, outro);
+await type(sobretxt, FAST, outro);
 
 sobretxt2.innerText= `>I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n 
 I create digital illustrations & arts and softwares, app's, websites and others.
                   Some of the technologies I generally use are: \n
        `
-       await type(sobretxt, { processChars: false , wait: 10 },FAST, outro);
+       await type(sobretxt,FAST, outro);
        
        technologies.innerText = `Frontend: Javascript ES6+, Vue.JS, Bootstrap,
                       React & Typescript
@@ -333,8 +333,8 @@ sobretxt3.innerText = `I do projects from simple dynamic websites to mobile app'
     Currently, I'm studying and specializing myself in Cybersecurity and Data Science`
 
 gifImage2.src = "../../images/Dog.gif";
-gifImage2.style.height = "10px"
-gifImage2.style.width = "10px"
+gifImage2.style.height = "50px"
+gifImage2.style.width = "50px"
 // Append the image to divgif
 
 
@@ -365,7 +365,7 @@ technologies.style.left = "0";
 technologies.style.width = "95vw";
 technologies.style.height = "100%";
 technologies.style.margin = "0";
-technologies.style.fontSize = "45%"
+technologies.style.fontSize = "75%"
 
 
 
@@ -453,7 +453,7 @@ iniciotext.style.left = "0";
 iniciotext.style.width = "87vw";
 iniciotext.style.height = "100%";
 iniciotext.style.margin = "0";
-
+divinicio.style.marginLeft = "8px"
 divinicio.appendChild(divtextinicio);
 divinicio.appendChild(divgif);
 divtextinicio.appendChild(iniciotext);
