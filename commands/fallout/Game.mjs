@@ -280,7 +280,7 @@ Game.prototype.start = async function() {
     );
 
     // Get list of words
-    let words = await fetch("data.txt").then(res => res.text());
+    let words = await fetch("../../util/words.txt").then(res => res.text());
         words = words.split(" ");
 
     // Get arrays of words of the same length, the object is indexed by word length
