@@ -444,7 +444,7 @@ gifImage.style.height= "50vh"
 
 iniciotext.style.top = "0";
 iniciotext.style.left = "0";
-iniciotext.style.width = "95vw";
+iniciotext.style.width = "87vw";
 iniciotext.style.height = "100%";
 iniciotext.style.margin = "0";
 
