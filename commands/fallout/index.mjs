@@ -280,12 +280,68 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 		sobre.innerText = "[ABOUT ME]";
 
 		sobre.href = "#";
-		sobre.onclick = () => {
-			
-		
+		sobre.onclick = () =>  {		
 		  
+		  const gifImage = document.createElement("img");
+		  // Create a new <p> elemen
+		  const divinicio = document.createElement("div")
+		  divinicio.classList.add("divinicio")
+		  const divtextinicio = document.createElement("div")
+		  divtextinicio.classList.add("divtextinicio") 
+		  const divgif = document.createElement("div")
+		  divgif.classList.add("divgif")
+const iniciotext = document.createElement("p");
+
+// Set the text for the <p> element
+iniciotext.innerText = "🚀 Welcome to my digital playground! 🌟 I'm not just a developer; I'm a creator of online experiences that leave a mark. With a dash of innovation and a sprinkle of code, I turn dreams into pixels, and pixels into reality.";
+
+// Assuming you have a container div with an id of "portfolio" to append the <p> element to
+
+
+gifImage.src = "../images/Dog.gif";
+
+// Append the image to divgif
+
+
+
+iniciotext.style.top = "0";
+iniciotext.style.left = "0";
+iniciotext.style.width = "95vw";
+iniciotext.style.height = "100%";
+iniciotext.style.margin = "0";
+
+iniciotext.appendChild(divtextinicio) 
+divtextinicio.appendChild(divinicio)
+divgif.appendChild(divinicio)
+gifImage.appendChild(divgif)
+
+
+		  const goBackLinkIn = document.createElement("a");
+    goBackLinkIn.innerText = "[RETURN]";
+    goBackLinkIn.style.marginTop = "10px"
+    goBackLinkIn.href = "#";
+    goBackLinkIn.onclick = () => {
+        // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
+        iniciotext.remove();
+        goBackLinkIn.remove();
+        // outro.appendChild(logout);
+        // outro.appendChild(contato);
+type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
+    };
+
+    // Remove the "Logout" and "Contact" buttons
+    inicio.remove();
+    sobre.remove();
+    galeria.remove();
+    logout.remove();
+    contato.remove();
+    idioma.remove();
+    terminal.remove();
+
+    // Append the message and "Go Back" link to the 'outro' element
+type([divinicio, goBackLinkIn], { processChars: false , wait: 10 }, outro);
+    
 		
-		  
 		};
 		let terminal = document.createElement("a");
 
@@ -365,6 +421,7 @@ type([divinicio, goBackLinkIn], { processChars: false , wait: 10 }, outro);
     
 		
 		};
+		
 		let logout = document.createElement("a");
 		logout.innerText = "[EXIT]";
 		logout.href = "#";
