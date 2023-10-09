@@ -281,8 +281,7 @@ Game.prototype.start = async function() {
 
     // Get list of words
     let words = await fetch("commands/fallout/data.txt").then(res => res.text());
-    let words = await fetch("commands/fallout/data.txt").then(res => res.text());
-    words = words.split(" ");
+        words = words.split(" ");
 
     // Get arrays of words of the same length, the object is indexed by word length
     let wordBucket = {};
