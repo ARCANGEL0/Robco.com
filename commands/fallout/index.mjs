@@ -282,21 +282,51 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 		sobre.href = "#";
 		sobre.onclick = () =>  {		
 		  
-		  const gifImage = document.createElement("img");
+		  const gifImage2 = document.createElement("img");
 		  // Create a new <p> elemen
-		  const divinicio = document.createElement("div")
-		  divinicio.classList.add("divinicio")
-		  const divtextinicio = document.createElement("div")
-		  divtextinicio.classList.add("divtextinicio") 
+		  const divsobre = document.createElement("div")
+		  divsobre.classList.add("divsobre")
+		  const divtextsobre = document.createElement("div")
+		  divtextsobre.classList.add("divtextsobre") 
 		  const divgif = document.createElement("div")
-		  divgif.classList.add("divgif")
-const iniciotext = document.createElement("p");
+		  divgif2.classList.add("divgif")
+const sobretxt = document.createElement("p");
+const sobretxt2 = document.createElement("p");
+const sobretxt3 = document.createElement("p");
+const technologies = document.createElement("p");
 
 // Set the text for the <p> element
-iniciotext.innerText = "🚀 Welcome to my digital playground! 🌟 I'm not just a developer; I'm a creator of online experiences that leave a mark. With a dash of innovation and a sprinkle of code, I turn dreams into pixels, and pixels into reality.";
 
-// Assuming you have a container div with an id of "portfolio" to append the <p> element to
+// Define  birthdate
+var birthDate = new Date("2000-09-11");
 
+// Function to calculate age
+function calculateAge(birthDate) {
+    var today = new Date();
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var monthDiff = today.getMonth() - birthDate.getMonth();
+
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
+    return age;
+}
+
+var age = calculateAge(birthDate);
+
+sobretxt.innerText = `>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `;
+sobretxt2.innerText= `>I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n 
+I create digital illustrations & arts and softwares, app's, websites and others.
+                  Some of the technologies I generally use are: \n
+       `
+       technologies.innerText = `Frontend: Javascript ES6+, Vue.JS, Bootstrap,
+                      React & Typescript
+                     \n  Backend:
+                      PHP (Including Laravel and CakePHP), Python & Flask, Node & Electron (for desktop build),and for databases I usually work with MySql, MongoDB, or Firebase`
+// o append the <p> element to
+sobretxt3.innerText = `I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \n 
+    Currently, I'm studying and specializing myself in Cybersecurity and Data Science`
 
 gifImage.src = "../images/Dog.gif";
 
@@ -304,26 +334,52 @@ gifImage.src = "../images/Dog.gif";
 
 
 
-iniciotext.style.top = "0";
-iniciotext.style.left = "0";
-iniciotext.style.width = "95vw";
-iniciotext.style.height = "100%";
-iniciotext.style.margin = "0";
-
-divinicio.appendChild(divtextinicio);
-divinicio.appendChild(divgif);
-divtextinicio.appendChild(iniciotext);
-divgif.appendChild(gifImage);
+sobretxt.style.top = "0";
+sobretxt.style.left = "0";
+sobretxt.style.width = "95vw";
+sobretxt.style.height = "100%";
+sobretxt.style.margin = "0";
 
 
-		  const goBackLinkIn = document.createElement("a");
-    goBackLinkIn.innerText = "[RETURN]";
-    goBackLinkIn.style.marginTop = "10px"
-    goBackLinkIn.href = "#";
-    goBackLinkIn.onclick = () => {
+sobretxt2.style.top = "0";
+
+sobretxt2.style.left = "0";
+
+sobretxt2.style.width = "95vw";
+sobretxt2.style.height = "100%";
+sobretxt2.style.margin = "0";
+
+sobretxt3.style.top = "0";
+sobretxt3.style.left = "0";
+sobretxt3.style.width = "95vw";
+sobretxt3.style.height = "100%";
+sobretxt3.style.margin = "0";
+
+technologies.style.top = "0";
+technologies.style.left = "0";
+technologies.style.width = "95vw";
+technologies.style.height = "100%";
+technologies.style.margin = "0";
+
+
+
+divsobre.appendChild(divtextsobre) ;
+divsobre.appendChild(divgif2);
+divtextsobre.appendChild(sobretxt);
+divtextsobre.appendChild(sobretxt2);
+divtextsobre.appendChild(technologies );
+divtextsobre.appendChild(sobretxt3);
+divgif2.appendChild(gifImage2);
+
+
+		  const backSobre = document.createElement("a");
+    backSobre.innerText = "[RETURN]";
+    backSobre.style.marginTop = "10px"
+    backSobre.href = "#";
+    backSobre.onclick = () => {
         // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
-        iniciotext.remove();
-        goBackLinkIn.remove();
+        divsobre.remove();
+        backSobre.remove();
         // outro.appendChild(logout);
         // outro.appendChild(contato);
 type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
@@ -339,7 +395,7 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
     terminal.remove();
 
     // Append the message and "Go Back" link to the 'outro' element
-type([divinicio, goBackLinkIn], { processChars: false , wait: 10 }, outro);
+type([divsobre, backSobre], { processChars: false , wait: 10 }, outro);
     
 		
 		};
@@ -400,7 +456,7 @@ divgif.appendChild(gifImage);
     goBackLinkIn.href = "#";
     goBackLinkIn.onclick = () => {
         // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
-        iniciotext.remove();
+        divinicio.remove();
         goBackLinkIn.remove();
         // outro.appendChild(logout);
         // outro.appendChild(contato);
