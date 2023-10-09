@@ -280,7 +280,7 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 		sobre.innerText = "[ABOUT ME]";
 
 		sobre.href = "#";
-		sobre.onclick = () =>  {		
+		sobre.onclick = async () =>  {		
 		  
 		  const gifImage2 = document.createElement("img");
 		  // Create a new <p> elemen
@@ -316,13 +316,13 @@ function calculateAge(birthDate) {
 var age = calculateAge(birthDate);
 
 sobretxt.innerText = `>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `;
-type(sobretxt, { processChars: false , wait: 10 }, outro);
+await type(sobretxt, { processChars: false , wait: 10 }, FAST, outro);
 
 sobretxt2.innerText= `>I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n 
 I create digital illustrations & arts and softwares, app's, websites and others.
                   Some of the technologies I generally use are: \n
        `
-       type(sobretxt, { processChars: false , wait: 10 }, outro);
+       await type(sobretxt, { processChars: false , wait: 10 },FAST, outro);
        
        technologies.innerText = `Frontend: Javascript ES6+, Vue.JS, Bootstrap,
                       React & Typescript
@@ -365,7 +365,7 @@ technologies.style.left = "0";
 technologies.style.width = "95vw";
 technologies.style.height = "100%";
 technologies.style.margin = "0";
-technologies.style.fontSize = "15%"
+technologies.style.fontSize = "45%"
 
 
 
