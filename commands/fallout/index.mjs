@@ -434,9 +434,10 @@ iniciotext.innerText = "🚀 Welcome to my digital playground! 🌟 I'm not just
 
 gifImage.src = "../images/Code.gif";
 
-gifImage.style.marginTop = "5px"
-gifImage.style.width = "80vw"
-gifImage.style.height= "25vh"
+gifImage.style.marginTop = "15px"
+gifImage.style.marginBottom= "15px"
+gifImage.style.width = "92vw"
+gifImage.style.height= "50vh"
 // Append the image to divgif
 
 
