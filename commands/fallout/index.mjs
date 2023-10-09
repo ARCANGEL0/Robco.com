@@ -90,7 +90,7 @@ async function outro() {
 		await type(
 			[
 				"        ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
-				`          COPYRIGHT 2075-2077 ROBCO INDUSTRIES`, `                        -SERVER 6- `, 
+				`          COPYRIGHT 2201-2203 ROBCO INDUSTRIES`, `                        -SERVER 6- `, 
 				`____________________________________________________`
 			],
 			FAST,
