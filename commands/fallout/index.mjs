@@ -453,7 +453,7 @@ iniciotext.style.left = "0";
 iniciotext.style.width = "87vw";
 iniciotext.style.height = "100%";
 iniciotext.style.margin = "0";
-divinicio.style.marginLeft = "8px"
+divinicio.style.marginLeft = "20px"
 divinicio.appendChild(divtextinicio);
 divinicio.appendChild(divgif);
 divtextinicio.appendChild(iniciotext);
