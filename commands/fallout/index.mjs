@@ -328,7 +328,7 @@ I create digital illustrations & arts and softwares, app's, websites and others.
 sobretxt3.innerText = `I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \n 
     Currently, I'm studying and specializing myself in Cybersecurity and Data Science`
 
-gifImage.src = "../images/Dog.gif";
+gifImage2.src = "../images/Dog.gif";
 
 // Append the image to divgif
 
