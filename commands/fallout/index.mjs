@@ -297,8 +297,7 @@ const technologies = document.createElement("p");
 
 // Set the text for the <p> element
 
-// Define  birthdate
-var birthDate = new Date("2000-09-11");
+// Define  birthdatevar birthDate = new Date("2000-09-11");
 
 // Function to calculate age
 function calculateAge(birthDate) {
@@ -313,13 +312,17 @@ function calculateAge(birthDate) {
     return age;
 }
 
+// Calculate age
 var age = calculateAge(birthDate);
 
 sobretxt.innerText = `>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `;
+type(sobretxt)
+
 sobretxt2.innerText= `>I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n 
 I create digital illustrations & arts and softwares, app's, websites and others.
                   Some of the technologies I generally use are: \n
        `
+       type(sobretxt2)
        technologies.innerText = `Frontend: Javascript ES6+, Vue.JS, Bootstrap,
                       React & Typescript
                      \n  Backend:
@@ -328,7 +331,7 @@ I create digital illustrations & arts and softwares, app's, websites and others.
 sobretxt3.innerText = `I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \n 
     Currently, I'm studying and specializing myself in Cybersecurity and Data Science`
 
-gifImage2.src = "../images/Dog.gif";
+gifImage2.src = "../../images/Dog.gif";
 
 // Append the image to divgif
 
