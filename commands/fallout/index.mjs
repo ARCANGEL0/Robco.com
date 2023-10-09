@@ -288,7 +288,7 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 		  divsobre.classList.add("divsobre")
 		  const divtextsobre = document.createElement("div")
 		  divtextsobre.classList.add("divtextsobre") 
-		  const divgif = document.createElement("div")
+		  const divgif2 = document.createElement("div")
 		  divgif2.classList.add("divgif")
 const sobretxt = document.createElement("p");
 const sobretxt2 = document.createElement("p");
