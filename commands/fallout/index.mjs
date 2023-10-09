@@ -388,11 +388,10 @@ iniciotext.style.width = "95vw";
 iniciotext.style.height = "100%";
 iniciotext.style.margin = "0";
 
-iniciotext.appendChild(divtextinicio) 
-gifImage.appendChild(divgif)
-divtextinicio.appendChild(divinicio)
-divgif.appendChild(divinicio)
-
+divinicio.appendChild(divtextinicio);
+divinicio.appendChild(divgif);
+divtextinicio.appendChild(iniciotext);
+divgif.appendChild(gifImage); 
 
 
 		  const goBackLinkIn = document.createElement("a");
