@@ -316,36 +316,36 @@ function calculateAge(birthDate) {
 var age = calculateAge(birthDate);
 
 sobretxt = `>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `;
- type(sobretxt, FAST, outro);
 
-// sobretxt2.innerText= `>I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n 
-// I create digital illustrations & arts and softwares, app's, websites and others.
-        //           Some of the technologies I generally use are: \n
-//   `
+
+sobretxt2.innerText= `>I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n 
+ I create digital illustrations & arts and softwares, app's, websites and others.
+                  Some of the technologies I generally use are: \n
+  `
     //    type(sobretxt,FAST, outro);
        
-    //   technologies.innerText = `Frontend: Javascript ES6+, Vue.JS, Bootstrap,
-    /*                  React & Typescript
+       technologies.innerText = `Frontend: Javascript ES6+, Vue.JS, Bootstrap,
+                     React & Typescript
                      \n  Backend:
                       PHP (Including Laravel and CakePHP), Python & Flask, Node & Electron (for desktop build),and for databases I usually work with MySql, MongoDB, or Firebase`
 // o append the <p> element to
-// sobretxt3.innerText = `I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \n 
+sobretxt3.innerText = `I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \n 
     Currently, I'm studying and specializing myself in Cybersecurity and Data Science`
-*/
+
 gifImage2.src = "../../images/Dog.gif";
 gifImage2.style.height = "50px"
 gifImage2.style.width = "50px"
 // Append the image to divgif
 
 
-/*
+
 sobretxt.style.top = "0";
 sobretxt.style.left = "0";
 sobretxt.style.width = "95vw";
 sobretxt.style.height = "100%";
 sobretxt.style.margin = "0";
 
-*/
+
 sobretxt2.style.top = "0";
 
 sobretxt2.style.left = "0";
@@ -371,10 +371,10 @@ technologies.style.fontSize = "75%"
 
 divsobre.appendChild(divtextsobre) ;
 divsobre.appendChild(divgif2);
-// divtextsobre.appendChild(sobretxt);
-// divtextsobre.appendChild(sobretxt2);
-// divtextsobre.appendChild(technologies );
-// divtextsobre.appendChild(sobretxt3);
+ divtextsobre.appendChild(sobretxt);
+divtextsobre.appendChild(sobretxt2);
+divtextsobre.appendChild(technologies );
+divtextsobre.appendChild(sobretxt3);
 divgif2.appendChild(gifImage2);
 
 
@@ -401,7 +401,7 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
     terminal.remove();
 
     // Append the message and "Go Back" link to the 'outro' element
-type([divsobre, backSobre], { processChars: false , wait: 10 }, outro);
+type([divsobre, backSobre], FAST, outro);
     
 		
 		};
