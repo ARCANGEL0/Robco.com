@@ -483,7 +483,7 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
     terminal.remove();
 
     // Append the message and "Go Back" link to the 'outro' element
-type([divinicio, goBackLinkIn], { processChars: false , wait: 10 }, outro);
+type([divinicio, goBackLinkIn], { processChars: true , wait: 10, initialWait: 10}, outro);
     
 		
 		};
