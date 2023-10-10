@@ -401,7 +401,7 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
     terminal.remove();
 
     // Append the message and "Go Back" link to the 'outro' element
-type([divsobre, backSobre], FAST, outro);
+type([divsobre, backSobre], {processChars: true , wait: 10, initialWait: 10}, outro);
     
 		
 		};
