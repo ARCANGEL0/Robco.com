@@ -315,7 +315,7 @@ function calculateAge(birthDate) {
 // Calculate age
 var age = calculateAge(birthDate);
 
-sobretxt = `>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `;
+sobretxt.innerText = `>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `;
 
 
 sobretxt2.innerText= `>I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n 
