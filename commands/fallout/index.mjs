@@ -281,8 +281,20 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 
 		sobre.href = "#";
 		sobre.onclick = async () =>  {		
+		
+		inicio.remove();
+
+    sobre.remove();
+
+    galeria.remove();
+    logout.remove();
+    contato.remove();
+    idioma.remove();
+    terminal.remove() 
+      );
+      const gifImage2 = document.createElement("img");
 		  /*
-		  const gifImage2 = document.createElement("img");
+		  
 		  // Create a new <p> elemen
 		  const divsobre = document.createElement("div")
 		  divsobre.classList.add("divsobre")
@@ -307,6 +319,7 @@ function calculateAge(birthDate) {
 
     if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
         age--;
+        
     }
 
     return age;
@@ -317,17 +330,21 @@ var age = calculateAge(birthDate);
 
 	await type(
 			[
-				">// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data ",
-				`I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n 
- I create digital illustrations & arts and softwares, app's, websites and others. Some of the technologies I generally use are: \n
-  `, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript
-\n  Backend: PHP (Including Laravel and CakePHP), Python & Flask, Node & Electron (for desktop build),and for databases I usually work with MySql, MongoDB, or Firebase`, 
-				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \n 
-    Currently, I'm studying and specializing myself in Cybersecurity and Data Science`
+				`>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `,
+				`I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n I create digital illustrations & arts and softwares, app's, websites and others. Some of the technologies I generally use are:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript\nBackend: PHP (Including Laravel and CakePHP), Python & Flask, Node & Electron (for desktop build),and for databases I usually work with MySql, MongoDB, or Firebase`, 
+				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`
 			],
 			FAST,
 			outro
 		);
+		
+		gifImage2.src = "../../images/Dog.gif";
+
+gifImage2.style.height = "50px"
+
+gifImage2.style.width = "50px"
+
+type(gifImage2, { processChars: false , wait: 10 }, outro);
 /*
 sobretxt.innerText = `>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `;
 
@@ -346,9 +363,7 @@ sobretxt2.innerText= `>I'm graduated in Software Development & Digital Design an
 sobretxt3.innerText = `I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \n 
     Currently, I'm studying and specializing myself in Cybersecurity and Data Science`
 
-gifImage2.src = "../../images/Dog.gif";
-gifImage2.style.height = "50px"
-gifImage2.style.width = "50px"
+
 // Append the image to divgif
 
 
@@ -406,19 +421,13 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
     };
 
     // Remove the "Logout" and "Contact" buttons
-    inicio.remove();
-    sobre.remove();
-    galeria.remove();
-    logout.remove();
-    contato.remove();
-    idioma.remove();
-    terminal.remove();
+    
 
     // Append the message and "Go Back" link to the 'outro' element
     
     
     
-await type(backSobre, { processChars: false , wait: 10 }, outro); 
+type(backSobre, { processChars: false , wait: 10 }, outro); 
 
 }
 		let terminal = document.createElement("a");
