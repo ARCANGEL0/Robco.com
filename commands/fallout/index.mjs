@@ -401,12 +401,12 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
     terminal.remove();
 
     // Append the message and "Go Back" link to the 'outro' element
-type([divsobre, backSobre], {processChars: true , wait: 10, initialWait: 10}, outro);
+type([divsobre, backSobre], {processChars: true wait: 10, initialWait: 10}, outro);
     
 		
 		};
 		let terminal = document.createElement("a");
-
+processChars: true , wait: 10, initialWait: 10
 		terminal.innerText = "[TERMINAL]";
 
 		terminal.href = "#";
@@ -483,7 +483,7 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
     terminal.remove();
 
     // Append the message and "Go Back" link to the 'outro' element
-type([divinicio, goBackLinkIn], { processChars: true , wait: 10, initialWait: 10}, outro);
+type([divinicio, goBackLinkIn], { processChars: false , wait: 10 }, outro);
     
 		
 		};
