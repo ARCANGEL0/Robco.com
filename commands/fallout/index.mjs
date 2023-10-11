@@ -402,12 +402,8 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
 
     // Append the message and "Go Back" link to the 'outro' element
 type([divsobre, backSobre], { processChars: false , wait: 10 }, outro);
-
-
-		
-		};
+}
 		let terminal = document.createElement("a");
-processChars: true , wait: 10, initialWait: 10
 		terminal.innerText = "[TERMINAL]";
 
 		terminal.href = "#";
