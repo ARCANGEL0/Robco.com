@@ -339,26 +339,27 @@ const technologies = document.createElement("p");
 */
 // Set the text for the <p> element
 
-const birthDate = new Date("2000-11-09");
+function calculateAge(birthdate) {
+  const today = new Date();
+  const birthDate = new Date(birthdate);
+  const age = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
 
-// Function to calculate age
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
 
-
-  function getAge() {
-    var today = new Date();
-    var birthDate = new Date(birthDate);
-    var age = today.getFullYear() - birthDate.getFullYear();
-    var m = today.getMonth() - birthDate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-        age--;
-    }
-    return age;
+  return age;
 }
+
+const birthdate = '2000-11-09'; // Replace with your birthdate in 'YYYY-MM-DD' format
+const age = calculateAge(birthdate);
+
 
 
 	await type(
 			[
-				`>// I'm Henry! I'm ${getAge()} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `,
+				`>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `,
 				`I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n I create digital illustrations & arts and softwares, app's, websites and others. Some of the technologies I generally use are:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript\nBackend: PHP (Including Laravel and CakePHP), Python & Flask, Node & Electron (for desktop build),and for databases I usually work with MySql, MongoDB, or Firebase`, 
 				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`
 			],
