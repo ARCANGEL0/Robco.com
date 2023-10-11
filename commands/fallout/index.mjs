@@ -293,7 +293,36 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
     terminal.remove() 
     logout.remove()
     
+    
+    const backSobre = document.createElement("a");
+    backSobre.innerText = "[RETURN]";
+    backSobre.style.marginTop = "10px"
+    backSobre.href = "#";
+    backSobre.onclick = () => {
+        // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
+        divsobre.remove();
+        backSobre.remove();
+        // outro.appendChild(logout);
+        // outro.appendChild(contato);
+type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
+    };
+
+    // Remove the "Logout" and "Contact" buttons
+    
+
+    // Append the message and "Go Back" link to the 'outro' element
+    
+    
+    
+type(backSobre, { processChars: false , wait: 10 }, outro); 
+
       const gifImage2 = document.createElement("img");
+      
+		gifImage2.src = "../../images/Dog.gif";
+
+gifImage2.style.height = "50px"
+
+gifImage2.style.width = "50px"
 		  /*
 		  
 		  // Create a new <p> elemen
@@ -333,20 +362,12 @@ var age = calculateAge(birthDate);
 			[
 				`>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `,
 				`I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n I create digital illustrations & arts and softwares, app's, websites and others. Some of the technologies I generally use are:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript\nBackend: PHP (Including Laravel and CakePHP), Python & Flask, Node & Electron (for desktop build),and for databases I usually work with MySql, MongoDB, or Firebase`, 
-				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`
+				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`,gifImage2,backSobre
 			],
 			FAST,
 			outro
 		);
-		
-		gifImage2.src = "../../images/Dog.gif";
-
-gifImage2.style.height = "50px"
-
-gifImage2.style.width = "50px"
-
-await type(gifImage2, { processChars: false , wait: 10 }, outro);
-/*
+		/*
 sobretxt.innerText = `>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `;
 
 
@@ -408,27 +429,7 @@ divtextsobre.appendChild(sobretxt3);
 divgif2.appendChild(gifImage2);
 
 */
-		  const backSobre = document.createElement("a");
-    backSobre.innerText = "[RETURN]";
-    backSobre.style.marginTop = "10px"
-    backSobre.href = "#";
-    backSobre.onclick = () => {
-        // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
-        divsobre.remove();
-        backSobre.remove();
-        // outro.appendChild(logout);
-        // outro.appendChild(contato);
-type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
-    };
-
-    // Remove the "Logout" and "Contact" buttons
-    
-
-    // Append the message and "Go Back" link to the 'outro' element
-    
-    
-    
-type(backSobre, { processChars: false , wait: 10 }, outro); 
+		  
 
 }
 		let terminal = document.createElement("a");
