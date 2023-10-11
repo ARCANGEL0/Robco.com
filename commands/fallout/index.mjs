@@ -291,7 +291,8 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
     contato.remove();
     idioma.remove();
     terminal.remove() 
-      );
+    logout.remove()
+    
       const gifImage2 = document.createElement("img");
 		  /*
 		  
