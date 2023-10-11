@@ -280,8 +280,8 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 		sobre.innerText = "[ABOUT ME]";
 
 		sobre.href = "#";
-		sobre.onclick = () =>  {		
-		  
+		sobre.onclick = async () =>  {		
+		  /*
 		  const gifImage2 = document.createElement("img");
 		  // Create a new <p> elemen
 		  const divsobre = document.createElement("div")
@@ -294,7 +294,7 @@ const sobretxt = document.createElement("p");
 const sobretxt2 = document.createElement("p");
 const sobretxt3 = document.createElement("p");
 const technologies = document.createElement("p");
-
+*/
 // Set the text for the <p> element
 
 const birthDate = new Date("2000-09-11");
@@ -315,6 +315,20 @@ function calculateAge(birthDate) {
 // Calculate age
 var age = calculateAge(birthDate);
 
+	await type(
+			[
+				">// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data ",
+				`I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n 
+ I create digital illustrations & arts and softwares, app's, websites and others. Some of the technologies I generally use are: \n
+  `, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript
+\n  Backend: PHP (Including Laravel and CakePHP), Python & Flask, Node & Electron (for desktop build),and for databases I usually work with MySql, MongoDB, or Firebase`, 
+				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \n 
+    Currently, I'm studying and specializing myself in Cybersecurity and Data Science`
+			],
+			FAST,
+			outro
+		);
+/*
 sobretxt.innerText = `>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `;
 
 
@@ -377,7 +391,7 @@ divtextsobre.appendChild(technologies );
 divtextsobre.appendChild(sobretxt3);
 divgif2.appendChild(gifImage2);
 
-
+*/
 		  const backSobre = document.createElement("a");
     backSobre.innerText = "[RETURN]";
     backSobre.style.marginTop = "10px"
@@ -401,7 +415,11 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
     terminal.remove();
 
     // Append the message and "Go Back" link to the 'outro' element
-type([divsobre, backSobre], { processChars: false , wait: 10 }, outro);
+    
+    
+    
+await type(backSobre, { processChars: false , wait: 10 }, outro); 
+
 }
 		let terminal = document.createElement("a");
 		terminal.innerText = "[TERMINAL]";
