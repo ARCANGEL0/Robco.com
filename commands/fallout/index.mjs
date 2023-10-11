@@ -345,7 +345,7 @@ gifImage2.style.height = "50px"
 
 gifImage2.style.width = "50px"
 
-type(gifImage2, { processChars: false , wait: 10 }, outro);
+await type(gifImage2, { processChars: false , wait: 10 }, outro);
 /*
 sobretxt.innerText = `>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `;
 
