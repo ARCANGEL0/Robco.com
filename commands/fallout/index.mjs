@@ -339,19 +339,19 @@ const technologies = document.createElement("p");
 */
 // Set the text for the <p> element
 
-const birthDate = new Date("2000-09-11");
+const birthDate = new Date("2000-11-09");
 
 // Function to calculate age
-function calculateAge(birthDate) {
+
+
+  function getAge() {
     var today = new Date();
+    var birthDate = new Date(birthDate);
     var age = today.getFullYear() - birthDate.getFullYear();
-    var monthDiff = today.getMonth() - birthDate.getMonth();
-
-    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
         age--;
-        
     }
-
     return age;
 }
 
@@ -359,10 +359,10 @@ function calculateAge(birthDate) {
 var age = calculateAge(birthDate);
 
 	await type(
-			[
+			[backSobre,
 				`>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `,
 				`I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n I create digital illustrations & arts and softwares, app's, websites and others. Some of the technologies I generally use are:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript\nBackend: PHP (Including Laravel and CakePHP), Python & Flask, Node & Electron (for desktop build),and for databases I usually work with MySql, MongoDB, or Firebase`, 
-				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`,gifImage2,backSobre
+				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`,gifImage2
 			],
 			FAST,
 			outro
