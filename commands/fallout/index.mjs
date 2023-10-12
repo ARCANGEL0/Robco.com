@@ -368,7 +368,7 @@ type([gifImage2, backSobre ], { processChars: false , wait: 10 }, divsobre);
 				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`
 			],
 			FAST,
-			outro
+			divsobre 
 		);
 	
 	
