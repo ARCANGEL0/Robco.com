@@ -297,7 +297,7 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
     logout.remove()
     
     var divsobre = document.getElementsByClassName("typer")[3];
-
+    divsobre.classList.add('divsob')
     const backSobre = document.createElement("a");
     backSobre.innerText = "[RETURN]";
     backSobre.style.marginTop = "10px"
