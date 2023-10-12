@@ -323,11 +323,13 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
 gifImage2.style.height = "50px"
 
 gifImage2.style.width = "50px"
-		  /*
 		  
-		  // Create a new <p> elemen
+		  
+		   
 		  const divsobre = document.createElement("div")
 		  divsobre.classList.add("divsobre")
+		  const sobrecont = document.querySelector(".divsobre")
+		 /*
 		  const divtextsobre = document.createElement("div")
 		  divtextsobre.classList.add("divtextsobre") 
 		  const divgif2 = document.createElement("div")
@@ -364,10 +366,10 @@ const age = calculateAge(birthdate);
 				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`
 			],
 			FAST,
-			divsobre
+			sobrecont
 		);
 	
-	type([gifImage2, backSobre ], { processChars: false , wait: 10 }, divsobre);
+	type([gifImage2, backSobre ], { processChars: false , wait: 10 }, sobrecont);
 	
 		/*
 sobretxt.innerText = `>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `;
