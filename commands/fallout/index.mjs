@@ -314,7 +314,7 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
     
     
     
-type(backSobre, { processChars: false , wait: 10 }, outro); 
+
 
       const gifImage2 = document.createElement("img");
       
