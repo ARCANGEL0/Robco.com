@@ -296,7 +296,7 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
     terminal.remove() 
     logout.remove()
     
-    var divsobre = document.getElementsByClassName("typer")[3];
+    var divsobre = document.getElementsByClassName("typer")[4];
     divsobre.classList.add('divsob')
     const backSobre = document.createElement("a");
     backSobre.innerText = "[RETURN]";
@@ -359,7 +359,7 @@ function calculateAge(birthdate) {
 const birthdate = '2000-11-09'; // Replace with your birthdate in 'YYYY-MM-DD' format
 const age = calculateAge(birthdate);
 
-
+type([gifImage2, backSobre ], { processChars: false , wait: 10 }, divsobre);
 
 	await type(
 			[
@@ -371,7 +371,7 @@ const age = calculateAge(birthdate);
 			outro
 		);
 	
-	type([gifImage2, backSobre ], { processChars: false , wait: 10 }, divsobre);
+	
 	
 		/*
 sobretxt.innerText = `>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `;
