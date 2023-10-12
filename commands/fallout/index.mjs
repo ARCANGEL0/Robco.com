@@ -366,10 +366,10 @@ const age = calculateAge(birthdate);
 				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`
 			],
 			FAST,
-			sobrecont
+			divsobre
 		);
 	
-	type([gifImage2, backSobre ], { processChars: false , wait: 10 }, sobrecont);
+	type([gifImage2, backSobre ], { processChars: false , wait: 10 }, divsobre);
 	
 		/*
 sobretxt.innerText = `>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `;
