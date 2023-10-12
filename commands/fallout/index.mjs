@@ -293,14 +293,17 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
     terminal.remove() 
     logout.remove()
     
-    
+var elementsWithtyperClass = document.getElementsByClassName('typer');
+if (elementsWithtyperClass.length >= 4) {
+  var pagetxt = elementsWithtyperClass[3];
+
     const backSobre = document.createElement("a");
     backSobre.innerText = "[RETURN]";
     backSobre.style.marginTop = "10px"
     backSobre.href = "#";
     backSobre.onclick = () => {
         // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
-        divsobre.remove();
+        pagetxt.remove();
         backSobre.remove();
         // outro.appendChild(logout);
         // outro.appendChild(contato);
@@ -366,7 +369,7 @@ const age = calculateAge(birthdate);
 				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`
 			],
 			FAST,
-			divsobre
+			outro
 		);
 	
 	type([gifImage2, backSobre ], { processChars: false , wait: 10 }, divsobre);
