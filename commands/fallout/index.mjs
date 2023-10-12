@@ -282,6 +282,9 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 		sobre.href = "#";
 		sobre.onclick = async () =>  {		
 		
+		
+		
+		
 		inicio.remove();
 
     sobre.remove();
@@ -293,17 +296,15 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
     terminal.remove() 
     logout.remove()
     
-var elementsWithtyperClass = document.getElementsByClassName('typer');
-if (elementsWithtyperClass.length >= 4) {
-  var pagetxt = elementsWithtyperClass[3];
-}
+    var divsobre = document.getElementsByClassName("typer")[3];
+
     const backSobre = document.createElement("a");
     backSobre.innerText = "[RETURN]";
     backSobre.style.marginTop = "10px"
     backSobre.href = "#";
     backSobre.onclick = () => {
         // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
-        pagetxt.remove();
+        divsobre.remove();
         backSobre.remove();
         // outro.appendChild(logout);
         // outro.appendChild(contato);
@@ -329,9 +330,7 @@ gifImage2.style.width = "50px"
 		  
 		  
 		   
-		  const divsobre = document.createElement("div")
-		  divsobre.classList.add("divsobre")
-		  const sobrecont = document.querySelector(".divsobre")
+		  
 		 /*
 		  const divtextsobre = document.createElement("div")
 		  divtextsobre.classList.add("divtextsobre") 
