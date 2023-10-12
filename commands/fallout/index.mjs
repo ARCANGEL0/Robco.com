@@ -296,7 +296,7 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 var elementsWithtyperClass = document.getElementsByClassName('typer');
 if (elementsWithtyperClass.length >= 4) {
   var pagetxt = elementsWithtyperClass[3];
-
+}
     const backSobre = document.createElement("a");
     backSobre.innerText = "[RETURN]";
     backSobre.style.marginTop = "10px"
