@@ -359,7 +359,10 @@ function calculateAge(birthdate) {
 const birthdate = '2000-11-09'; // Replace with your birthdate in 'YYYY-MM-DD' format
 const age = calculateAge(birthdate);
 
-type([gifImage2, backSobre ], { processChars: false , wait: 10 }, divsobre);
+
+divsobre.appendChild(gifImage2)
+divsobre.appendChild(backSobre)
+
 
 	await type(
 			[
