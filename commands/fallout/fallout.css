@@ -215,7 +215,7 @@ height: 60vh !important;
 	word-break: break-all;
 	outline: none;
 }
-.techtxt {
+.divsob .typer:nth-child(3) {
   font-size: 30%;
   
 }
