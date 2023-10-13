@@ -3,10 +3,10 @@
   /* Your CSS rules for Galaxy S5 go here */
  .divsob {
    padding: 10px;
-   max-width: 90%;
+   width: 80%;
    overflow: hidden;
    margin: 0;
-   white-space: nowrap;
+   overflow-wrap: break-word;
  }
   .cypher,
     .intro,
@@ -55,10 +55,10 @@
  .divsob {
 
    padding: 10px;
-   max-width: 90%;
+   width: 80%;
    overflow: hidden;
    margin: 0;
-   white-space: nowrap;
+   overflow-wrap: break-word;
 }
  .cypher {
    height: 60vh !important;
@@ -123,10 +123,10 @@ height: 60vh !important;
     /* Your CSS rules for Galaxy S5 go here */
  .divsob {
    padding: 10px;
-   max-width: 90%;
+   width: 80%;
    overflow: hidden;
    margin: 0;
-   white-space: nowrap;
+   overflow-wrap: break-word;
   
  }
   .cypher,
