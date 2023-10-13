@@ -215,7 +215,10 @@ height: 60vh !important;
 	word-break: break-all;
 	outline: none;
 }
-
+.techtxt {
+  font-size: 30%;
+  
+}
 .hide {
 	visibility: hidden;
 }
