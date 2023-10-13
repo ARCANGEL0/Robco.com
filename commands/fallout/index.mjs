@@ -297,6 +297,14 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
     logout.remove()
     
     var divsobre = document.getElementsByClassName("typer")[4];
+    
+
+    
+    var typerElements = divsobre.getElementsByClassName("typer");
+
+// Access the third "typer" element (remember, the index is zero-based)
+var tech = typerElements[2];
+tech.classList.add("techtxt")
     divsobre.classList.add('divsob')
     const backSobre = document.createElement("a");
     backSobre.innerText = "[RETURN]";
