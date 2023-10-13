@@ -215,8 +215,8 @@ height: 60vh !important;
 	word-break: break-all;
 	outline: none;
 }
-.divsob .typer:nth-child(3) {
-  font-size: 30%;
+.divsob .typer:nth-child(4) {
+  font-size: 75%;
   
 }
 .hide {
