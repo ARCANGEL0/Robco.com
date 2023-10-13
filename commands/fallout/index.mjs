@@ -328,8 +328,8 @@ gifImage2.style.height = "70px"
 
 gifImage2.style.width = "70px"
 		  
-gifImage.style.display = "block";
-gifImage.style.margin = "0 auto";
+gifImage2.style.display = "block";
+gifImage2.style.margin = "0 auto";
 		   
 		  
 		 /*
