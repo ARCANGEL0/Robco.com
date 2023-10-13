@@ -324,11 +324,12 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
       
 		gifImage2.src = "../../images/Dog.gif";
 
-gifImage2.style.height = "50px"
+gifImage2.style.height = "70px"
 
-gifImage2.style.width = "50px"
+gifImage2.style.width = "70px"
 		  
-		  
+gifImage.style.display = "block";
+gifImage.style.margin = "0 auto";
 		   
 		  
 		 /*
@@ -373,7 +374,7 @@ divsobre.appendChild(backSobre)
 			FAST,
 			divsobre 
 		);
-divsobre.appendChild(backSobre)
+divsobre.appendChild(gifImage2)
 	
 	
 		/*
