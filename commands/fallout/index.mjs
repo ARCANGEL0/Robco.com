@@ -373,7 +373,7 @@ divsobre.appendChild(backSobre)
 			FAST,
 			divsobre 
 		);
-divsobre.appendChild(gifImage2)
+divsobre.appendChild(backSobre)
 	
 	
 		/*
