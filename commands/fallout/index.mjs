@@ -302,7 +302,7 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
     
     
 // Access the third "typer" element (remember, the index is zero-based)
-document.getElementsByClassName('divsob'.getElementsByClassName('typer')[2].classList.add('techtxt')
+document.getElementsByClassName('divsob').getElementsByClassName('typer')[2].classList.add('techtxt')
     divsobre.classList.add('divsob')
     const backSobre = document.createElement("a");
     backSobre.innerText = "[RETURN]";
