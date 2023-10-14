@@ -301,10 +301,22 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
 
 		  
 		// Array de URLs de imagens
-const videoUrls = [
-    '../../images/Dog.gif',
-    '../../images/Dog.gif',
-    '../../images/Dog.gif',
+const VideosUrls = [
+    '../../images/gallery/alpha2.mp4',
+    '../../images/gallery/Videos/lna.mp4',
+    '../../images/gallery/Videos/lnadigital.mp4',
+      '../../images/gallery/Videos/escoteiros.mp4',
+    '../../images/gallery/Videos/arcUI.mp4',
+    '../../images/gallery/Videos/hadesign.mp4',
+        '../../images/gallery/Videos/GreenWaste.mp4',
+    '../../images/gallery/Videos/arcUI.mp4',
+
+    '../../images/gallery/Videos/pong.mp4',
+
+
+
+
+
 ];
 
 // Crie um div para conter o carrossel
@@ -320,14 +332,14 @@ carousel.style.display = 'flex';
 carousel.style.transition = 'transform 0.5s';
 
 // Crie elementos de imagem e adicione-os ao carrossel
-videoUrls.forEach((videoUrl) => {
-    const video = document.createElement('video');
-    video.src = videoUrl;
-    video.style.width = '75%';
-    video.style.height = 'auto';
-    video.setAttribute('controls', true); // Add controls for the video
-    carousel.appendChild(video);
-});. 
+VideosUrls.forEach((VideosUrl) => {
+    const Videos = document.createElement('video');
+    Videos.src = VideosUrl;
+    Videos.style.width = '75%';
+    Videos.style.height = 'auto';
+    Videos.setAttribute('controls', true); // Add controls for the Videos
+    carousel.appendChild(Videos);
+});
 
 
 // Crie botões para navegar no carrossel
@@ -345,9 +357,9 @@ nextButton.addEventListener('click', () => showSlide(currentIndex + 1));
 let currentIndex = 0;
 function showSlide(index) {
     if (index < 0) {
-        index = imageUrls.length - 1;
+        index = VideosUrls.length - 1;
     }
-    if (index >= imageUrls.length) {
+    if (index >= VideosUrls.length) {
         index = 0;
     }
 
