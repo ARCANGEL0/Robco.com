@@ -302,9 +302,9 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
 		  
 		// Array de URLs de imagens
 const imageUrls = [
-    'image1.jpg',
-    'image2.jpg',
-    'image3.jpg',
+    '../../images/Dog.gif',
+    '../../images/Dog.gif',
+    '../../images/Dog.gif',
 ];
 
 // Crie um div para conter o carrossel
@@ -358,7 +358,7 @@ showSlide(currentIndex);
 
 // Adicione todos os elementos ao documento
 carouselContainer.appendChild(carousel);
-divgal.appendChild(carouselContainer);
+divgalleryl.appendChild(carouselContainer);
 divgallery.appendChild(prevButton);
 divgallery.appendChild(nextButton);
 		  
