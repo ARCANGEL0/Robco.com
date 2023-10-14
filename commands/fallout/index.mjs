@@ -301,7 +301,7 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
 
 		  
 		// Array de URLs de imagens
-const imageUrls = [
+const videoUrls = [
     '../../images/Dog.gif',
     '../../images/Dog.gif',
     '../../images/Dog.gif',
@@ -320,13 +320,15 @@ carousel.style.display = 'flex';
 carousel.style.transition = 'transform 0.5s';
 
 // Crie elementos de imagem e adicione-os ao carrossel
-imageUrls.forEach((imageUrl) => {
-    const img = document.createElement('img');
-    img.src = imageUrl;
-    img.style.width = '75%';
-    img.style.height = 'auto';
-    carousel.appendChild(img);
-});
+videoUrls.forEach((videoUrl) => {
+    const video = document.createElement('video');
+    video.src = videoUrl;
+    video.style.width = '75%';
+    video.style.height = 'auto';
+    video.setAttribute('controls', true); // Add controls for the video
+    carousel.appendChild(video);
+});. 
+
 
 // Crie botões para navegar no carrossel
 const prevButton = document.createElement('button');
