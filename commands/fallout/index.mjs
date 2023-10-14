@@ -285,14 +285,14 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
     
 // Access the third "typer" element (remember, the index is zero-based)
 
-    divsobre.classList.add('divgal')
+    divgallery.classList.add('divgal')
     const backSobre = document.createElement("a");
     backSobre.innerText = "[RETURN]";
     backSobre.style.marginTop = "10px"
     backSobre.href = "#";
     backSobre.onclick = () => {
         // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
-        divsobre.remove();
+        divgallery.remove();
         backSobre.remove();
         // outro.appendChild(logout);
         // outro.appendChild(contato);
@@ -358,7 +358,7 @@ showSlide(currentIndex);
 
 // Adicione todos os elementos ao documento
 carouselContainer.appendChild(carousel);
-divgalleryl.appendChild(carouselContainer);
+divgallery.appendChild(carouselContainer);
 divgallery.appendChild(prevButton);
 divgallery.appendChild(nextButton);
 		  
