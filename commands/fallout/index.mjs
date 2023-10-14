@@ -286,14 +286,14 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 // Access the third "typer" element (remember, the index is zero-based)
 
     divgallery.classList.add('divgal')
-    const backSobre = document.createElement("a");
-    backSobre.innerText = "[RETURN]";
-    backSobre.style.marginTop = "10px"
-    backSobre.href = "#";
-    backSobre.onclick = () => {
+    const backGal = document.createElement("a");
+    backGal.innerText = "[RETURN]";
+    backGal.style.marginTop = "10px"
+    backGal.href = "#";
+    backGal.onclick = () => {
         // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
         divgallery.remove();
-        backSobre.remove();
+        backGal.remove();
         // outro.appendChild(logout);
         // outro.appendChild(contato);
 type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
@@ -310,7 +310,7 @@ const imageUrls = [
 // Crie um div para conter o carrossel
 const carouselContainer = document.createElement('div');
 carouselContainer.className = 'carousel-container';
-carouselContainer.style.width = '300px';
+carouselContainer.style.width = '80%';
 carouselContainer.style.overflow = 'hidden';
 
 // Crie um div para as imagens
@@ -323,7 +323,7 @@ carousel.style.transition = 'transform 0.5s';
 imageUrls.forEach((imageUrl) => {
     const img = document.createElement('img');
     img.src = imageUrl;
-    img.style.width = '100%';
+    img.style.width = '75%';
     img.style.height = 'auto';
     carousel.appendChild(img);
 });
@@ -331,12 +331,12 @@ imageUrls.forEach((imageUrl) => {
 // Crie botões para navegar no carrossel
 const prevButton = document.createElement('button');
 prevButton.className = 'carousel-button';
-prevButton.textContent = 'Anterior';
+prevButton.textContent = 'Previous';
 prevButton.addEventListener('click', () => showSlide(currentIndex - 1));
 
 const nextButton = document.createElement('button');
 nextButton.className = 'carousel-button';
-nextButton.textContent = 'Próximo';
+nextButton.textContent = 'Next';
 nextButton.addEventListener('click', () => showSlide(currentIndex + 1));
 
 // Função para mostrar um slide
@@ -358,6 +358,7 @@ showSlide(currentIndex);
 
 // Adicione todos os elementos ao documento
 carouselContainer.appendChild(carousel);
+divgallery.appendChild(backGal)
 divgallery.appendChild(carouselContainer);
 divgallery.appendChild(prevButton);
 divgallery.appendChild(nextButton);
