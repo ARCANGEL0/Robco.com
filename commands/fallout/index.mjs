@@ -317,9 +317,7 @@ const VideosUrls = [
 
 
 
-];
-
-// Crie um div para conter o carrossel
+];// Crie um div para conter o carrossel
 const carouselContainer = document.createElement('div');
 carouselContainer.className = 'carousel-container';
 carouselContainer.style.width = '80%';
@@ -331,16 +329,19 @@ carousel.className = 'carousel';
 carousel.style.display = 'flex';
 carousel.style.transition = 'transform 0.5s';
 
-// Crie elementos de imagem e adicione-os ao carrossel
-VideosUrls.forEach((VideosUrl) => {
-    const Videos = document.createElement('video');
-    Videos.src = VideosUrl;
-    Videos.style.width = '75%';
-    Videos.style.height = 'auto';
-    Videos.setAttribute('controls', true); // Add controls for the Videos
-    carousel.appendChild(Videos);
-});
+// Crie elementos de vídeo e adicione-os ao carrossel
+videoUrls.forEach((videoUrl) => {
+    const video = document.createElement('video');
+    video.src = videoUrl;
+    video.style.width = '75%';
+    video.style.height = 'auto';
+    video.setAttribute('controls', false);
+    video.setAttribute('autoplay', true);
+    video.style.display = 'none'; // Adicione essa linha para ocultar os vídeos
 
+    // Adicione controls para o vídeo
+    carousel.appendChild(video);
+});
 
 // Crie botões para navegar no carrossel
 const prevButton = document.createElement('button');
@@ -357,13 +358,23 @@ nextButton.addEventListener('click', () => showSlide(currentIndex + 1));
 let currentIndex = 0;
 function showSlide(index) {
     if (index < 0) {
-        index = VideosUrls.length - 1;
+        index = videoUrls.length - 1;
     }
-    if (index >= VideosUrls.length) {
+    if (index >= videoUrls.length) {
         index = 0;
     }
 
+    // Ocultar todos os vídeos
+    videoUrls.forEach((videoUrl, i) => {
+        const video = carousel.children[i];
+        video.style.display = 'none';
+    });
+
+    // Mostrar apenas o vídeo atual
     currentIndex = index;
+    const video = carousel.children[currentIndex];
+    video.style.display = 'block';
+
     const offset = -currentIndex * 300;
     carousel.style.transform = `translateX(${offset}px)`;
 }
@@ -372,12 +383,10 @@ showSlide(currentIndex);
 
 // Adicione todos os elementos ao documento
 carouselContainer.appendChild(carousel);
-divgallery.appendChild(backGal)
+divgallery.appendChild(backGal);
 divgallery.appendChild(carouselContainer);
 divgallery.appendChild(prevButton);
 divgallery.appendChild(nextButton);
-		  
-		  
 		  
 		}; // function end fim galeriq
 		
