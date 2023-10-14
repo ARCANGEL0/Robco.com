@@ -300,7 +300,67 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
     };
 
 		  
-		
+		// Array de URLs de imagens
+const imageUrls = [
+    'image1.jpg',
+    'image2.jpg',
+    'image3.jpg',
+];
+
+// Crie um div para conter o carrossel
+const carouselContainer = document.createElement('div');
+carouselContainer.className = 'carousel-container';
+carouselContainer.style.width = '300px';
+carouselContainer.style.overflow = 'hidden';
+
+// Crie um div para as imagens
+const carousel = document.createElement('div');
+carousel.className = 'carousel';
+carousel.style.display = 'flex';
+carousel.style.transition = 'transform 0.5s';
+
+// Crie elementos de imagem e adicione-os ao carrossel
+imageUrls.forEach((imageUrl) => {
+    const img = document.createElement('img');
+    img.src = imageUrl;
+    img.style.width = '100%';
+    img.style.height = 'auto';
+    carousel.appendChild(img);
+});
+
+// Crie botões para navegar no carrossel
+const prevButton = document.createElement('button');
+prevButton.className = 'carousel-button';
+prevButton.textContent = 'Anterior';
+prevButton.addEventListener('click', () => showSlide(currentIndex - 1));
+
+const nextButton = document.createElement('button');
+nextButton.className = 'carousel-button';
+nextButton.textContent = 'Próximo';
+nextButton.addEventListener('click', () => showSlide(currentIndex + 1));
+
+// Função para mostrar um slide
+let currentIndex = 0;
+function showSlide(index) {
+    if (index < 0) {
+        index = imageUrls.length - 1;
+    }
+    if (index >= imageUrls.length) {
+        index = 0;
+    }
+
+    currentIndex = index;
+    const offset = -currentIndex * 300;
+    carousel.style.transform = `translateX(${offset}px)`;
+}
+
+showSlide(currentIndex);
+
+// Adicione todos os elementos ao documento
+carouselContainer.appendChild(carousel);
+divgal.appendChild(carouselContainer);
+divgallery.appendChild(prevButton);
+divgallery.appendChild(nextButton);
 		  
 		  
 		  
