@@ -267,11 +267,44 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 		galeria.href = "#";
 		galeria.onclick = () => {
 			
-		
+		inicio.remove();
+
+    sobre.remove();
+
+    galeria.remove();
+    logout.remove();
+    contato.remove();
+    idioma.remove();
+    terminal.remove() 
+    logout.remove()
+    
+    var divgallery = document.getElementsByClassName("typer")[4];
+    
+
+    
+    
+// Access the third "typer" element (remember, the index is zero-based)
+
+    divsobre.classList.add('divgal')
+    const backSobre = document.createElement("a");
+    backSobre.innerText = "[RETURN]";
+    backSobre.style.marginTop = "10px"
+    backSobre.href = "#";
+    backSobre.onclick = () => {
+        // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
+        divsobre.remove();
+        backSobre.remove();
+        // outro.appendChild(logout);
+        // outro.appendChild(contato);
+type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
+    };
+
 		  
 		
 		  
-		};
+		  
+		  
+		}; // function end fim galeriq
 		
 		let sobre = document.createElement("a");
 
