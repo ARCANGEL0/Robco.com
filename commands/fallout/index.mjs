@@ -266,7 +266,10 @@ const backLang = document.createElement("a");
     backLang.href = "#";
     backLang.onclick = () => {
         // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
-        message.remove();
+        port.remove();
+        spa.remove();
+        eng.remove()
+        fra.remove()
         backLang.remove();
         // outro.appendChild(logout);
         // outro.appendChild(contato);
