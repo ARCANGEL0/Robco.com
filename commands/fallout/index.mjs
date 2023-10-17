@@ -97,10 +97,14 @@ async function outro() {
 			outro
 		);
 
-
-
+let btnhome ='[HOME]'
+let btnsobre ='[ABOUT]'
+let btngal ='[GALLERY]'
+let btncontact ='[CONTACT]'
+  let btnlang = '[IDIOMA/LANGUE]'
+  let btnreturm ='[RETURN]'
 let contato = document.createElement("a");
-		contato.innerText = "[CONTACT]";
+		contato.innerText = btncontact;
 		contato.href = "#";
 		contato.onclick = () => {
 			// remove all a tags and put a text with p and an a tag in the end to take back to preciois page.. Remove text and restore a tag buttons 
@@ -220,7 +224,7 @@ message.appendChild(contactForm);
 
     // Create a "Go Back" <a> tag
     const goBackLink = document.createElement("a");
-    goBackLink.innerText = "[RETURN]";
+    goBackLink.innerText = btnreturn;
     goBackLink.href = "#";
     goBackLink.onclick = () => {
         // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
@@ -250,7 +254,7 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 
 
 
-		idioma.innerText = "[IDIOMA/LANGUE]";
+		idioma.innerText = btnlang;
 
 		idioma.href = "#";
 		idioma.onclick = () => {
@@ -258,7 +262,7 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 			
 			
 const backLang = document.createElement("a");
-    backLang.innerText = "[RETURN]";
+    backLang.innerText = btnreturn;
     backLang.href = "#";
     backLang.onclick = () => {
         // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
@@ -306,7 +310,7 @@ type([backLang,port, eng, spa, fre], { processChars: false , wait: 10 }, outro);
 
 
 
-		galeria.innerText = "[GALLERY]";
+		galeria.innerText = btngal;
 
 		galeria.href = "#";
 		galeria.onclick = () => {
@@ -331,7 +335,7 @@ type([backLang,port, eng, spa, fre], { processChars: false , wait: 10 }, outro);
 
     divgallery.classList.add('divgal')
     const backGal = document.createElement("a");
-    backGal.innerText = "[RETURN]";
+    backGal.innerText = btnreturn;
     backGal.style.marginTop = "10px"
     backGal.href = "#";
     backGal.onclick = () => {
@@ -345,7 +349,7 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
 
 		  
 		// Array de URLs de imagens
-const VideosUrls = [
+const VideosUrl = [
     '../../images/gallery/alpha2.mp4',
     '../../images/gallery/Videos/lna.mp4',
     '../../images/gallery/Videos/lnadigital.mp4',
@@ -374,7 +378,7 @@ carousel.style.display = 'flex';
 carousel.style.transition = 'transform 0.5s';
 
 // Crie elementos de vídeo e adicione-os ao carrossel
-VideosUrls.forEach((videoUrl) => {
+VideosUrl.forEach((videoUrl) => {
     const video = document.createElement('video');
     video.src = videoUrl;
     video.style.width = '75%';
@@ -402,14 +406,14 @@ nextButton.addEventListener('click', () => showSlide(currentIndex + 1));
 let currentIndex = 0;
 function showSlide(index) {
     if (index < 0) {
-        index = videoUrls.length - 1;
+        index = VideosUrl.length - 1;
     }
-    if (index >= videoUrls.length) {
+    if (index >= VideosUrl.length) {
         index = 0;
     }
 
     // Ocultar todos os vídeos
-    videoUrls.forEach((videoUrl, i) => {
+    VideosUrl.forEach((videoUrl, i) => {
         const video = carousel.children[i];
         video.style.display = 'none';
     });
@@ -438,7 +442,7 @@ divgallery.appendChild(nextButton);
 
 
 
-		sobre.innerText = "[ABOUT ME]";
+		sobre.innerText = btnsobre;
 
 		sobre.href = "#";
 		sobre.onclick = async () =>  {		
@@ -466,7 +470,7 @@ divgallery.appendChild(nextButton);
 
     divsobre.classList.add('divsob')
     const backSobre = document.createElement("a");
-    backSobre.innerText = "[RETURN]";
+    backSobre.innerText = btnreturn;
     backSobre.style.marginTop = "10px"
     backSobre.href = "#";
     backSobre.onclick = () => {
@@ -620,7 +624,7 @@ divgif2.appendChild(gifImage2);
 		
 			let inicio = document.createElement("a");
 
-		inicio.innerText = "[HOME]";
+		inicio.innerText = btnhome;
 
 		inicio.href = "#";
 		inicio.onclick = () => {		
@@ -664,7 +668,7 @@ divgif.appendChild(gifImage);
 
 
 		  const goBackLinkIn = document.createElement("a");
-    goBackLinkIn.innerText = "[RETURN]";
+    goBackLinkIn.innerText = btnreturn;
     goBackLinkIn.style.marginTop = "10px"
     goBackLinkIn.href = "#";
     goBackLinkIn.onclick = () => {
@@ -692,7 +696,7 @@ type([divinicio, goBackLinkIn], { processChars: false , wait: 10 }, outro);
 		};
 		
 		let logout = document.createElement("a");
-		logout.innerText = "[EXIT]";
+		logout.innerText = "[LOGOUT]";
 		logout.href = "#";
 		logout.onclick = () => {
 			outro.remove();
