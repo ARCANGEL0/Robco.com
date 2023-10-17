@@ -255,7 +255,51 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 		idioma.href = "#";
 		idioma.onclick = () => {
 			
+			
+			
+const backLang = document.createElement("a");
+    backLang.innerText = "[RETURN]";
+    backLang.href = "#";
+    backLang.onclick = () => {
+        // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
+        message.remove();
+        backLang.remove();
+        // outro.appendChild(logout);
+        // outro.appendChild(contato);
+type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
+    };
+
+    // Remove the "Logout" and "Contact" buttons
+    inicio.remove();
+    sobre.remove();
+    galeria.remove();
+    logout.remove();
+    contato.remove();
+    idioma.remove();
+    terminal.remove();
+
+
+let port = document.createElement("a");
+		port.innerText = "[PORTUGUÊS]";
+		port.href = "#";
+		port.onclick = () => { }
 		
+let eng = document.createElement("a");
+		eng.innerText = "[ENGLISH]";
+		eng.href = "#";
+		eng.onclick = () => { }
+		
+let spa = document.createElement("a");
+		spa.innerText = "[ESPANÕL]";
+		spa.href = "#";
+		spa.onclick = () => { }
+		
+let fre = document.createElement("a");
+		fre.innerText = "[FRANÇAIS]";
+		fre.href = "#";
+		fre.onclick = () => { }
+    // Append the message and "Go Back" link to the 'outro' element
+type([backLang,port, eng, spa, fre], { processChars: false , wait: 10 }, outro);
 		  
 		};
 		let galeria = document.createElement("a");
