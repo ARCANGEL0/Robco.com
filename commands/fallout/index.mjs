@@ -365,80 +365,46 @@ const VideosUrl = [
     '../../images/gallery/Videos/pong.mp4',
 
 
+divgallery.appendChild(backGal);
 
+const prevBtn = document.createElement("button");
+prevBtn.textContent = "Previous";
+divgallery.appendChild(prevBtn);
+
+const nextBtn = document.createElement("button");
+nextBtn.textContent = "Next";
+divgallery.appendChild(nextBtn);
+
+let currentIndex = 0;
+
+function showVideo(index) {
+    if (index < 0) {
+        currentIndex = VideosUrl.length - 1;
+    } else if (index >= VideosUrl.length) {
+        currentIndex = 0;
+    }
+
+    divGallery.innerHTML = `<video controls src="${VideosUrl[currentIndex]}"></video>`;
+}
+
+prevBtn.addEventListener("click", () => {
+    currentIndex--;
+    showVideo(currentIndex);
+});
+
+nextBtn.addEventListener("click", () => {
+    currentIndex++;
+    showVideo(currentIndex);
+});
+
+// Initial display
+showVideo(currentIndex);
 
 
 ];// Crie um div para conter o carrossel
-const carouselContainer = document.createElement('div');
-carouselContainer.className = 'carousel-container';
-carouselContainer.style.width = '80%';
-carouselContainer.style.overflow = 'hidden';
 
-// Crie um div para as imagens
-const carousel = document.createElement('div');
-carousel.className = 'carousel';
-carousel.style.display = 'flex';
-carousel.style.transition = 'transform 0.5s';
 
-// Crie elementos de vídeo e adicione-os ao carrossel
-VideosUrl.forEach((videoUrl) => {
-    const video = document.createElement('video');
-    video.src = videoUrl;
-    video.style.width = '75%';
-    video.style.height = 'auto';
-    video.setAttribute('controls', false);
-    video.setAttribute('autoplay', true);
-    video.style.display = 'none'; // Adicione essa linha para ocultar os vídeos
 
-    // Adicione controls para o vídeo
-    carousel.appendChild(video);
-});
-
-// Crie botões para navegar no carrossel
-const prevButton = document.createElement('button');
-prevButton.className = 'carousel-button';
-prevButton.textContent = 'Previous';
-prevButton.addEventListener('click', () => showSlide(currentIndex - 1));
-
-const nextButton = document.createElement('button');
-nextButton.className = 'carousel-button';
-nextButton.textContent = 'Next';
-nextButton.addEventListener('click', () => showSlide(currentIndex + 1));
-
-// Função para mostrar um slide
-let currentIndex = 0;
-function showSlide(index) {
-    if (index < 0) {
-        index = VideosUrl.length - 1;
-    }
-    if (index >= VideosUrl.length) {
-        index = 0;
-    }
-
-    // Ocultar todos os vídeos
-    VideosUrl.forEach((videoUrl, i) => {
-        const video = carousel.children[i];
-        video.style.display = 'none';
-    });
-
-    // Mostrar apenas o vídeo atual
-    currentIndex = index;
-    const video = carousel.children[currentIndex];
-    video.style.display = 'block';
-
-    const offset = -currentIndex * 300;
-    carousel.style.transform = `translateX(${offset}px)`;
-}
-
-showSlide(currentIndex);
-
-// Adicione todos os elementos ao documento
-carouselContainer.appendChild(carousel);
-divgallery.appendChild(backGal);
-divgallery.appendChild(carouselContainer);
-divgallery.appendChild(prevButton);
-divgallery.appendChild(nextButton);
-		  
 		}; // function end fim galeriq
 		
 		let sobre = document.createElement("a");
