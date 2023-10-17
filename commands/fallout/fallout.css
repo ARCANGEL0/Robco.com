@@ -408,6 +408,14 @@ clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0% 25%);
   height: auto !important;
 }
 
+.video {
+  width: 45%;
+  height: 45%;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
+}
+
 .form-input::after{
   
   --slice-0:inset(50% 50% 50% 50%);
