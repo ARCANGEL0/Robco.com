@@ -330,7 +330,7 @@ carousel.style.display = 'flex';
 carousel.style.transition = 'transform 0.5s';
 
 // Crie elementos de vídeo e adicione-os ao carrossel
-VideoUrls.forEach((videoUrl) => {
+VideosUrls.forEach((videoUrl) => {
     const video = document.createElement('video');
     video.src = videoUrl;
     video.style.width = '75%';
