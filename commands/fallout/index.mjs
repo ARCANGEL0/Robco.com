@@ -250,7 +250,7 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 
 
 
-		idioma.innerText = "[IDIOMA]";
+		idioma.innerText = "[IDIOMA/LANGUE]";
 
 		idioma.href = "#";
 		idioma.onclick = () => {
