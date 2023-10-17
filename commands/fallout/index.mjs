@@ -363,7 +363,7 @@ const VideosUrl = [
     '../../images/gallery/Videos/arcUI.mp4',
 
     '../../images/gallery/Videos/pong.mp4',
-
+];
 
 divgallery.appendChild(backGal);
 
@@ -401,7 +401,7 @@ nextBtn.addEventListener("click", () => {
 showVideo(currentIndex);
 
 
-];// Crie um div para conter o carrossel
+// Crie um div para conter o carrossel
 
 
 
