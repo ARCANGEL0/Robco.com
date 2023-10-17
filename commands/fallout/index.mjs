@@ -259,7 +259,13 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 		idioma.href = "#";
 		idioma.onclick = () => {
 			
-			
+inicio.remove();
+    sobre.remove();
+    galeria.remove();
+    logout.remove();
+    contato.remove();
+    idioma.remove();
+    terminal.remove();
 			
 const backLang = document.createElement("a");
     backLang.innerText = btnreturn;
@@ -269,7 +275,7 @@ const backLang = document.createElement("a");
         port.remove();
         spa.remove();
         eng.remove()
-        fra.remove()
+        fre.remove()
         backLang.remove();
         // outro.appendChild(logout);
         // outro.appendChild(contato);
@@ -277,13 +283,7 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
     };
 
     // Remove the "Logout" and "Contact" buttons
-    inicio.remove();
-    sobre.remove();
-    galeria.remove();
-    logout.remove();
-    contato.remove();
-    idioma.remove();
-    terminal.remove();
+    
 
 
 let port = document.createElement("a");
