@@ -384,7 +384,7 @@ function showVideo(index) {
         currentIndex = 0;
     }
 
-    divGallery.innerHTML = `<video controls src="${VideosUrl[currentIndex]}"></video>`;
+    divGallery.innerHTML = `<video loop autoplay src="${VideosUrl[currentIndex]}"></video>`;
 }
 
 prevBtn.addEventListener("click", () => {
