@@ -367,13 +367,19 @@ const VideosUrl = [
 
 divgallery.appendChild(backGal);
 
+const divbuttons = document.createElement("div");
+divbuttons.classList.add("galbtns")
+
+const dvid = document.createElement("div");
+divid.classList.add("dvid")
+
 const prevBtn = document.createElement("button");
 prevBtn.textContent = "Previous";
-divgallery.appendChild(prevBtn);
+divbuttons.appendChild(prevBtn);
 
 const nextBtn = document.createElement("button");
 nextBtn.textContent = "Next";
-divgallery.appendChild(nextBtn);
+divbuttons.appendChild(nextBtn);
 
 let currentIndex = 0;
 
