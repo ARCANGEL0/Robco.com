@@ -375,10 +375,12 @@ divid.classList.add("dvid")
 
 const prevBtn = document.createElement("button");
 prevBtn.textContent = "Previous";
+prevBtn.classList.add='carousel-button'
 divbuttons.appendChild(prevBtn);
 
 const nextBtn = document.createElement("button");
 nextBtn.textContent = "Next";
+nextBtn.classList.add='carousel-button'
 divbuttons.appendChild(nextBtn);
 
 let currentIndex = 0;
@@ -387,7 +389,8 @@ const vid = document.createElement("video");
 
 vid.src=VideosUrl[0]
 
-divgallery.appendChild(vid)
+
+dvid.appendChild(vid)
 
 		}; // function end fim galeriq
 		
