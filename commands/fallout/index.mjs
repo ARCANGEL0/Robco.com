@@ -377,31 +377,10 @@ divgallery.appendChild(nextBtn);
 
 let currentIndex = 0;
 
-function showVideo(index) {
-    if (index < 0) {
-        currentIndex = VideosUrl.length - 1;
-    } else if (index >= VideosUrl.length) {
-        currentIndex = 0;
-    }
-
-    divGallery.innerHTML = `<video loop autoplay src="${VideosUrl[currentIndex]}"></video>`;
-}
-
-prevBtn.addEventListener("click", () => {
-    currentIndex--;
-    showVideo(currentIndex);
-});
-
-nextBtn.addEventListener("click", () => {
-    currentIndex++;
-    showVideo(currentIndex);
-});
-
-// Initial display
-showVideo(currentIndex);
-
-
-// Crie um div para conter o carrossel
+const vid = document.createElement("video");
+vid.style.width='65%'
+vid.style.height='20rem'
+vid.src=VideosUrl[0]
 
 
 
