@@ -382,7 +382,7 @@ vid.style.width='65%'
 vid.style.height='20rem'
 vid.src=VideosUrl[0]
 
-
+divgallery.appendChild(vid)
 
 		}; // function end fim galeriq
 		
