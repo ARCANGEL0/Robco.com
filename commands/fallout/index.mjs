@@ -378,8 +378,7 @@ divgallery.appendChild(nextBtn);
 let currentIndex = 0;
 
 const vid = document.createElement("video");
-vid.style.width='65%'
-vid.style.height='20rem'
+
 vid.src=VideosUrl[0]
 
 divgallery.appendChild(vid)
