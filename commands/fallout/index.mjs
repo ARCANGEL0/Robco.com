@@ -392,6 +392,9 @@ vid.src=VideosUrl[0]
 
 dvid.appendChild(vid)
 
+
+divgallery.appendChild(divbuttons)
+divgallery.appendChild(dvid)
 		}; // function end fim galeriq
 		
 		let sobre = document.createElement("a");
