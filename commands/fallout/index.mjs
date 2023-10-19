@@ -134,6 +134,10 @@ let btncontact ='[CONTACT]'
 				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`
 		]
 
+let subjecttext = 'Subject:'
+let messagetext = 'Message:'
+let nametext = 'Name:'
+let phonenumbertext = 'Phone Number:'
 
 
 let contato = document.createElement("a");
@@ -185,7 +189,7 @@ contactForm.classList.add('contact-form'); // Add a class for the form
 
 // Create form fields
 const nameLabel = document.createElement('label');
-nameLabel.innerText = 'Name:';
+nameLabel.innerText = nametext ;
 nameLabel.classList.add('form-label'); // Add a class for the label
 const nameInput = document.createElement('input');
 nameInput.setAttribute('type', 'text');
@@ -203,7 +207,7 @@ emailInput.required = true;
 emailInput.classList.add('form-input'); // Add a class for the input
 
 const phoneLabel = document.createElement('label');
-phoneLabel.innerText = 'Phone Number:';
+phoneLabel.innerText = phonenumbertext;
 phoneLabel.classList.add('form-label'); // Add a class for the label
 const phoneInput = document.createElement('input');
 phoneInput.setAttribute('type', 'tel');
@@ -211,7 +215,7 @@ phoneInput.setAttribute('name', 'phone');
 phoneInput.classList.add('form-input'); // Add a class for the input
 
 const subjectLabel = document.createElement('label');
-subjectLabel.innerText = 'Subject:';
+subjectLabel.innerText = subjecttext;
 subjectLabel.classList.add('form-label'); // Add a class for the label
 const subjectInput = document.createElement('input');
 subjectInput.setAttribute('type', 'text');
@@ -219,7 +223,7 @@ subjectInput.setAttribute('name', 'subject');
 subjectInput.required = true;
 subjectInput.classList.add('form-input'); // Add a class for the input
 const messageLabel = document.createElement('label');
-messageLabel.innerText = 'Message:';
+messageLabel.innerText = messagetext;
 messageLabel.classList.add('form-label'); // Add a class for the label
 const messageTextarea = document.createElement('textarea');
 messageTextarea.setAttribute('name', 'message');
@@ -322,7 +326,39 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
 let port = document.createElement("a");
 		port.innerText = "[PORTUGUÊS]";
 		port.href = "#";
-		port.onclick = () => { }
+		port.onclick = () => { 
+
+ btnhome ='[TESTTE]'
+ btnsobre ='[ABOUT]'
+ btngal ='[GALLERY]'
+ btncontact ='[CONTACT]'
+   btnlang = '[IDIOMA/LANGUE]'
+   btnreturn ='[RETURN]'
+   nexttxt = 'NEXT'
+   previoustxt ='PREVIOUS'
+   contactheader ='Contact Info:\n\n' 
+   iniciopagetext = "? Welcome to my digital playground! ? I'm not just a developer; I'm a creator of online experiences that leave a mark. With a dash of innovation and a sprinkle of code, I turn dreams into pixels, and pixels into reality.";
+   sobremimtxt  = [	`\n>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `,
+				`I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n I create digital illustrations & arts and softwares, app's, websites and others. Some of the technologies I generally use are:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript\n\nBackend: PHP (Including Laravel and CakePHP), Python & Flask, Node & Electron (for desktop build),and for databases I usually work with MySql, MongoDB, or Firebase`, 
+				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`
+		]
+
+ subjecttext = 'Subject:'
+ messagetext = 'Message:'
+ nametext = 'Name:'
+ phonenumbertext = 'Phone Number:'
+        port.remove();
+        spa.remove();
+        eng.remove()
+        fre.remove()
+        backLang.remove();
+        // outro.appendChild(logout);
+        // outro.appendChild(contato);
+type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
+   
+
+
+		}
 		
 let eng = document.createElement("a");
 		eng.innerText = "[ENGLISH]";
@@ -400,71 +436,71 @@ const VideosUrl = [
 
 divgallery.appendChild(backGal);
 
+divgallery.appendChild(backGal);
 
+const divbuttons = document.createElement("div");
+divbuttons.classList.add("galbtns")
 
-
-
-
-const carousel = document.createElement("div");
-carousel.classList.add("carousel");
+const dvid = document.createElement("div");
+dvid.classList.add("dvid")
 
 const prevBtn = document.createElement("button");
-prevBtn.textContent = "Previous";
-prevBtn.classList.add('carousel-button');
-prevBtn.classList.add('prev-button');
-carousel.appendChild(prevBtn);
+prevBtn.textContent = previoustxt;
+prevBtn.classList.add('carousel-button')
+divbuttons.appendChild(prevBtn);
 
 const nextBtn = document.createElement("button");
-nextBtn.textContent = "Next";
-nextBtn.classList.add('carousel-button');
-nextBtn.classList.add('next-button');
-carousel.appendChild(nextBtn);
+nextBtn.textContent = nexttxt;
+nextBtn.classList.add('carousel-button')
+divbuttons.appendChild(nextBtn);
 
-const carouselContainer = document.createElement("div");
-carouselContainer.classList.add("carousel-container");
-
-const carouselItems = document.createElement("div");
-carouselItems.classList.add("carousel-items");
-carouselItems.style.display = 'flex'
-
-
-VideosUrl.forEach((videoUrl) => {
-  const carouselItem = document.createElement("div");
-  carouselItem.classList.add("carousel-item");
-
-  const video = document.createElement("video");
-  video.src = videoUrl;
-  video.autoplay = true;
-  video.controls = false;
-  video.style.width = "100%";
-  video.style.height = "auto";
-
-  carouselItem.appendChild(video);
-  carouselItems.appendChild(carouselItem);
-});
-
-carouselContainer.appendChild(carouselItems);
-carousel.appendChild(carouselContainer);
-divgallery.appendChild(carousel);
-
-const carouselItemsWidth = carouselContainer.offsetWidth;
 let currentIndex = 0;
 
 prevBtn.onclick = () => {
-  currentIndex--;
-  if (currentIndex < 0) {
-    currentIndex = VideosUrl.length - 1;
-  }
-  carouselItems.style.transform = `translateX(-${currentIndex * carouselItemsWidth}px)`;
-};
+	currentIndex--
+     if (currentIndex<=VideosUrl.length && currentIndex>0) {
+    
 
+vid.src=VideosUrl[currentIndex]
+     }
+     if (currentIndex<0){
+     	 currentIndex=0
+vid.src=VideosUrl[currentIndex]    
+     
+}
+
+}
 nextBtn.onclick = () => {
-  currentIndex++;
-  if (currentIndex >= VideosUrl.length) {
-    currentIndex = 0;
-  }
-  carouselItems.style.transform = `translateX(-${currentIndex * carouselItemsWidth}px)`;
-};
+	currentIndex++
+     if (currentIndex<VideosUrl.length && currentIndex>=0) {
+     
+vid.src=VideosUrl[currentIndex]
+
+     }
+     if (currentIndex>VideosUrl.length){
+     	 currentIndex=0
+vid.src=VideosUrl[currentIndex]    
+     
+}
+}
+divbuttons.style.marginTop='20px'
+divbuttons.style.marginBottom='20px'
+const vid = document.createElement("video");
+
+vid.src=VideosUrl[currentIndex]
+vid.autoplay = true
+vid.style.width = '65%'
+vid.style.height='20rem'
+
+dvid.appendChild(vid)
+
+
+divgallery.appendChild(divbuttons)
+divgallery.appendChild(dvid)
+
+
+
+
 
 		}; // function end fim galeriq
 		
