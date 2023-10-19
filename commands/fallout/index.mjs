@@ -96,6 +96,28 @@ async function outro() {
 			FAST,
 			outro
 		);
+// texts for language change
+
+
+
+function calculateAge(birthdate) {
+  let today = new Date();
+  let birthDate = new Date(birthdate);
+  let age = today.getFullYear() - birthDate.getFullYear();
+  let monthDiff = today.getMonth() - birthDate.getMonth();
+
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+
+  return age;
+}
+
+const birthdate = '2000-11-09'; // Replace with your birthdate in 'YYYY-MM-DD' format
+const age = calculateAge(birthdate);
+
+
+
 
 let btnhome ='[HOME]'
 let btnsobre ='[ABOUT]'
@@ -103,6 +125,17 @@ let btngal ='[GALLERY]'
 let btncontact ='[CONTACT]'
   let btnlang = '[IDIOMA/LANGUE]'
   let btnreturn ='[RETURN]'
+  let nexttxt = 'NEXT'
+  let previoustxt ='PREVIOUS'
+  let contactheader ='Contact Info:\n\n' 
+  let iniciopagetext = "? Welcome to my digital playground! ? I'm not just a developer; I'm a creator of online experiences that leave a mark. With a dash of innovation and a sprinkle of code, I turn dreams into pixels, and pixels into reality.";
+  let sobremimtxt  = [	`\n>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `,
+				`I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n I create digital illustrations & arts and softwares, app's, websites and others. Some of the technologies I generally use are:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript\n\nBackend: PHP (Including Laravel and CakePHP), Python & Flask, Node & Electron (for desktop build),and for databases I usually work with MySql, MongoDB, or Firebase`, 
+				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`
+		]
+
+
+
 let contato = document.createElement("a");
 		contato.innerText = btncontact;
 		contato.href = "#";
@@ -110,7 +143,7 @@ let contato = document.createElement("a");
 			// remove all a tags and put a text with p and an a tag in the end to take back to preciois page.. Remove text and restore a tag buttons 
 			   // Create a <p> element with a message
     const message = document.createElement('p');
-    message.innerText = "Contact info:\n\n ";
+    message.innerText = contactheader;
 const contactTable = document.createElement('table');
 contactTable.style.borderCollapse = 'collapse';
 
@@ -367,65 +400,72 @@ const VideosUrl = [
 
 divgallery.appendChild(backGal);
 
-const divbuttons = document.createElement("div");
-divbuttons.classList.add("galbtns")
 
-const dvid = document.createElement("div");
-dvid.classList.add("dvid")
+
+
+
+
+const carousel = document.createElement("div");
+carousel.classList.add("carousel");
 
 const prevBtn = document.createElement("button");
 prevBtn.textContent = "Previous";
-prevBtn.classList.add('carousel-button')
-divbuttons.appendChild(prevBtn);
+prevBtn.classList.add('carousel-button');
+prevBtn.classList.add('prev-button');
+carousel.appendChild(prevBtn);
 
 const nextBtn = document.createElement("button");
 nextBtn.textContent = "Next";
-nextBtn.classList.add('carousel-button')
-divbuttons.appendChild(nextBtn);
+nextBtn.classList.add('carousel-button');
+nextBtn.classList.add('next-button');
+carousel.appendChild(nextBtn);
 
+const carouselContainer = document.createElement("div");
+carouselContainer.classList.add("carousel-container");
+
+const carouselItems = document.createElement("div");
+carouselItems.classList.add("carousel-items");
+carouselItems.style.display = 'flex'
+
+
+VideosUrl.forEach((videoUrl) => {
+  const carouselItem = document.createElement("div");
+  carouselItem.classList.add("carousel-item");
+
+  const video = document.createElement("video");
+  video.src = videoUrl;
+  video.autoplay = true;
+  video.controls = false;
+  video.style.width = "100%";
+  video.style.height = "auto";
+
+  carouselItem.appendChild(video);
+  carouselItems.appendChild(carouselItem);
+});
+
+carouselContainer.appendChild(carouselItems);
+carousel.appendChild(carouselContainer);
+divgallery.appendChild(carousel);
+
+const carouselItemsWidth = carouselContainer.offsetWidth;
 let currentIndex = 0;
 
 prevBtn.onclick = () => {
-	currentIndex--
-     if (currentIndex<=VideosUrl.length && currentIndex>0) {
-    
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = VideosUrl.length - 1;
+  }
+  carouselItems.style.transform = `translateX(-${currentIndex * carouselItemsWidth}px)`;
+};
 
-vid.src=VideosUrl[currentIndex]
-     }
-     if (currentIndex<0){
-     	 currentIndex=0
-vid.src=VideosUrl[currentIndex]    
-     
-}
-
-}
 nextBtn.onclick = () => {
-	currentIndex++
-     if (currentIndex<VideosUrl.length && currentIndex>=0) {
-     
-vid.src=VideosUrl[currentIndex]
+  currentIndex++;
+  if (currentIndex >= VideosUrl.length) {
+    currentIndex = 0;
+  }
+  carouselItems.style.transform = `translateX(-${currentIndex * carouselItemsWidth}px)`;
+};
 
-     }
-     if (currentIndex>VideosUrl.length){
-     	 currentIndex=0
-vid.src=VideosUrl[currentIndex]    
-     
-}
-}
-divbuttons.style.marginTop='20px'
-divbuttons.style.marginBottom='20px'
-const vid = document.createElement("video");
-
-vid.src=VideosUrl[currentIndex]
-vid.autoplay = true
-vid.style.width = '65%'
-vid.style.height='20rem'
-
-dvid.appendChild(vid)
-
-
-divgallery.appendChild(divbuttons)
-divgallery.appendChild(dvid)
 		}; // function end fim galeriq
 		
 		let sobre = document.createElement("a");
@@ -505,33 +545,12 @@ const technologies = document.createElement("p");
 */
 // Set the text for the <p> element
 
-function calculateAge(birthdate) {
-  let today = new Date();
-  let birthDate = new Date(birthdate);
-  let age = today.getFullYear() - birthDate.getFullYear();
-  let monthDiff = today.getMonth() - birthDate.getMonth();
-
-  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-    age--;
-  }
-
-  return age;
-}
-
-const birthdate = '2000-11-09'; // Replace with your birthdate in 'YYYY-MM-DD' format
-const age = calculateAge(birthdate);
-
-
 
 divsobre.appendChild(backSobre)
 
 
 	await type(
-			[
-				`\n>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `,
-				`I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n I create digital illustrations & arts and softwares, app's, websites and others. Some of the technologies I generally use are:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript\n\nBackend: PHP (Including Laravel and CakePHP), Python & Flask, Node & Electron (for desktop build),and for databases I usually work with MySql, MongoDB, or Firebase`, 
-				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`
-			],
+			sobremimtxt ,
 			FAST,
 			divsobre 
 		);
@@ -630,8 +649,7 @@ divgif2.appendChild(gifImage2);
 const iniciotext = document.createElement("p");
 
 // Set the text for the <p> element
-iniciotext.innerText = "? Welcome to my digital playground! ? I'm not just a developer; I'm a creator of online experiences that leave a mark. With a dash of innovation and a sprinkle of code, I turn dreams into pixels, and pixels into reality.";
-
+iniciotext.innerText = iniciopagetext;
 // Assuming you have a container div with an id of "portfolio" to append the <p> element to
 
 
