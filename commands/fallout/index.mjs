@@ -371,24 +371,54 @@ const divbuttons = document.createElement("div");
 divbuttons.classList.add("galbtns")
 
 const dvid = document.createElement("div");
-divid.classList.add("dvid")
+dvid.classList.add("dvid")
 
 const prevBtn = document.createElement("button");
 prevBtn.textContent = "Previous";
-prevBtn.classList.add='carousel-button'
+prevBtn.classList.add('carousel-button')
 divbuttons.appendChild(prevBtn);
 
 const nextBtn = document.createElement("button");
 nextBtn.textContent = "Next";
-nextBtn.classList.add='carousel-button'
+nextBtn.classList.add('carousel-button')
 divbuttons.appendChild(nextBtn);
 
 let currentIndex = 0;
 
+prevBtn.onclick = () => {
+     if (currentIndex<=VideosUrl.length && currentIndex>=0) {
+     	currentIndex--
+
+vid.src=VideosUrl[currentIndex]
+     }
+     else {
+     	 currentIndex=0
+     	 
+vid.src=VideosUrl[currentIndex]    
+     }
+
+}
+nextBtn.onclick = () => {
+     if (currentIndex<=VideosUrl.length && currentIndex>=0) {
+     	currentIndex++
+
+vid.src=VideosUrl[currentIndex]
+     }
+     else {
+     	 currentIndex=0
+     	 
+vid.src=VideosUrl[currentIndex]    
+     
+}
+
+divbuttons.style.marginTop='20px'
+divbuttons.style.marginBottom='20px'
 const vid = document.createElement("video");
 
-vid.src=VideosUrl[0]
-
+vid.src=VideosUrl[currentIndex]
+vid.autoplay = true
+vid.style.width = '65%'
+vid.style.height='20rem'
 
 dvid.appendChild(vid)
 
@@ -599,7 +629,7 @@ divgif2.appendChild(gifImage2);
 const iniciotext = document.createElement("p");
 
 // Set the text for the <p> element
-iniciotext.innerText = "🚀 Welcome to my digital playground! 🌟 I'm not just a developer; I'm a creator of online experiences that leave a mark. With a dash of innovation and a sprinkle of code, I turn dreams into pixels, and pixels into reality.";
+iniciotext.innerText = "? Welcome to my digital playground! ? I'm not just a developer; I'm a creator of online experiences that leave a mark. With a dash of innovation and a sprinkle of code, I turn dreams into pixels, and pixels into reality.";
 
 // Assuming you have a container div with an id of "portfolio" to append the <p> element to
 
