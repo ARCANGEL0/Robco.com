@@ -410,7 +410,7 @@ vid.src=VideosUrl[currentIndex]
 vid.src=VideosUrl[currentIndex]    
      
 }
-
+}
 divbuttons.style.marginTop='20px'
 divbuttons.style.marginBottom='20px'
 const vid = document.createElement("video");
@@ -697,7 +697,7 @@ type([divinicio, goBackLinkIn], { processChars: false , wait: 10 }, outro);
 		 type([inicio, sobre, galeria, contato,idioma, terminal, logout], { processChars: false , wait: 5 }, outro);
 
 		logout.focus();
-	};
+	});
 
 	outro.remove();
 }
