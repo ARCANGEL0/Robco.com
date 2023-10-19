@@ -697,7 +697,7 @@ type([divinicio, goBackLinkIn], { processChars: false , wait: 10 }, outro);
 		 type([inicio, sobre, galeria, contato,idioma, terminal, logout], { processChars: false , wait: 5 }, outro);
 
 		logout.focus();
-	});
+	};
 
 	outro.remove();
 }
