@@ -281,6 +281,12 @@ margin-bottom: 7px;
   --slice-4:inset(40% -6px 43% 0);
   --slice-5:inset(80% -6px 5% 0);
 }
+
+.carousel-button{
+  width: auto;
+  margin: 10px;
+  margin-left: 8px;
+}
 .carousel-button , .carousel-button::after,
 #btnhack ,#btnhack::after{
   width:20vw;
