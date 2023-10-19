@@ -283,8 +283,10 @@ margin-bottom: 7px;
 }
 .carousel-button , .carousel-button::after,
 #btnhack ,#btnhack::after{
-  width:20vw;
+  width:auto;
   height:102;
+  margin: 10px;
+  margin-left: 8px;
   /* 左下角切角，前一半透明*/
   background:linear-gradient(45deg,transparent 5%,#1C2E007C 5%);
   border:0;
