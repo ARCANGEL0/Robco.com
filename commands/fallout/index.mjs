@@ -386,27 +386,28 @@ divbuttons.appendChild(nextBtn);
 let currentIndex = 0;
 
 prevBtn.onclick = () => {
-     if (currentIndex<=VideosUrl.length && currentIndex>=0) {
-     	currentIndex--
+	currentIndex--
+     if (currentIndex<=VideosUrl.length && currentIndex>0) {
+    
 
 vid.src=VideosUrl[currentIndex]
      }
-     else {
+     if (currentIndex<0){
      	 currentIndex=0
-     	 
 vid.src=VideosUrl[currentIndex]    
-     }
+     
+}
 
 }
 nextBtn.onclick = () => {
-     if (currentIndex<=VideosUrl.length && currentIndex>=0) {
-     	currentIndex++
-
+	currentIndex++
+     if (currentIndex<VideosUrl.length && currentIndex>=0) {
+     
 vid.src=VideosUrl[currentIndex]
+
      }
-     else {
+     if (currentIndex>VideosUrl.length){
      	 currentIndex=0
-     	 
 vid.src=VideosUrl[currentIndex]    
      
 }
