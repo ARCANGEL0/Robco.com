@@ -96,28 +96,6 @@ async function outro() {
 			FAST,
 			outro
 		);
-// texts for language change
-
-
-
-function calculateAge(birthdate) {
-  let today = new Date();
-  let birthDate = new Date(birthdate);
-  let age = today.getFullYear() - birthDate.getFullYear();
-  let monthDiff = today.getMonth() - birthDate.getMonth();
-
-  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-    age--;
-  }
-
-  return age;
-}
-
-const birthdate = '2000-11-09'; // Replace with your birthdate in 'YYYY-MM-DD' format
-const age = calculateAge(birthdate);
-
-
-
 
 let btnhome ='[HOME]'
 let btnsobre ='[ABOUT]'
@@ -125,21 +103,6 @@ let btngal ='[GALLERY]'
 let btncontact ='[CONTACT]'
   let btnlang = '[IDIOMA/LANGUE]'
   let btnreturn ='[RETURN]'
-  let nexttxt = 'NEXT'
-  let previoustxt ='PREVIOUS'
-  let contactheader ='Contact Info:\n\n' 
-  let iniciopagetext = "? Welcome to my digital playground! ? I'm not just a developer; I'm a creator of online experiences that leave a mark. With a dash of innovation and a sprinkle of code, I turn dreams into pixels, and pixels into reality.";
-  let sobremimtxt  = [	`\n>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `,
-				`I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n I create digital illustrations & arts and softwares, app's, websites and others. Some of the technologies I generally use are:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript\n\nBackend: PHP (Including Laravel and CakePHP), Python & Flask, Node & Electron (for desktop build),and for databases I usually work with MySql, MongoDB, or Firebase`, 
-				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`
-		]
-
-let subjecttext = 'Subject:'
-let messagetext = 'Message:'
-let nametext = 'Name:'
-let phonenumbertext = 'Phone Number:'
-
-
 let contato = document.createElement("a");
 		contato.innerText = btncontact;
 		contato.href = "#";
@@ -147,7 +110,7 @@ let contato = document.createElement("a");
 			// remove all a tags and put a text with p and an a tag in the end to take back to preciois page.. Remove text and restore a tag buttons 
 			   // Create a <p> element with a message
     const message = document.createElement('p');
-    message.innerText = contactheader;
+    message.innerText = "Contact info:\n\n ";
 const contactTable = document.createElement('table');
 contactTable.style.borderCollapse = 'collapse';
 
@@ -155,7 +118,7 @@ contactTable.style.borderCollapse = 'collapse';
 const contacts = [
     { type: 'GitHub', name:'ARCANGEL0', link: 'https://github.com/ARCANGEL0/' },
     { type: 'WhatsApp/Phone ', name: '+351 927 285 125', link: 'https://api.whatsapp.com/send?phone=351927285125' },
-    { type: 'Website',name: 'LNA Digital', link: 'https://lnadigital.com' },
+    { type: 'Website',name: 'LNA Digital', link: 'https://lnaassessoriadigital.com' },
     { type: 'Email',name:'Henry.arcangello@gmail.com*', link: 'mailto:rick_arcangelo@hotmail.com,henry.arcangello@proton.me,henry.arcangello@gmail.com' },
     { type: 'LinkedIn', name:'Luis Henrique CB Arcangelo', link: 'https://www.linkedin.com/in/henrique-carreira-b-arcangelo-7965841bb/' },
     { type: 'Hack The Box', name:'HenryNx', link: 'https://app.hackthebox.com/profile/1276132' },
@@ -189,7 +152,7 @@ contactForm.classList.add('contact-form'); // Add a class for the form
 
 // Create form fields
 const nameLabel = document.createElement('label');
-nameLabel.innerText = nametext ;
+nameLabel.innerText = 'Name:';
 nameLabel.classList.add('form-label'); // Add a class for the label
 const nameInput = document.createElement('input');
 nameInput.setAttribute('type', 'text');
@@ -207,7 +170,7 @@ emailInput.required = true;
 emailInput.classList.add('form-input'); // Add a class for the input
 
 const phoneLabel = document.createElement('label');
-phoneLabel.innerText = phonenumbertext;
+phoneLabel.innerText = 'Phone Number:';
 phoneLabel.classList.add('form-label'); // Add a class for the label
 const phoneInput = document.createElement('input');
 phoneInput.setAttribute('type', 'tel');
@@ -215,7 +178,7 @@ phoneInput.setAttribute('name', 'phone');
 phoneInput.classList.add('form-input'); // Add a class for the input
 
 const subjectLabel = document.createElement('label');
-subjectLabel.innerText = subjecttext;
+subjectLabel.innerText = 'Subject:';
 subjectLabel.classList.add('form-label'); // Add a class for the label
 const subjectInput = document.createElement('input');
 subjectInput.setAttribute('type', 'text');
@@ -223,7 +186,7 @@ subjectInput.setAttribute('name', 'subject');
 subjectInput.required = true;
 subjectInput.classList.add('form-input'); // Add a class for the input
 const messageLabel = document.createElement('label');
-messageLabel.innerText = messagetext;
+messageLabel.innerText = 'Message:';
 messageLabel.classList.add('form-label'); // Add a class for the label
 const messageTextarea = document.createElement('textarea');
 messageTextarea.setAttribute('name', 'message');
@@ -326,39 +289,7 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
 let port = document.createElement("a");
 		port.innerText = "[PORTUGUÊS]";
 		port.href = "#";
-		port.onclick = () => { 
-
- btnhome ='[TESTTE]'
- btnsobre ='[ABOUT]'
- btngal ='[GALLERY]'
- btncontact ='[CONTACT]'
-   btnlang = '[IDIOMA/LANGUE]'
-   btnreturn ='[RETURN]'
-   nexttxt = 'NEXT'
-   previoustxt ='PREVIOUS'
-   contactheader ='Contact Info:\n\n' 
-   iniciopagetext = "? Welcome to my digital playground! ? I'm not just a developer; I'm a creator of online experiences that leave a mark. With a dash of innovation and a sprinkle of code, I turn dreams into pixels, and pixels into reality.";
-   sobremimtxt  = [	`\n>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `,
-				`I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n I create digital illustrations & arts and softwares, app's, websites and others. Some of the technologies I generally use are:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript\n\nBackend: PHP (Including Laravel and CakePHP), Python & Flask, Node & Electron (for desktop build),and for databases I usually work with MySql, MongoDB, or Firebase`, 
-				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`
-		]
-
- subjecttext = 'Subject:'
- messagetext = 'Message:'
- nametext = 'Name:'
- phonenumbertext = 'Phone Number:'
-        port.remove();
-        spa.remove();
-        eng.remove()
-        fre.remove()
-        backLang.remove();
-        // outro.appendChild(logout);
-        // outro.appendChild(contato);
-type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
-   
-
-
-		}
+		port.onclick = () => { }
 		
 let eng = document.createElement("a");
 		eng.innerText = "[ENGLISH]";
@@ -436,8 +367,6 @@ const VideosUrl = [
 
 divgallery.appendChild(backGal);
 
-divgallery.appendChild(backGal);
-
 const divbuttons = document.createElement("div");
 divbuttons.classList.add("galbtns")
 
@@ -445,12 +374,12 @@ const dvid = document.createElement("div");
 dvid.classList.add("dvid")
 
 const prevBtn = document.createElement("button");
-prevBtn.textContent = previoustxt;
+prevBtn.textContent = "Previous";
 prevBtn.classList.add('carousel-button')
 divbuttons.appendChild(prevBtn);
 
 const nextBtn = document.createElement("button");
-nextBtn.textContent = nexttxt;
+nextBtn.textContent = "Next";
 nextBtn.classList.add('carousel-button')
 divbuttons.appendChild(nextBtn);
 
@@ -499,9 +428,8 @@ divgallery.appendChild(divbuttons)
 divgallery.appendChild(dvid)
 
 
-
-
-
+let divsites = document.createElement("div")
+divsites.classList.add("divsites")
 		}; // function end fim galeriq
 		
 		let sobre = document.createElement("a");
@@ -581,12 +509,33 @@ const technologies = document.createElement("p");
 */
 // Set the text for the <p> element
 
+function calculateAge(birthdate) {
+  let today = new Date();
+  let birthDate = new Date(birthdate);
+  let age = today.getFullYear() - birthDate.getFullYear();
+  let monthDiff = today.getMonth() - birthDate.getMonth();
+
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+
+  return age;
+}
+
+const birthdate = '2000-11-09'; // Replace with your birthdate in 'YYYY-MM-DD' format
+const age = calculateAge(birthdate);
+
+
 
 divsobre.appendChild(backSobre)
 
 
 	await type(
-			sobremimtxt ,
+			[
+				`\n>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `,
+				`I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n I create digital illustrations & arts and softwares, app's, websites and others. Some of the technologies I generally use are:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript\n\nBackend: PHP (Including Laravel and CakePHP), Python & Flask, Node & Electron (for desktop build),and for databases I usually work with MySql, MongoDB, or Firebase`, 
+				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`
+			],
 			FAST,
 			divsobre 
 		);
@@ -685,7 +634,8 @@ divgif2.appendChild(gifImage2);
 const iniciotext = document.createElement("p");
 
 // Set the text for the <p> element
-iniciotext.innerText = iniciopagetext;
+iniciotext.innerText = "? Welcome to my digital playground! ? I'm not just a developer; I'm a creator of online experiences that leave a mark. With a dash of innovation and a sprinkle of code, I turn dreams into pixels, and pixels into reality.";
+
 // Assuming you have a container div with an id of "portfolio" to append the <p> element to
 
 
