@@ -427,40 +427,45 @@ dvid.appendChild(vid)
 divgallery.appendChild(divbuttons)
 divgallery.appendChild(dvid)
 
+let divsites = document.createElement("div");
+divsites.classList.add("divsites");
+divsites.style.display = "flex";
+divsites.style.flexWrap = "wrap"; // Allow elements to wrap to the next line
 
-let divsites = document.createElement("div")
-divsites.classList.add("divsites")
-divsites.style.display="flex"
-
-let escoteiro = document.createElement("img")
-escoteiro.src = "../../images/Escoteiros.png"
+let escoteiro = document.createElement("img");
+escoteiro.src = "../../images/Escoteiros.png";
 escoteiro.onclick = () => {
   window.open("https://77gemar-jairmattenauer.com", "_blank");
 };
 
-let arc = document.createElement("img")
-arc.src = "../../images/Arc.png"
+let arc = document.createElement("img");
+arc.src = "../../images/Arc.png";
 arc.onclick = () => {
   window.open("https://arcangel0.github.io/ARC_UI", "_blank");
 };
 
-let info = document.createElement("img")
-info.src = "../../images/Info.png"
-
+let info = document.createElement("img");
+info.src = "../../images/Info.png";
 info.onclick = () => {
   window.open("https://arcangeloinfo.com.br", "_blank");
 };
-let lna = document.createElement("img")
-lna.src = "../../images/Lna.png"
+
+let lna = document.createElement("img");
+lna.src = "../../images/Lna.png";
 lna.onclick = () => {
   window.open("https://lnaassessoriadigital.com", "_blank");
 };
-divsites.appendChild(escoteiro)
-divsites.appendChild(lna)
-divsites.appendChild(info)
-divsites.appendChild(arc)
 
-divgallery.appendChild(divsites)
+divsites.appendChild(escoteiro);
+divsites.appendChild(arc);
+divsites.appendChild(info);
+divsites.appendChild(lna);
+
+divsites.style.display = "grid";
+divsites.style.gridTemplateColumns = "1fr 1fr"; // 2 columns
+divsites.style.gridTemplateRows = "1fr 1fr"; // 2 rows
+
+divgallery.appendChild(divsites);
 
 		}; // function end fim galeriq
 		
