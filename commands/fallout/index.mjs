@@ -430,6 +430,38 @@ divgallery.appendChild(dvid)
 
 let divsites = document.createElement("div")
 divsites.classList.add("divsites")
+divsites.style.display="flex"
+
+let escoteiro = document.createElement("img")
+escoteiro.src = "../../images/Escoteiros.png"
+escoteiro.onclick = () => {
+  window.open("https://77gemar-jairmattenauer.com", "_blank");
+};
+
+let arc = document.createElement("img")
+arc.src = "../../images/Arc.png"
+arc.onclick = () => {
+  window.open("https://arcangel0.github.io/ARC_UI", "_blank");
+};
+
+let info = document.createElement("img")
+info.src = "../../images/Info.png"
+
+info.onclick = () => {
+  window.open("https://arcangeloinfo.com.br", "_blank");
+};
+let lna = document.createElement("img")
+lna.src = "../../images/Lna.png"
+lna.onclick = () => {
+  window.open("https://lnaassessoriadigital.com", "_blank");
+};
+divsites.appendChild(escoteiro)
+divsites.appendChild(lna)
+divsites.appendChild(info)
+divsites.appendChild(arc)
+
+divgallery.appendChild(divsites)
+
 		}; // function end fim galeriq
 		
 		let sobre = document.createElement("a");
