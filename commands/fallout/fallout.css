@@ -204,7 +204,6 @@ height: 60vh !important;
 	max-height: var(--column);
 	line-height: var(--lh);
 }
-
 .cypher {
 	flex: 0 0 auto;
 	width: 20vw;
@@ -248,7 +247,24 @@ height: 60vh !important;
 	margin: 0;
 	margin-bottom: 2.5ch;
 }
+.divsites {
+  
+  padding-right: 5%;
+    /* display: grid; */
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5%;
+    padding-left: 5;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: -20px;
+}
 
+.divsites img {
+  height: auto;
+  width: 20%;
+}
 .locked {
 	text-align: center;
 }
