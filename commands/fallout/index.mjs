@@ -47,19 +47,19 @@ export async function intro() {
 		intro
 	);
 
-	await type(
-		[
-			"Initializing Robco Industries(TM) MF Boot Agent v2.3.0",
-			"RETROS BIOS",
-			"RBIOS-4.02.08.00 52EE5.E7.E8",
-			"Copyright 2201-2203 Robco Ind.",
-			"Uppermem: 64 KB",
-			"Root (5A8)",
-			"Maintenance Mode"
-		],
-		FAST,
+ 	await type(
+ 		[
+ 			"Initializing Robco Industries(TM) MF Boot Agent v2.3.0",
+ 			"RETROS BIOS",
+ 			"RBIOS-4.02.08.00 52EE5.E7.E8",
+ 			"Copyright 2201-2203 Robco Ind.",
+ 			"Uppermem: 64 KB",
+ 			"Root (5A8)",
+ 			"Maintenance Mode"
+ 		],
+ 		FAST,
 		intro
-	);
+ 	);
 
 	await type(">RUN DEBUG/ACCOUNTS.F", { finalWait: 1000 }, intro);
 
@@ -103,6 +103,7 @@ let btngal ='[GALLERY]'
 let btncontact ='[CONTACT]'
   let btnlang = '[IDIOMA/LANGUE]'
   let btnreturn ='[RETURN]'
+  let sitext = 'WEBSITES I\'VE DONE'
 let contato = document.createElement("a");
 		contato.innerText = btncontact;
 		contato.href = "#";
@@ -455,7 +456,9 @@ lna.src = "../../images/Lna.png";
 lna.onclick = () => {
   window.open("https://lnaassessoriadigital.com", "_blank");
 };
-
+let sitestxt = document.createElement("a");
+sites.innerText = sitext
+divsites.appendChild(sitestxt)
 divsites.appendChild(escoteiro);
 divsites.appendChild(arc);
 divsites.appendChild(info);
