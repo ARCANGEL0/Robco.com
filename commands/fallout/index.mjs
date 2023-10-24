@@ -97,13 +97,46 @@ async function outro() {
 			outro
 		);
 
-let btnhome ='[HOME]'
-let btnsobre ='[ABOUT]'
-let btngal ='[GALLERY]'
-let btncontact ='[CONTACT]'
-  let btnlang = '[IDIOMA/LANGUE]'
-  let btnreturn ='[RETURN]'
-  let sitext = 'WEBSITES I\'VE DONE'
+
+// Defina variáveis de idioma para rastrear o idioma atual
+let currentLanguage = 'en'; // Inicialize com o idioma padrão (inglês)
+
+// Função para atualizar os textos com base no idioma
+function updateTexts(language) {
+  if (language === 'pt') {
+    btnhome = '[INÍCIO]';
+    btnsobre = '[SOBRE]';
+    btngal = '[GALERIA]';
+    btncontact = '[CONTATO]';
+    btnlang = '[LANGUAGE/LANGUE]';
+    btnreturn = '[VOLTAR]';
+    sitext = 'SITES QUE JA FIZ';
+  } else if (language === 'es') {
+    // Adicione traduções em espanhol aqui
+  } else if (language === 'fr') {
+    // Adicione traduções em francês aqui
+  } else {
+    // Idioma padrão (inglês)
+    btnhome = '[HOME]';
+    btnsobre = '[ABOUT]';
+    btngal = '[GALLERY]';
+    btncontact = '[CONTACT]';
+    btnlang = '[IDIOMA/LANGUE]';
+    btnreturn = '[RETURN]';
+    sitext = 'WEBSITES I\'VE DONE';
+  }
+}
+
+// Função para lidar com os cliques nos botões de idioma
+function changeLanguage(language) {
+  updateTexts(language);
+
+  // Atualize o conteúdo das variáveis de texto no seu site
+  // Por exemplo, atualize o texto de elementos HTML com id correspondentes
+}
+
+
+
 let contato = document.createElement("a");
 		contato.innerText = btncontact;
 		contato.href = "#";
@@ -290,7 +323,11 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
 let port = document.createElement("a");
 		port.innerText = "[PORTUGUÊS]";
 		port.href = "#";
-		port.onclick = () => { }
+		port.onclick = () => { 
+		  changeLanguage('pt')
+		  
+		  
+		}
 		
 let eng = document.createElement("a");
 		eng.innerText = "[ENGLISH]";
