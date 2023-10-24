@@ -457,8 +457,9 @@ lna.onclick = () => {
   window.open("https://lnaassessoriadigital.com", "_blank");
 };
 let sitestxt = document.createElement("a");
-sites.innerText = sitext
-divsites.appendChild(sitestxt)
+sitestxt.innerText = sitext
+sitestxt.style.marginTop="12%"
+dvid.appendChild(sitestxt)
 divsites.appendChild(escoteiro);
 divsites.appendChild(arc);
 divsites.appendChild(info);
