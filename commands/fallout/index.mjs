@@ -458,7 +458,7 @@ lna.onclick = () => {
 };
 let sitestxt = document.createElement("a");
 sitestxt.innerText = sitext
-sitestxt.style.marginTop="12%"
+sitestxt.style.marginTop="6%"
 dvid.appendChild(sitestxt)
 divsites.appendChild(escoteiro);
 divsites.appendChild(arc);
