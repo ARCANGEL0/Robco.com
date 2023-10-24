@@ -263,7 +263,8 @@ height: 60vh !important;
 
 .divsites img {
   height: auto;
-  width: 20%;
+  width: 13%;
+  margin: 3.5vw;
 }
 .locked {
 	text-align: center;
