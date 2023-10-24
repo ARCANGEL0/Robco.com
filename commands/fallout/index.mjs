@@ -465,9 +465,7 @@ divsites.appendChild(arc);
 divsites.appendChild(info);
 divsites.appendChild(lna);
 
-divsites.style.display = "grid";
-divsites.style.gridTemplateColumns = "1fr 1fr"; // 2 columns
-divsites.style.gridTemplateRows = "1fr 1fr"; // 2 rows
+divsites.style.display = "flex";
 
 divgallery.appendChild(divsites);
 
