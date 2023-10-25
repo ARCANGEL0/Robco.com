@@ -113,7 +113,7 @@ const birthdate = '2000-11-09'; // Replace with your birthdate in 'YYYY-MM-DD' f
 const age = calculateAge(birthdate);
 
 
-
+let btnhome, btnsobre, btngal, btncontact, btnlang, btnreturn, sitext;
 // Função para atualizar os textos com base no idioma
 function updateTexts(language) {
   if (language === 'pt') {
