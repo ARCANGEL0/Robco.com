@@ -113,7 +113,7 @@ const birthdate = '2000-11-09'; // Replace with your birthdate in 'YYYY-MM-DD' f
 const age = calculateAge(birthdate);
 
 
-let btnhome, btnsobre, btngal, btncontact, btnlang, btnreturn, sitext;
+let btnhome, btnsobre, btngal, btncontact, btnlang, btnreturn, sitext,sobretexto, hometexto
 // Função para atualizar os textos com base no idioma
 function updateTexts(language) {
   if (language === 'pt') {
@@ -124,6 +124,7 @@ function updateTexts(language) {
     btnlang = '[LANGUAGE/LANGUE]';
     btnreturn = '[VOLTAR]';
     sitext = 'WEBSITES JÁ FEITOS';
+    
   } else if (language === 'es') {
     // Adicione traduções em espanhol aqui
   } else if (language === 'fr') {
@@ -137,6 +138,12 @@ function updateTexts(language) {
     btnlang = '[IDIOMA/LANGUE]';
     btnreturn = '[RETURN]';
     sitext = 'WEBSITES I\'VE DONE';
+    sobretexto = [
+				`\n>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `,
+				`I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n I create digital illustrations & arts and softwares, app's, websites and others. Some of the technologies I generally use are:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript\n\nBackend: PHP (Including Laravel and CakePHP), Python & Flask, Node & Electron (for desktop build),and for databases I usually work with MySql, MongoDB, or Firebase`, 
+				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`
+			];
+			hometexto = "🚀 Welcome to my digital playground! 🌟 I'm not just a developer; I'm a creator of online experiences that leave a mark. ☄ With a dash of innovation and a sprinkle of code, I turn dreams into pixels, and pixels into reality.";
   }
 
   // Store the selected language in localStorage
@@ -618,11 +625,7 @@ divsobre.appendChild(backSobre)
 
 
 	await type(
-			[
-				`\n>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `,
-				`I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n I create digital illustrations & arts and softwares, app's, websites and others. Some of the technologies I generally use are:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript\n\nBackend: PHP (Including Laravel and CakePHP), Python & Flask, Node & Electron (for desktop build),and for databases I usually work with MySql, MongoDB, or Firebase`, 
-				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`
-			],
+			sobretexto,
 			FAST,
 			divsobre 
 		);
@@ -721,7 +724,7 @@ divgif2.appendChild(gifImage2);
 const iniciotext = document.createElement("p");
 
 // Set the text for the <p> element
-iniciotext.innerText = "? Welcome to my digital playground! ? I'm not just a developer; I'm a creator of online experiences that leave a mark. With a dash of innovation and a sprinkle of code, I turn dreams into pixels, and pixels into reality.";
+iniciotext.innerText = hometexto
 
 // Assuming you have a container div with an id of "portfolio" to append the <p> element to
 
