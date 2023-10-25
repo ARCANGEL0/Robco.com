@@ -112,25 +112,41 @@ function calculateAge(birthdate) {
 const birthdate = '2000-11-09'; // Replace with your birthdate in 'YYYY-MM-DD' format
 const age = calculateAge(birthdate);
 
+// Function to update the text on the page
+function updateTexts() {
+  document.getElementById('btn-home').textContent = btnhome;
+  document.getElementById('btn-sobre').textContent = btnsobre;
+  document.getElementById('btn-gal').textContent = btngal;
+  document.getElementById('btn-contact').textContent = btncontact;
+  document.getElementById('btn-lang').textContent = btnlang;
+  document.getElementById('btn-return').textContent = btnreturn;
+  document.getElementById('site-text').textContent = sitext;
+  
+  // Also update other text elements if necessary
+  document.getElementById('sobre-text').textContent = sobretexto;
+  document.getElementById('home-text').textContent = hometexto;
+}
 
-let btnhome, btnsobre, btngal, btncontact, btnlang, btnreturn, sitext,sobretexto, hometexto
-// Função para atualizar os textos com base no idioma
-function updateTexts(language) {
+// Function to handle language change
+function changeLanguage(language) {
+  updateTexts(); // Update the text content first
+  
   if (language === 'pt') {
     btnhome = '[INÍCIO]';
     btnsobre = '[SOBRE]';
     btngal = '[GALERIA]';
     btncontact = '[CONTATO]';
-    btnlang = '[LANGUAGE/LANGUE]';
+    btnlang = '[IDIOMA/LANGUE]';
     btnreturn = '[VOLTAR]';
     sitext = 'WEBSITES JÁ FEITOS';
-    
+    sobretexto = ["..."]; // Update other text as needed
+    hometexto = "...."; // Update other text as needed
   } else if (language === 'es') {
-    // Adicione traduções em espanhol aqui
+    // Add translations in Spanish here
   } else if (language === 'fr') {
-    // Adicione traduções em francês aqui
+    // Add translations in French here
   } else {
-    // Idioma padrão (inglês)
+    // Default language (English)
     btnhome = '[HOME]';
     btnsobre = '[ABOUT]';
     btngal = '[GALLERY]';
@@ -142,30 +158,25 @@ function updateTexts(language) {
 				`\n>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `,
 				`I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n I create digital illustrations & arts and softwares, app's, websites and others. Some of the technologies I generally use are:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript\n\nBackend: PHP (Including Laravel and CakePHP), Python & Flask, Node & Electron (for desktop build),and for databases I usually work with MySql, MongoDB, or Firebase`, 
 				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`
-			];
-			hometexto = "🚀 Welcome to my digital playground! 🌟 I'm not just a developer; I'm a creator of online experiences that leave a mark. ☄ With a dash of innovation and a sprinkle of code, I turn dreams into pixels, and pixels into reality.";
+			]
+    //Update other text as needed
+    hometexto = "🚀 Welcome to my digital playground! 🌟 I'm not just a developer; I'm a creator of online experiences that leave a mark. ☄ With a dash of innovation and a sprinkle of code, I turn dreams into pixels, and pixels into reality."; // Update other text as needed
   }
+
+  // Update the text content on the page again
+  updateTexts();
 
   // Store the selected language in localStorage
   localStorage.setItem('selectedLanguage', language);
 }
 
-// Função para lidar com os cliques nos botões de idioma
-function changeLanguage(language) {
-  updateTexts(language);
 
-  // Atualize o conteúdo das variáveis de texto no seu site
-  // Por exemplo, atualize o texto de elementos HTML com id correspondentes
-}
-
-// Recuperar o idioma selecionado da localStorage quando a página carrega
+// Handle initial language setup (use the stored language or default to English)
 const storedLanguage = localStorage.getItem('selectedLanguage');
 if (storedLanguage) {
-  // Use the stored language if available
-  updateTexts(storedLanguage);
+  changeLanguage(storedLanguage);
 } else {
-  // Use the default language (English) if no language is stored in localStorage
-  updateTexts('en');
+  changeLanguage('en');
 }
 
 
@@ -173,6 +184,7 @@ if (storedLanguage) {
 
 let contato = document.createElement("a");
 		contato.innerText = btncontact;
+		contato.classList.add("btn-contact")
 		contato.href = "#";
 		contato.onclick = () => {
 			// remove all a tags and put a text with p and an a tag in the end to take back to preciois page.. Remove text and restore a tag buttons 
@@ -293,6 +305,7 @@ message.appendChild(contactForm);
     // Create a "Go Back" <a> tag
     const goBackLink = document.createElement("a");
     goBackLink.innerText = btnreturn;
+    goBackLink.classList.add("btnReturn")
     goBackLink.href = "#";
     goBackLink.onclick = () => {
         // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
@@ -336,7 +349,8 @@ inicio.remove();
     terminal.remove();
 			
 const backLang = document.createElement("a");
-    backLang.innerText = btnreturn;
+    backLang.innerText = btnreturn
+    backLang.classList.add("btnReturn")
     backLang.href = "#";
     backLang.onclick = () => {
         // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
@@ -392,7 +406,7 @@ type([backLang,port, eng, spa, fre], { processChars: false , wait: 10 }, outro);
 
 
 		galeria.innerText = btngal;
-
+galeria.classList.add("bt-gal")
 		galeria.href = "#";
 		galeria.onclick = () => {
 			
@@ -418,6 +432,7 @@ type([backLang,port, eng, spa, fre], { processChars: false , wait: 10 }, outro);
     const backGal = document.createElement("a");
     backGal.innerText = btnreturn;
     backGal.style.marginTop = "10px"
+    backGal.classList.add("btnReturn")
     backGal.href = "#";
     backGal.onclick = () => {
         // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
@@ -535,6 +550,7 @@ lna.onclick = () => {
 };
 let sitestxt = document.createElement("a");
 sitestxt.innerText = sitext
+sitestxt.classList.add("sitesheader")
 sitestxt.style.marginTop="6%"
 dvid.appendChild(sitestxt)
 divsites.appendChild(escoteiro);
@@ -553,6 +569,7 @@ divgallery.appendChild(divsites);
 
 
 		sobre.innerText = btnsobre;
+		sobre.classList.add("btn-sobre")
 
 		sobre.href = "#";
 		sobre.onclick = async () =>  {		
@@ -581,6 +598,7 @@ divgallery.appendChild(divsites);
     divsobre.classList.add('divsob')
     const backSobre = document.createElement("a");
     backSobre.innerText = btnreturn;
+    backSobre.classList.add("btnReturn")
     backSobre.style.marginTop = "10px"
     backSobre.href = "#";
     backSobre.onclick = () => {
@@ -705,7 +723,7 @@ divgif2.appendChild(gifImage2);
 }
 		let terminal = document.createElement("a");
 		terminal.innerText = "[TERMINAL]";
-
+     terminal.classList.add("btn-terminal")
 		terminal.href = "#";
 		terminal.onclick = () => {
 		  outro.remove();
@@ -715,7 +733,7 @@ divgif2.appendChild(gifImage2);
 			let inicio = document.createElement("a");
 
 		inicio.innerText = btnhome;
-
+    inicio.classList.add('btn-homr')
 		inicio.href = "#";
 		inicio.onclick = () => {		
 		  
@@ -731,6 +749,7 @@ const iniciotext = document.createElement("p");
 
 // Set the text for the <p> element
 iniciotext.innerText = hometexto
+iniciotext.classList.add("inicioheader")
 
 // Assuming you have a container div with an id of "portfolio" to append the <p> element to
 
@@ -759,6 +778,7 @@ divgif.appendChild(gifImage);
 
 		  const goBackLinkIn = document.createElement("a");
     goBackLinkIn.innerText = btnreturn;
+    goBackLinkIn.classList.add('btnReturn')
     goBackLinkIn.style.marginTop = "10px"
     goBackLinkIn.href = "#";
     goBackLinkIn.onclick = () => {
