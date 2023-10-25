@@ -98,9 +98,6 @@ async function outro() {
 		);
 
 
-// Defina variáveis de idioma para rastrear o idioma atual
-let currentLanguage = 'en'; // Inicialize com o idioma padrão (inglês)
-
 // Função para atualizar os textos com base no idioma
 function updateTexts(language) {
   if (language === 'pt') {
@@ -110,7 +107,7 @@ function updateTexts(language) {
     btncontact = '[CONTATO]';
     btnlang = '[LANGUAGE/LANGUE]';
     btnreturn = '[VOLTAR]';
-    sitext = 'SITES QUE JA FIZ';
+    sitext = 'WEBSITES JÁ FEITOS';
   } else if (language === 'es') {
     // Adicione traduções em espanhol aqui
   } else if (language === 'fr') {
@@ -125,6 +122,9 @@ function updateTexts(language) {
     btnreturn = '[RETURN]';
     sitext = 'WEBSITES I\'VE DONE';
   }
+
+  // Store the selected language in localStorage
+  localStorage.setItem('selectedLanguage', language);
 }
 
 // Função para lidar com os cliques nos botões de idioma
@@ -134,6 +134,17 @@ function changeLanguage(language) {
   // Atualize o conteúdo das variáveis de texto no seu site
   // Por exemplo, atualize o texto de elementos HTML com id correspondentes
 }
+
+// Recuperar o idioma selecionado da localStorage quando a página carrega
+const storedLanguage = localStorage.getItem('selectedLanguage');
+if (storedLanguage) {
+  // Use the stored language if available
+  updateTexts(storedLanguage);
+} else {
+  // Use the default language (English) if no language is stored in localStorage
+  updateTexts('en');
+}
+
 
 
 
