@@ -358,15 +358,21 @@ let port = document.createElement("a");
 		port.innerText = "[PORTUGUÊS]";
 		port.href = "#";
 		port.onclick = () => { 
-		  changeLanguage('pt')
 		  
+		  changeLanguage('pt')
+		  alert('txt')
+		  updateTexts('pt')
 		  
 		}
 		
 let eng = document.createElement("a");
 		eng.innerText = "[ENGLISH]";
 		eng.href = "#";
-		eng.onclick = () => { }
+		eng.onclick = () => { 
+		  changeLanguage('en')
+		  alert('txt')
+		  updateTexts('en') 
+		}
 		
 let spa = document.createElement("a");
 		spa.innerText = "[ESPANÕL]";
