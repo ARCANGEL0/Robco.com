@@ -96,6 +96,22 @@ async function outro() {
 			FAST,
 			outro
 		);
+function calculateAge(birthdate) {
+  let today = new Date();
+  let birthDate = new Date(birthdate);
+  let age = today.getFullYear() - birthDate.getFullYear();
+  let monthDiff = today.getMonth() - birthDate.getMonth();
+
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+
+  return age;
+}
+
+const birthdate = '2000-11-09'; // Replace with your birthdate in 'YYYY-MM-DD' format
+const age = calculateAge(birthdate);
+
 
 
 // Função para atualizar os textos com base no idioma
@@ -595,22 +611,6 @@ const sobretxt3 = document.createElement("p");
 const technologies = document.createElement("p");
 */
 // Set the text for the <p> element
-
-function calculateAge(birthdate) {
-  let today = new Date();
-  let birthDate = new Date(birthdate);
-  let age = today.getFullYear() - birthDate.getFullYear();
-  let monthDiff = today.getMonth() - birthDate.getMonth();
-
-  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-    age--;
-  }
-
-  return age;
-}
-
-const birthdate = '2000-11-09'; // Replace with your birthdate in 'YYYY-MM-DD' format
-const age = calculateAge(birthdate);
 
 
 
