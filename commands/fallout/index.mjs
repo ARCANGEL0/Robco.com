@@ -418,7 +418,7 @@ let spa = document.createElement("a");
         backLang.remove();
         // outro.appendChild(logout);
         // outro.appendChild(contato);
-type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);/
+type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
 
 		}
 		
