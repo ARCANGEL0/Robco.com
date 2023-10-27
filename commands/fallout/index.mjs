@@ -374,8 +374,16 @@ let port = document.createElement("a");
 		port.onclick = () => { 
 		  
 		  changeLanguage('pt')
-		  alert('txt')
+		  
 		  updateTexts()
+		  port.remove();
+        spa.remove();
+        eng.remove()
+        fre.remove()
+        backLang.remove();
+        // outro.appendChild(logout);
+        // outro.appendChild(contato);
+type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
 		  
 		}
 		
@@ -384,19 +392,51 @@ let eng = document.createElement("a");
 		eng.href = "#";
 		eng.onclick = () => { 
 		  changeLanguage('en')
-		  alert('txt')
+		  
 		  updateTexts() 
+		  
+		  port.remove();
+        spa.remove();
+        eng.remove()
+        fre.remove()
+        backLang.remove();
+        // outro.appendChild(logout);
+        // outro.appendChild(contato);
+type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
+
 		}
 		
 let spa = document.createElement("a");
 		spa.innerText = "[ESPANÕL]";
 		spa.href = "#";
-		spa.onclick = () => { }
+		spa.onclick = () => { 
+		  
+		  port.remove();
+        spa.remove();
+        eng.remove()
+        fre.remove()
+        backLang.remove();
+        // outro.appendChild(logout);
+        // outro.appendChild(contato);
+type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);/
+
+		}
 		
 let fre = document.createElement("a");
 		fre.innerText = "[FRANÇAIS]";
 		fre.href = "#";
-		fre.onclick = () => { }
+		fre.onclick = () => { 
+		  
+		  port.remove();
+        spa.remove();
+        eng.remove()
+        fre.remove()
+        backLang.remove();
+        // outro.appendChild(logout);
+        // outro.appendChild(contato);
+type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
+
+		}
     // Append the message and "Go Back" link to the 'outro' element
 type([backLang,port, eng, spa, fre], { processChars: false , wait: 10 }, outro);
 		  
