@@ -114,17 +114,17 @@ const age = calculateAge(birthdate);
 
 // Function to update the text on the page
 function updateTexts() {
-  document.getElementById('btn-home').textContent = btnhome;
-  document.getElementById('btn-sobre').textContent = btnsobre;
-  document.getElementById('btn-gal').textContent = btngal;
-  document.getElementById('btn-contact').textContent = btncontact;
-  document.getElementById('btn-lang').textContent = btnlang;
-  document.getElementById('btn-return').textContent = btnreturn;
-  document.getElementById('site-text').textContent = sitext;
+  document.getElementsByClassName('btn-home').textContent = btnhome;
+  document.getElementsByClassName('btn-sobre').textContent = btnsobre;
+  document.getElementsByClassName('btn-gal').textContent = btngal;
+  document.getElementsByClassName('btn-contact').textContent = btncontact;
+  document.getElementsByClassName('btn-lang').textContent = btnlang;
+  document.getElementsByClassName('btnReturn').textContent = btnreturn;
+  document.getElementsByClassName('sitesheader').textContent = sitext;
   
   // Also update other text elements if necessary
-  document.getElementById('sobre-text').textContent = sobretexto;
-  document.getElementById('home-text').textContent = hometexto;
+  document.getElementsByClassName('sobre-text').textContent = sobretexto;
+  document.getElementsByClassName('inicioheader').textContent = hometexto;
 }
 
 // Function to handle language change
@@ -332,7 +332,7 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 			
 		};
 		let idioma = document.createElement("a");
-
+    idioma.classList.add("btn-lang")
 
 
 		idioma.innerText = btnlang;
@@ -406,7 +406,7 @@ type([backLang,port, eng, spa, fre], { processChars: false , wait: 10 }, outro);
 
 
 		galeria.innerText = btngal;
-galeria.classList.add("bt-gal")
+galeria.classList.add("btn-gal")
 		galeria.href = "#";
 		galeria.onclick = () => {
 			
@@ -467,12 +467,12 @@ const dvid = document.createElement("div");
 dvid.classList.add("dvid")
 
 const prevBtn = document.createElement("button");
-prevBtn.textContent = "Previous";
+prevBtn.textContent = "《";
 prevBtn.classList.add('carousel-button')
 divbuttons.appendChild(prevBtn);
 
 const nextBtn = document.createElement("button");
-nextBtn.textContent = "Next";
+nextBtn.textContent = "》";
 nextBtn.classList.add('carousel-button')
 divbuttons.appendChild(nextBtn);
 
@@ -733,7 +733,7 @@ divgif2.appendChild(gifImage2);
 			let inicio = document.createElement("a");
 
 		inicio.innerText = btnhome;
-    inicio.classList.add('btn-homr')
+    inicio.classList.add('btn-home')
 		inicio.href = "#";
 		inicio.onclick = () => {		
 		  
@@ -749,6 +749,7 @@ const iniciotext = document.createElement("p");
 
 // Set the text for the <p> element
 iniciotext.innerText = hometexto
+
 iniciotext.classList.add("inicioheader")
 
 // Assuming you have a container div with an id of "portfolio" to append the <p> element to
