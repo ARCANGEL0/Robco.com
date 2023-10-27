@@ -375,7 +375,7 @@ let port = document.createElement("a");
 		  
 		  changeLanguage('pt')
 		  alert('txt')
-		  updateTexts('pt')
+		  updateTexts()
 		  
 		}
 		
@@ -385,7 +385,7 @@ let eng = document.createElement("a");
 		eng.onclick = () => { 
 		  changeLanguage('en')
 		  alert('txt')
-		  updateTexts('en') 
+		  updateTexts() 
 		}
 		
 let spa = document.createElement("a");
