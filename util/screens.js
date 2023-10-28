@@ -59,8 +59,8 @@ export async function main() {
 // Function to make a request to ChatGPT
 async function requestToChatGPT(inputText) {
   // You should replace 'YOUR_API_KEY' and 'YOUR_CHATGPT_ENDPOINT' with your actual API key and endpoint
-  const apiKey = 'YOUR_API_KEY';
-  const endpoint = 'YOUR_CHATGPT_ENDPOINT';
+  const apiKey = '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';
+  const endpoint = 'https://api.openai.com/v1/chat/completions';
   
   const response = await fetch(endpoint, {
     method: 'POST',
