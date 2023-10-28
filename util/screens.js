@@ -37,25 +37,42 @@ export async function login() {
 	
 }
 
-/** Main input terminal, recursively calls itself */
-export async function main() { 
 
-  
-	let command = await input();
-	try {
-	  if(command=="VOLTAR") {
-	    addStylesheet(`commands/fallout/fallout.css`);
-	    loadTemplates(`commands/fallout/fallout.html`);
-	    outro();
-	  }
-		await type(command)
-	} catch (e) {
-		if (e.message) await type(e.message);
-	}
-
-	main();
+export async function main() {
+  let command = await input();
+  try {
+    if (command == "VOLTAR") {
+      addStylesheet(`commands/fallout/fallout.css`);
+      loadTemplates(`commands/fallout/fallout.html`);
+      outro();
+    } else {
+      // Send the command to ChatGPT and get a response
+      const response = await requestToChatGPT(command);
+      await type(response);
+    }
+  } catch (e) {
+    if (e.message) await type(e.message);
+  }
+  main();
 }
 
+// Function to make a request to ChatGPT
+async function requestToChatGPT(inputText) {
+  // You should replace 'YOUR_API_KEY' and 'YOUR_CHATGPT_ENDPOINT' with your actual API key and endpoint
+  const apiKey = 'YOUR_API_KEY';
+  const endpoint = 'YOUR_CHATGPT_ENDPOINT';
+  
+  const response = await fetch(endpoint, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({ text: inputText }),
+  });
+
+  const result = await response.json();
+  return result.choices[0].text
 export function addClasses(el, ...cls) {
 	let list = [...cls].filter(Boolean);
 	el.classList.add(...list);
