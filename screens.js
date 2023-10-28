@@ -40,6 +40,7 @@ export async function login() {
 /** Main input terminal, recursively calls itself */
 export async function main() { 
 
+  
 	let command = await input();
 	try {
 		await type(command)
