@@ -36,6 +36,9 @@ export async function login() {
 export async function main() { 
 	let command = await input();
 	try {
+	  if (command=='VOLTAR'){
+	    await outro()
+	  }
 		await type(command)
 	} catch (e) {
 		if (e.message) await type(e.message);
