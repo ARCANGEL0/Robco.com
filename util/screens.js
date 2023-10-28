@@ -36,7 +36,7 @@ export async function login() {
 export async function main() { 
 	let command = await input();
 	try {
-	  if (command=='VOLTAR'){
+	  if (command=='voltar'){
 	    await outro()
 	  }
 		await type(command)
