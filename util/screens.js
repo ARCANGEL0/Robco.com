@@ -75,7 +75,7 @@ async function requestToChatGPT(inputText) {
   const result = await response.json();
   return result.choices[0].text
   
-  
+    
 }
 export function addClasses(el, ...cls) {
 	let list = [...cls].filter(Boolean);
