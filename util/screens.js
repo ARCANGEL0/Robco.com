@@ -73,6 +73,7 @@ async function requestToChatGPT(inputText) {
   console.log("respons" + response)
 
   const result = await response.json();
+  console.log(result)
   return result.choices[0].text
   
     
