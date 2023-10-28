@@ -1,7 +1,6 @@
-const output = [
-	"I would tell you a UDP joke...",
-	" ",
-	"...but you might not get it"
-];
 
-export { output };
+import { getScreen, clear, main} from "../../util/screens.js";
+
+await outro();
+
+
