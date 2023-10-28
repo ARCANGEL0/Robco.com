@@ -33,7 +33,7 @@ async function run(command, debug) {
 	// Run the command (setting debug param will skip typing the command)
 	if (command) {
 		if (!debug) {
-			await type("> " + command, { initialWait: 3000, finalWait: 1500 });
+			await type("> " + command, { initialWait: 3000, finalWait: 1000 });
 		}
 		await type(command);
 	}
