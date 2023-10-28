@@ -1,5 +1,5 @@
 
-import { getScreen, clear, main} from "../../util/screens.js";
+import { outro} from "../fallout/index.js";
 
 await outro();
 
