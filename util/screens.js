@@ -41,7 +41,7 @@ export async function login() {
 export async function main() {
   let command = await input();
   try {
-    if (command == "VOLTAR") {
+    if (command == "voltar") {
       addStylesheet(`commands/fallout/fallout.css`);
       loadTemplates(`commands/fallout/fallout.html`);
       outro();
