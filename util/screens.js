@@ -2,7 +2,12 @@ import { parse, type, prompt, input } from "./io.js";
 import pause from "./pause.js";
 import alert from "./alert.js";
 import say from "./speak.js";
-import { intro , outro} from "../commands/fallout/index.mjs"
+import { intro, outro} from '../commands/fallout/index.mjs'
+
+const FAST = {
+	wait: 15,
+	initialWait: 100
+};
 
 
 function addStylesheet(href) {
@@ -23,8 +28,8 @@ function addStylesheet(href) {
 
 /** Boot screen */
 export async function boot() {
-await main();
 
+main()
 }
 
 /** Login screen */
@@ -34,10 +39,14 @@ export async function login() {
 
 /** Main input terminal, recursively calls itself */
 export async function main() { 
+
+  
 	let command = await input();
 	try {
-	  if (command=='voltar'){
-	    await outro()
+	  if(command=="VOLTAR") {
+	    addStylesheet(`commands/fallout/fallout.css`);
+	    loadTemplates(`commands/fallout/fallout.html`);
+	    outro();
 	  }
 		await type(command)
 	} catch (e) {
