@@ -35,7 +35,7 @@ async function run(command, debug) {
 		if (!debug) {
 			await type("> " + command, { initialWait: 3000, finalWait: 1500 });
 		}
-		await parse(command);
+		await type(command);
 	}
 
 	// After the command is finished, show the main terminal
