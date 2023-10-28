@@ -2,7 +2,7 @@ import { parse, type, prompt, input } from "./io.js";
 import pause from "./pause.js";
 import alert from "./alert.js";
 import say from "./speak.js";
-import { intro } from '../commands/fallout/index.mjs'
+import { intro, outro} from '../commands/fallout/index.mjs'
 
 const FAST = {
 	wait: 15,
@@ -43,6 +43,9 @@ export async function main() {
   
 	let command = await input();
 	try {
+	  if(command=="VOLTAR") {
+	    outro();
+	  }
 		await type(command)
 	} catch (e) {
 		if (e.message) await type(e.message);
