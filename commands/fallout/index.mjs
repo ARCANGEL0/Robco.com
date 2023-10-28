@@ -47,19 +47,19 @@ export async function intro() {
 		intro
 	);
 
- 	await type(
- 		[
- 			"Initializing Robco Industries(TM) MF Boot Agent v2.3.0",
- 			"RETROS BIOS",
- 			"RBIOS-4.02.08.00 52EE5.E7.E8",
- 			"Copyright 2201-2203 Robco Ind.",
- 			"Uppermem: 64 KB",
- 			"Root (5A8)",
- 			"Maintenance Mode"
- 		],
- 		FAST,
+	await type(
+		[
+			"Initializing Robco Industries(TM) MF Boot Agent v2.3.0",
+			"RETROS BIOS",
+			"RBIOS-4.02.08.00 52EE5.E7.E8",
+			"Copyright 2201-2203 Robco Ind.",
+			"Uppermem: 64 KB",
+			"Root (5A8)",
+			"Maintenance Mode"
+		],
+		FAST,
 		intro
- 	);
+	);
 
 	await type(">RUN DEBUG/ACCOUNTS.F", { finalWait: 1000 }, intro);
 
@@ -111,42 +111,75 @@ function calculateAge(birthdate) {
 
 const birthdate = '2000-11-09'; // Replace with your birthdate in 'YYYY-MM-DD' format
 const age = calculateAge(birthdate);
-let btnhome, btnsobre, btngal, btncontact, btnlang, btnreturn, sitext,sobretexto,hometexto;
-// Function to update the text on the page
-function updateTexts() {
-  document.getElementsByClassName('btn-home').textContent = btnhome;
-  document.getElementsByClassName('btn-sobre').textContent = btnsobre;
-  document.getElementsByClassName('btn-gal').textContent = btngal;
-  document.getElementsByClassName('btn-contact').textContent = btncontact;
-  document.getElementsByClassName('btn-lang').textContent = btnlang;
-  document.getElementsByClassName('btnReturn').textContent = btnreturn;
-  document.getElementsByClassName('sitesheader').textContent = sitext;
-  
-  // Also update other text elements if necessary
-  document.getElementsByClassName('sobre-text').textContent = sobretexto;
-  document.getElementsByClassName('inicioheader').textContent = hometexto;
-}
+let btnhome, btnsobre, btngal, btncontact, btnlang, btnreturn, sitext,sobretexto,hometexto,contactinfo
 
+function updateTexts() {
+		  inicio.innerText = btnhome
+		  sobre.innerText = btnsobre
+		  galeria.innerText = btngal
+		  contato.innerText = btncontact
+		  idioma.innerText= btnlang
+		  
+		}
 // Function to handle language change
 function changeLanguage(language) {
-  updateTexts(); // Update the text content first
+  
   
   if (language === 'pt') {
-    btnhome = '[INÍCIO]';
-    btnsobre = '[SOBRE]';
-    btngal = '[GALERIA]';
-    btncontact = '[CONTATO]';
-    btnlang = '[IDIOMA/LANGUE]';
-    btnreturn = '[VOLTAR]';
-    sitext = 'WEBSITES JÁ FEITOS';
-    sobretexto = ["..."]; // Update other text as needed
-    hometexto = "...."; // Update other text as needed
+     contactinfo = "Informações de Contato:\n\n ";
+ btnhome = '[INICIO]';
+ btnsobre = '[SOBRE]';
+ btngal = '[GALERIA]';
+ btncontact = '[CONTATO]';
+ btnlang = '[LANGUAGE/LANGUE]';
+ btnreturn = '[VOLTAR]';
+ sitext = 'WEBSITES QUE FIZ';
+ sobretexto = [
+  `\n>// Eu sou o Henry! Tenho ${age} anos. Sou ilustrador e desenvolvedor, apaixonado por Tecnologia, Design e tópicos em alta como IA ou Big Data.`,
+  `Sou formado em Desenvolvimento de Software e Design Digital e trabalho como desenvolvedor fullstack. \n Crio ilustrações digitais e softwares, aplicativos, websites e outros. Algumas das tecnologias que geralmente uso incluem:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript\n\nBackend: PHP (incluindo Laravel e CakePHP), Python & Flask, Node & Electron (para desenvolvimento de aplicativos desktop), e em relação a bancos de dados, geralmente trabalho com MySql, MongoDB ou Firebase.`,
+  `Realizo projetos que vão desde websites dinâmicos simples até aplicativos móveis, softwares sob demanda e sistemas de gerenciamento administrativo. Atualmente, estou estudando e me especializando em Cibersegurança e Ciência de Dados.`
+];
+ hometexto = "🚀 Bem-vindo ao meu parque de diversões digital! 🌟 Não sou apenas um desenvolvedor; sou um criador de experiências online que deixam uma marca. ☄ Com uma pitada de inovação e uma dose de código, transformo sonhos em pixels e pixels em realidade.";
   } else if (language === 'es') {
     // Add translations in Spanish here
+    
+     contactinfo = "Información de contacto:\n\n";
+ btnhome = '[INICIO]';
+ btnsobre = '[ACERCA DE]';
+ btngal = '[GALERÍA]';
+ btncontact = '[CONTACTO]';
+ btnlang = '[IDIOMA/LANGUAGE]';
+ btnreturn = '[VOLVER]';
+ sitext = 'SITIOS WEB QUE HE CREADO';
+ sobretexto = [
+  `\n>// ¡Soy Henry! Tengo ${age} años. Soy ilustrador y desarrollador, apasionado por la Tecnología, el Diseño y temas de vanguardia como la IA o el Big Data.`,
+  `Soy graduado en Desarrollo de Software y Diseño Digital y trabajo como desarrollador fullstack. Creo ilustraciones digitales y software, aplicaciones, sitios web y más. Algunas de las tecnologías que suelo utilizar incluyen:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React y Typescript\n\nBackend: PHP (incluyendo Laravel y CakePHP), Python y Flask, Node y Electron (para el desarrollo de aplicaciones de escritorio), y en cuanto a bases de datos, suelo trabajar con MySql, MongoDB o Firebase.`,
+  `Realizo proyectos que van desde sitios web dinámicos simples hasta aplicaciones móviles, software a medida y sistemas de administración. Actualmente, estoy estudiando y especializándome en Ciberseguridad y Ciencia de Datos.`
+];
+ hometexto = "🚀 ¡Bienvenido a mi parque de diversiones digital! 🌟 No soy solo un desarrollador; soy un creador de experiencias en línea que dejan huella. ☄ Con un toque de innovación y una dosis de código, convierto sueños en píxeles y píxeles en realidad.";
+
   } else if (language === 'fr') {
     // Add translations in French here
+    
+     contactinfo = "Coordonnées de contact:\n\n";
+ btnhome = '[ACCUEIL]';
+ btnsobre = '[À PROPOS]';
+ btngal = '[GALERIE]';
+ btncontact = '[CONTACT]';
+ btnlang = '[LANGUE]';
+ btnreturn = '[RETOUR]';
+ sitext = 'LES SITES WEB QUE J\'AI CRÉÉS';
+ sobretexto = [
+  `\n>// Je suis Henry ! J'ai ${age} ans. Je suis illustrateur et développeur, passionné par la technologie, le design et des sujets avancés tels que l'IA ou le Big Data.`,
+  `Je suis diplômé en développement logiciel et design numérique, et je travaille en tant que développeur fullstack. Je crée des illustrations numériques et des logiciels, des applications, des sites web, et plus encore. Certaines des technologies que j'utilise généralement incluent :`, `Frontend : Javascript ES6+, Vue.JS, Bootstrap, React et Typescript\n\nBackend : PHP (y compris Laravel et CakePHP), Python et Flask, Node et Electron (pour le développement d'applications de bureau), et en ce qui concerne les bases de données, je travaille généralement avec MySql, MongoDB ou Firebase.`,
+  `Je réalise des projets allant de simples sites web dynamiques à des applications mobiles, des logiciels sur mesure et des systèmes de gestion. Actuellement, j'étudie et me spécialise en cybersécurité et en science des données.`
+];
+ hometexto = "🚀 Bienvenue dans mon parc d'attractions numérique ! 🌟 Je ne suis pas seulement un développeur ; je suis un créateur d'expériences en ligne qui laissent une empreinte. ☄ Avec une touche d'innovation et une dose de code, je transforme les rêves en pixels et les pixels en réalité.";
+
+
   } else {
     // Default language (English)
+    contactinfo = "Contact info:\n\n ";
     btnhome = '[HOME]';
     btnsobre = '[ABOUT]';
     btngal = '[GALLERY]';
@@ -163,11 +196,9 @@ function changeLanguage(language) {
     hometexto = "🚀 Welcome to my digital playground! 🌟 I'm not just a developer; I'm a creator of online experiences that leave a mark. ☄ With a dash of innovation and a sprinkle of code, I turn dreams into pixels, and pixels into reality."; // Update other text as needed
   }
 
-  // Update the text content on the page again
-  updateTexts();
 
   // Store the selected language in localStorage
-  localStorage.setItem('selectedLanguage', language);
+   localStorage.setItem('selectedLanguage', language);
 }
 
 
@@ -190,7 +221,7 @@ let contato = document.createElement("a");
 			// remove all a tags and put a text with p and an a tag in the end to take back to preciois page.. Remove text and restore a tag buttons 
 			   // Create a <p> element with a message
     const message = document.createElement('p');
-    message.innerText = "Contact info:\n\n ";
+    message.innerText = contactinfo
 const contactTable = document.createElement('table');
 contactTable.style.borderCollapse = 'collapse';
 
@@ -219,88 +250,8 @@ contacts.forEach(contact => {
 });
 
 
-// ... Your existing code ...
-
-// Create a contact form
-// ... Your existing code ...
-
-// Create a contact form
-const contactForm = document.createElement('form');
-contactForm.setAttribute('action', 'mailto:your-email@example.com'); // Replace with your email address
-contactForm.setAttribute('method', 'post');
-contactForm.classList.add('contact-form'); // Add a class for the form
-
-// Create form fields
-const nameLabel = document.createElement('label');
-nameLabel.innerText = 'Name:';
-nameLabel.classList.add('form-label'); // Add a class for the label
-const nameInput = document.createElement('input');
-nameInput.setAttribute('type', 'text');
-nameInput.setAttribute('name', 'name');
-nameInput.required = true;
-nameInput.classList.add('form-input'); // Add a class for the input
-
-const emailLabel = document.createElement('label');
-emailLabel.innerText = 'Email:';
-emailLabel.classList.add('form-label'); // Add a class for the label
-const emailInput = document.createElement('input');
-emailInput.setAttribute('type', 'email');
-emailInput.setAttribute('name', 'email');
-emailInput.required = true;
-emailInput.classList.add('form-input'); // Add a class for the input
-
-const phoneLabel = document.createElement('label');
-phoneLabel.innerText = 'Phone Number:';
-phoneLabel.classList.add('form-label'); // Add a class for the label
-const phoneInput = document.createElement('input');
-phoneInput.setAttribute('type', 'tel');
-phoneInput.setAttribute('name', 'phone');
-phoneInput.classList.add('form-input'); // Add a class for the input
-
-const subjectLabel = document.createElement('label');
-subjectLabel.innerText = 'Subject:';
-subjectLabel.classList.add('form-label'); // Add a class for the label
-const subjectInput = document.createElement('input');
-subjectInput.setAttribute('type', 'text');
-subjectInput.setAttribute('name', 'subject');
-subjectInput.required = true;
-subjectInput.classList.add('form-input'); // Add a class for the input
-const messageLabel = document.createElement('label');
-messageLabel.innerText = 'Message:';
-messageLabel.classList.add('form-label'); // Add a class for the label
-const messageTextarea = document.createElement('textarea');
-messageTextarea.setAttribute('name', 'message');
-messageTextarea.rows ="1";
-messageTextarea.required = true;
-messageTextarea.classList.add('form-input');
-messageTextarea.classList.add('txtarea') 
-//Add a class for the input textarea
-// Create a submit button
-const submitButton = document.createElement('input');
-submitButton.setAttribute('type', 'submit');
-submitButton.value = 'Send';
-
-// Append form elements to the form
-contactForm.appendChild(nameLabel);
-contactForm.appendChild(nameInput);
-contactForm.appendChild(document.createElement('br'));
-contactForm.appendChild(emailLabel);
-contactForm.appendChild(emailInput);
-contactForm.appendChild(document.createElement('br'));
-contactForm.appendChild(phoneLabel);
-contactForm.appendChild(phoneInput);
-contactForm.appendChild(document.createElement('br'));
-contactForm.appendChild(subjectLabel);
-contactForm.appendChild(subjectInput);
-contactForm.appendChild(document.createElement('br'));
-contactForm.appendChild(messageLabel);
-contactForm.appendChild(messageTextarea);
-contactForm.appendChild(document.createElement('br'));
-contactForm.appendChild(submitButton);
-
 // Append the contact form to the message
 message.appendChild(contactTable);
-message.appendChild(contactForm); 
 
     // Create a "Go Back" <a> tag
     const goBackLink = document.createElement("a");
@@ -331,116 +282,7 @@ type([message, goBackLink], { processChars: false , wait: 10 }, outro);
 			
 			
 		};
-		let idioma = document.createElement("a");
-    idioma.classList.add("btn-lang")
-
-
-		idioma.innerText = btnlang;
-
-		idioma.href = "#";
-		idioma.onclick = () => {
-			
-inicio.remove();
-    sobre.remove();
-    galeria.remove();
-    logout.remove();
-    contato.remove();
-    idioma.remove();
-    terminal.remove();
-			
-const backLang = document.createElement("a");
-    backLang.innerText = btnreturn
-    backLang.classList.add("btnReturn")
-    backLang.href = "#";
-    backLang.onclick = () => {
-        // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
-        port.remove();
-        spa.remove();
-        eng.remove()
-        fre.remove()
-        backLang.remove();
-        // outro.appendChild(logout);
-        // outro.appendChild(contato);
-type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
-    };
-
-    // Remove the "Logout" and "Contact" buttons
-    
-
-
-let port = document.createElement("a");
-		port.innerText = "[PORTUGUÊS]";
-		port.href = "#";
-		port.onclick = () => { 
-		  
-		  changeLanguage('pt')
-		  
-		  updateTexts()
-		  port.remove();
-        spa.remove();
-        eng.remove()
-        fre.remove()
-        backLang.remove();
-        // outro.appendChild(logout);
-        // outro.appendChild(contato);
-type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
-		  
-		}
 		
-let eng = document.createElement("a");
-		eng.innerText = "[ENGLISH]";
-		eng.href = "#";
-		eng.onclick = () => { 
-		  changeLanguage('en')
-		  
-		  updateTexts() 
-		  
-		  port.remove();
-        spa.remove();
-        eng.remove()
-        fre.remove()
-        backLang.remove();
-        // outro.appendChild(logout);
-        // outro.appendChild(contato);
-type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
-
-		}
-		
-let spa = document.createElement("a");
-		spa.innerText = "[ESPANÕL]";
-		spa.href = "#";
-		spa.onclick = () => { 
-		  
-		  port.remove();
-        spa.remove();
-        eng.remove()
-        fre.remove()
-        backLang.remove();
-        // outro.appendChild(logout);
-        // outro.appendChild(contato);
-type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
-
-		}
-		
-let fre = document.createElement("a");
-		fre.innerText = "[FRANÇAIS]";
-		fre.href = "#";
-		fre.onclick = () => { 
-		  
-		  port.remove();
-        spa.remove();
-        eng.remove()
-        fre.remove()
-        backLang.remove();
-        // outro.appendChild(logout);
-        // outro.appendChild(contato);
-type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
-
-		}
-    // Append the message and "Go Back" link to the 'outro' element
-type([backLang,port, eng, spa, fre], { processChars: false , wait: 10 }, outro);
-		  
-		};
 		let galeria = document.createElement("a");
 
 
@@ -846,6 +688,119 @@ type([divinicio, goBackLinkIn], { processChars: false , wait: 10 }, outro);
 		
 		};
 		
+		
+		let idioma = document.createElement("a");
+    idioma.classList.add("btn-lang")
+
+
+		idioma.innerText = btnlang;
+
+		idioma.href = "#";
+		idioma.onclick = () => {
+
+inicio.remove();
+    sobre.remove();
+    galeria.remove();
+    logout.remove();
+    contato.remove();
+    idioma.remove();
+    terminal.remove();
+			
+const backLang = document.createElement("a");
+    backLang.innerText = btnreturn
+    backLang.classList.add("btnReturn")
+    backLang.href = "#";
+    backLang.onclick = () => {
+        // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
+        port.remove();
+        spa.remove();
+        eng.remove()
+        fre.remove()
+        backLang.remove();
+        // outro.appendChild(logout);
+        // outro.appendChild(contato);
+type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
+    };
+
+    // Remove the "Logout" and "Contact" buttons
+    
+
+
+let port = document.createElement("a");
+		port.innerText = "[PORTUGUÊS]";
+		port.href = "#";
+		port.onclick = () => { 
+		  
+		  changeLanguage('pt')
+		  
+		  updateTexts()
+		  port.remove();
+        spa.remove();
+        eng.remove()
+        fre.remove()
+        backLang.remove();
+        // outro.appendChild(logout);
+        // outro.appendChild(contato);
+type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
+		  
+		}
+		
+let eng = document.createElement("a");
+		eng.innerText = "[ENGLISH]";
+		eng.href = "#";
+		eng.onclick = () => { 
+		  changeLanguage('en')
+		  
+		  updateTexts() 
+		  
+		  port.remove();
+        spa.remove();
+        eng.remove()
+        fre.remove()
+        backLang.remove();
+        // outro.appendChild(logout);
+        // outro.appendChild(contato);
+type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
+
+		}
+		
+let spa = document.createElement("a");
+		spa.innerText = "[ESPANÕL]";
+		spa.href = "#";
+		spa.onclick = () => { 
+		  changeLanguage('es')
+		  updateTexts()
+		  port.remove();
+        spa.remove();
+        eng.remove()
+        fre.remove()
+        backLang.remove();
+        // outro.appendChild(logout);
+        // outro.appendChild(contato);
+type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
+
+		}
+		
+let fre = document.createElement("a");
+		fre.innerText = "[FRANÇAIS]";
+		fre.href = "#";
+		fre.onclick = () => { 
+		  changeLanguage('fr')
+		  updateTexts()
+		  port.remove();
+        spa.remove();
+        eng.remove()
+        fre.remove()
+        backLang.remove();
+        // outro.appendChild(logout);
+        // outro.appendChild(contato);
+type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
+
+		}
+    // Append the message and "Go Back" link to the 'outro' element
+type([backLang,port, eng, spa, fre], { processChars: false , wait: 10 }, outro);
+		  
+		};
 		let logout = document.createElement("a");
 		logout.innerText = "[LOGOUT]";
 		logout.href = "#";
