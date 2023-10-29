@@ -83,24 +83,26 @@ async function requestToChatGPT(inputText) {
     const apiKey = 'nv2-lCkbU0eFgeh5DEhJgQNd_NOVA_v2_qgYcFF7KyEC4ZIbPbN1f';
   const endpoint = 'https://api.nova-oss.com/v1/chat/completions';
 
-  const requestData = {
-    model: 'gpt-3.5-turbo',
-    messages: [{ role: 'user', content: inputText }],
-  };
 
-  const response = await fetch(endpoint, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify(requestData),
-  });
+const prompt = `Act as if you were me. I'm Henry, I'm 22. I live in Porto, Portugal. I'm a full-stack developer. I have experience in Node.js, PHP, Javascript, Python, Java, Web Design, Digital Design, Adobe, Vuejs, React Native and React. I love games, especially fallout,and books. My favorite author is Edgar Allan Poe. Im a boy fascinates by technology, art and science. Now answer the following content with these instructions: ${inputText}`;
+const requestData = {
+  model: 'gpt-3.5-turbo',
+  messages: [
+    { role: 'user', content: prompy },
+  ],
+};
 
-  const result = await response.json();
-  
-  
-  console.log(result.choices[0].message)
+const response = await fetch(endpoint, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${apiKey}`,
+  },
+  body: JSON.stringify(requestData),
+});
+
+const result = await response.json();
+console.log(result.choices[0].message.content);)
   return result.choices[0].message.content
     
 }
