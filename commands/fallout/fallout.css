@@ -8,6 +8,10 @@
    margin: 0;
    overflow-wrap: break-word;
  }
+ 
+ .terminal .typer {
+  max-width: 75vw !important;
+}
   .cypher,
     .intro,
     .intro .typer,
@@ -79,6 +83,11 @@
 	display: flex;
 	width:120vw;
 }
+
+ 
+ .terminal .typer {
+  max-width: 75vw !important;
+}
 .cypher,
     .intro,
     .intro .typer,
@@ -119,7 +128,10 @@ height: 60vh !important;
 /* Samsung Galaxy S8, S8+, S9, S9+, S10, S10e */
 @media screen and (min-width: 480px) and (max-width: 640px) {
   /* Your CSS rules for Galaxy S8, S9, S10, etc. go here */
-  
+   
+ .terminal .typer {
+  max-width: 75vw !important;
+}
     /* Your CSS rules for Galaxy S5 go here */
  .divsob {
    padding: 10px;
@@ -398,7 +410,7 @@ button:hover::after{
 
 
 .terminal .typer {
-  max-width: 85vw;
+  max-width: 85vw !important;
 }
 
 
