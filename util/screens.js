@@ -59,22 +59,25 @@ export async function main() {
 
 // Function to make a request to ChatGPT
 async function requestToChatGPT(inputText) {
-  // You should replace 'YOUR_API_KEY' and 'YOUR_CHATGPT_ENDPOINT' with your actual API key and endpoint
-  const apiKey = 'sk-IwRDyJDWUrcyqKsUXP3qT3BlbkFJIk0LsHctTYmWWo6zRD1';
-  const endpoint = 'https://api.openai.com/v1/engines/davinci-codex/completions';
-  
+
+    const apiKey = 'nv2-lCkbU0eFgeh5DEhJgQNd_NOVA_v2_qgYcFF7KyEC4ZIbPbN1f';
+  const endpoint = 'https://api.nova-oss.com/v1/chat/completions';
+
+  const requestData = {
+    model: 'gpt-3.5-turbo',
+    messages: [{ role: 'user', content: inputText }],
+  };
+
   const response = await fetch(endpoint, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${apiKey}`,
     },
-    body: JSON.stringify({ text: inputText }),
+    body: JSON.stringify(requestData),
   });
-  console.log("respons" + response)
 
   const result = await response.json();
-  console.log(result)
   return result
     
 }
