@@ -88,7 +88,7 @@ const prompt = `Act as if you were me. I'm Henry, I'm 22. I live in Porto, Portu
 const requestData = {
   model: 'gpt-3.5-turbo',
   messages: [
-    { role: 'user', content: prompy },
+    { role: 'user', content: prompt },
   ],
 };
 
