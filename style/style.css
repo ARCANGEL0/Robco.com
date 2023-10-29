@@ -267,6 +267,7 @@ body.fullscreen #crt {
 	height: 100%;
 	padding: 2rem;
 	overflow-y: auto;
+	width: 85vw;
 	overflow-x: hidden;
 	word-break: break-word;
 	text-transform: uppercase;
