@@ -67,7 +67,7 @@ export async function main() {
   try {
     if (command === "voltar" || command === "retour" || command === "back" || command === "volver") {
       clear()
-      
+      document.querySelector('#input').remove()
       addStylesheet(`commands/fallout/fallout.css`);
       loadTemplates(`commands/fallout/fallout.html`);
       outro();
