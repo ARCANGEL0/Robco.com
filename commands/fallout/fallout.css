@@ -397,7 +397,9 @@ button:hover::after{
 
 
 
-
+.terminal .typer {
+  max-width: 85vw;
+}
 
 
 .contact-form {
