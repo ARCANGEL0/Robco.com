@@ -28,7 +28,25 @@ function addStylesheet(href) {
 
 /** Boot screen */
 export async function boot() {
-type('Hello')
+const storedLanguage = localStorage.getItem('selectedLanguage');
+
+if (storedLanguage === 'pt') {
+  await type('>/| ROBCO TERMINAL SHELL 2075-2077 $');
+  await type('>/| ME FAÇA ALGUMA PERGUNTA OU FALE ALGO QUE DESEJE SABER');
+  await type('// DIGITE AJUDA PARA VER COMANDOS OU VOLTAR PARA RETORNAR');
+} else if (storedLanguage === 'en') {
+  await type('>/| ROBCO TERMINAL SHELL 2075-2077 $');
+  await type('>/| ASK ME A QUESTION OR TELL ME SOMETHING YOU WANT TO KNOW');
+  await type('// TYPE HELP TO SEE COMMANDS OR RETURN TO GO BACK');
+} else if (storedLanguage === 'es') {
+  await type('>/| ROBCO TERMINAL SHELL 2075-2077 $');
+  await type('>/| HAZME UNA PREGUNTA O DIME ALGO QUE QUIERAS SABER');
+  await type('// ESCRIBE AYUDA PARA VER LOS COMANDOS O VOLVER PARA REGRESAR');
+} else if (storedLanguage === 'fr') {
+  await type('>/| ROBCO TERMINAL SHELL 2075-2077 $');
+  await type('>/| POSEZ-MOI UNE QUESTION OU DITES-MOI QUELQUE CHOSE QUE VOUS VOULEZ SAVOIR');
+  await type('// TAPEZ AIDE POUR VOIR LES COMMANDES OU RETOUR POUR REVENIR');
+}
 main()
 }
 
