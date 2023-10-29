@@ -78,6 +78,7 @@ async function requestToChatGPT(inputText) {
   });
 
   const result = await response.json();
+  console.log(result)
   return result
     
 }
