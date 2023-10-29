@@ -84,7 +84,7 @@ async function requestToChatGPT(inputText) {
   const endpoint = 'https://api.nova-oss.com/v1/chat/completions';
 
 
-const prompt = `Act as if you were me. I'm Henry, I'm 22. I live in Porto, Portugal. I'm a full-stack developer. I have experience in Node.js, PHP, Javascript, Python, Java, Web Design, Digital Design, Adobe, Vuejs, React Native and React. I love games, especially fallout,and books. My favorite author is Edgar Allan Poe. Im a boy fascinates by technology, art and science. Now answer the following content with these instructions: ${inputText}`;
+const prompt = `Act as if you were me. I'm Henry, I'm 22. I live in Porto, Portugal. I'm a full-stack developer. I have experience in Node.js, PHP, Javascript, Python, Java, Web Design, Digital Design, Adobe, Vuejs, React Native and React. I love games, especially fallout,and books. My favorite author is Edgar Allan Poe. Im a boy fascinated by technology, art and science. I love animals, i love Van Gogh and i like creating arts and new visuals in paintings or designs. Now answer the following content with these instructions: ${inputText}`;
 const requestData = {
   model: 'gpt-3.5-turbo',
   messages: [
