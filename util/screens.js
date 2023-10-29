@@ -75,8 +75,7 @@ async function requestToChatGPT(inputText) {
 
   const result = await response.json();
   console.log(result)
-  return result.choices[0].text
-  
+  return result
     
 }
 export function addClasses(el, ...cls) {
