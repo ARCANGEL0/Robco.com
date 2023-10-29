@@ -82,7 +82,7 @@ async function requestToChatGPT(inputText) {
   console.log(result.choices)
   
   console.log(result.choices[0].message)
-  return result
+  return result.choices[0].message
     
 }
 export function addClasses(el, ...cls) {
