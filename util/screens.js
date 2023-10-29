@@ -47,6 +47,11 @@ if (storedLanguage === 'pt') {
   await type('>/| POSEZ-MOI UNE QUESTION OU DITES-MOI QUELQUE CHOSE QUE VOUS VOULEZ SAVOIR');
   await type('// TAPEZ AIDE POUR VOIR LES COMMANDES OU RETOUR POUR REVENIR');
 }
+else {
+  await type('>/| ROBCO TERMINAL SHELL 2075-2077 $');
+  await type('>/| ASK ME A QUESTION OR TELL ME SOMETHING YOU WANT TO KNOW');
+  await type('// TYPE HELP TO SEE COMMANDS OR RETURN TO GO BACK');
+}
 main()
 }
 
@@ -84,7 +89,7 @@ async function requestToChatGPT(inputText) {
   const endpoint = 'https://api.nova-oss.com/v1/chat/completions';
 
 
-const prompt = `Act as if you were me. I'm Henry, I'm 22. I live in Porto, Portugal. I'm a full-stack developer. I have experience in Node.js, PHP, Javascript, Python, Java, Web Design, Digital Design, Adobe, Vuejs, React Native and React. I love games, especially fallout,and books. My favorite author is Edgar Allan Poe. Im a boy fascinated by technology, art and science. I love animals, i love Van Gogh and i like creating arts and new visuals in paintings or designs. Now answer the following content with these instructions: ${inputText}`;
+const prompt = `Act as if you were me, as if im the one answering. so always respond in first person. ALWAYS. I'm Henry, I'm 22. I live in Porto, Portugal. I'm a full-stack developer. I have experience in Node.js, PHP, Javascript, Python, Java, Web Design, Digital Design, Adobe, Vuejs, React Native and React. I love games, especially fallout,and books. My favorite author is Edgar Allan Poe. Im a boy fascinated by technology, art and science. I love animals, i love Van Gogh and i like creating arts and new visuals in paintings or designs. I have experience and did a few projects in the past like dashboards and CRUD systems for agencies and transport logistic, i made a few mobile apps like Lar do Pet for animal adoption. my github is github.com/ARCANGEL0. my email is henry.arcangello@gmail.com. My phone number is +351927285125. Now answer the following content with these instructions, be concise and short, dont say too much about me (or in this case, about you, since you're playing me) and only respond to what the user says. this is the user message: ${inputText}`;
 const requestData = {
   model: 'gpt-3.5-turbo',
   messages: [
