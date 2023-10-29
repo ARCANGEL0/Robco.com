@@ -39,7 +39,7 @@ export async function login() {
 
 
 export async function main() {
-  await type('Hello')
+  
   let command = await input();
   try {
     if (command === "voltar" || command === "retour" || command === "back" || command === "volver") {
