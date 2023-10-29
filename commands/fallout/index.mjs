@@ -1,7 +1,7 @@
 // Inspiration:
 // - https://youtu.be/jDJHtLCHuAg
 // - http://aramor.epizy.com/fallout-terminal/password?diff=1
-import { getScreen, clear, main} from "../../util/screens.js";
+import { getScreen, clear, main,boot} from "../../util/screens.js";
 import {parse, type } from "../../util/io.js";
 import Game from './Game.mjs';
 import pause from "../../util/pause.js";
@@ -609,7 +609,7 @@ divgif2.appendChild(gifImage2);
 		terminal.href = "#";
 		terminal.onclick = () => {
 		  outro.remove();
-		  main();
+		  boot()
 		};
 		
 			let inicio = document.createElement("a");
