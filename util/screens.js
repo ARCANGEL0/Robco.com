@@ -68,12 +68,19 @@ export async function main() {
     
     
     // commands
-    if (command=="help")
-    {
-      type("FEEL FREE TO CHAT WITH ME OR ASK ANYTHING. TYPE RETURN TO GO BACK OR CLS TO CLEAR THE SCREEN ")
+    if (command == "help") {
+    type("FEEL FREE TO CHAT WITH ME OR ASK ANYTHING. TYPE RETURN TO GO BACK OR CLS TO CLEAR THE SCREEN ");
+} else if (command == "ayuda") {
+    type("SIÉNTETE LIBRE DE CHATEAR CONMIGO O PREGUNTAR CUALQUIER COSA. ESCRIBE VOLVER PARA VOLVER ATRÁS O CLS PARA LIMPIAR LA PANTALLA.");
+} else if (command == "aide") {
+    type("N'HÉSITEZ PAS À DISCUTER AVEC MOI OU À POSER DES QUESTIONS. TAPEZ RETOUR POUR REVENIR EN ARRIÈRE OU CLS POUR EFFACER L'ÉCRAN.");
+} else if (command == "ajuda") {
+    type("SINTA-SE À VONTADE PARA CONVERSAR COMIGO OU FAZER QUALQUER PERGUNTA. DIGITE VOLTAR PARA RETORNAR OU CLS PARA LIMPAR A TELA.");
+} 
+    else if (command == 'cls'){
+      clear()
     }
-    
-   else if (command === "voltar" || command === "retour" || command === "back" || command === "volver") {
+   else if (command === "voltar" || command === "retour" || command === "return" || command === "volver") {
      
       clear()
       
