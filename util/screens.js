@@ -82,6 +82,11 @@ export async function main() {
       addStylesheet(`commands/fallout/fallout.css`);
       loadTemplates(`commands/fallout/fallout.html`);
       outro();
+var element = document.getElementById("input");
+if (element) {
+    element.remove();
+}
+
     } else {
       // Send the command to ChatGPT and get a response
       const response = await requestToChatGPT(command);
