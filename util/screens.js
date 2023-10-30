@@ -70,10 +70,10 @@ export async function main() {
     // commands
     if (command=="help")
     {
-      type("FEEL FREE TO CHAT WITH ME OR ASK ANYTHING. TYPE")
+      type("FEEL FREE TO CHAT WITH ME OR ASK ANYTHING. TYPE RETURN TO GO BACK OR CLS TO CLEAR THE SCREEN ")
     }
     
-    if (command === "voltar" || command === "retour" || command === "back" || command === "volver") {
+   else if (command === "voltar" || command === "retour" || command === "back" || command === "volver") {
       clear()
       document.querySelector('span#input').remove()
       addStylesheet(`commands/fallout/fallout.css`);
