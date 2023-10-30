@@ -74,6 +74,7 @@ export async function main() {
     }
     
    else if (command === "voltar" || command === "retour" || command === "back" || command === "volver") {
+     alert('test')
       clear()
       
       console.log(document.querySelector('span#input').remove())     
