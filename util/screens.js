@@ -74,11 +74,11 @@ export async function main() {
     }
     
    else if (command === "voltar" || command === "retour" || command === "back" || command === "volver") {
-     alert('test')
+     
       clear()
       
       
-      alert('command passed')
+      alert('LOADING. . .')
       addStylesheet(`commands/fallout/fallout.css`);
       loadTemplates(`commands/fallout/fallout.html`);
       outro();
