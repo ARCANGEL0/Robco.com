@@ -93,7 +93,7 @@ var element = document.getElementById("input");
 if (element) {
     element.remove();
 }
-
+return; 
     } else {
       // Send the command to ChatGPT and get a response
       const response = await requestToChatGPT(command);
