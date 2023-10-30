@@ -88,6 +88,7 @@ export async function main() {
   } catch (e) {
     if (e.message) {
       console.log(e.message) 
+      await type('ERROR:')
       await type(e.message);
   }
   }
