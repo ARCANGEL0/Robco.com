@@ -637,7 +637,7 @@ iniciotext.classList.add("inicioheader")
 // Assuming you have a container div with an id of "portfolio" to append the <p> element to
 
 
-gifImage.src = "../images/Code.gif";
+gifImage.src = "images/Code.gif";
 
 gifImage.style.marginTop = "15px"
 gifImage.style.marginBottom= "15px"
