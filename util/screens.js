@@ -28,7 +28,14 @@ function addStylesheet(href) {
 
 /** Boot screen */
 export async function boot() {
+intro()
+}
+
+/** Login screen */
+export async function login() {
 const storedLanguage = localStorage.getItem('selectedLanguage');
+
+
 
 if (storedLanguage === 'pt') {
   await type('>/| ROBCO TERMINAL SHELL 2075-2077 $');
@@ -53,11 +60,6 @@ else {
   await type('// TYPE HELP TO SEE COMMANDS OR RETURN TO GO BACK');
 }
 main()
-}
-
-/** Login screen */
-export async function login() {
-	
 }
 
 
