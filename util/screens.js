@@ -77,7 +77,7 @@ export async function main() {
      alert('test')
       clear()
       
-      console.log(document.querySelector('span#input').remove())     
+      
       alert('command passed')
       addStylesheet(`commands/fallout/fallout.css`);
       loadTemplates(`commands/fallout/fallout.html`);
