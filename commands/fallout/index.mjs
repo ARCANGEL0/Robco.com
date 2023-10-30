@@ -328,16 +328,16 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
 		  
 		// Array de URLs de imagens
 const VideosUrl = [
-    '../../images/gallery/alpha2.mp4',
-    '../../images/gallery/Videos/lna.mp4',
-    '../../images/gallery/Videos/lnadigital.mp4',
-      '../../images/gallery/Videos/escoteiros.mp4',
-    '../../images/gallery/Videos/arcUI.mp4',
-    '../../images/gallery/Videos/hadesign.mp4',
-        '../../images/gallery/Videos/GreenWaste.mp4',
-    '../../images/gallery/Videos/arcUI.mp4',
+    'images/gallery/alpha2.mp4',
+    'images/gallery/Videos/lna.mp4',
+    'images/gallery/Videos/lnadigital.mp4',
+      'images/gallery/Videos/escoteiros.mp4',
+    'images/gallery/Videos/arcUI.mp4',
+    'images/gallery/Videos/hadesign.mp4',
+        'images/gallery/Videos/GreenWaste.mp4',
+    'images/gallery/Videos/arcUI.mp4',
 
-    '../../images/gallery/Videos/pong.mp4',
+    'images/gallery/Videos/pong.mp4',
 ];
 
 divgallery.appendChild(backGal);
@@ -408,25 +408,25 @@ divsites.style.display = "flex";
 divsites.style.flexWrap = "wrap"; // Allow elements to wrap to the next line
 
 let escoteiro = document.createElement("img");
-escoteiro.src = "../../images/Escoteiros.png";
+escoteiro.src = "images/Escoteiros.png";
 escoteiro.onclick = () => {
   window.open("https://77gemar-jairmattenauer.com", "_blank");
 };
 
 let arc = document.createElement("img");
-arc.src = "../../images/Arc.png";
+arc.src = "images/Arc.png";
 arc.onclick = () => {
   window.open("https://arcangel0.github.io/ARC_UI", "_blank");
 };
 
 let info = document.createElement("img");
-info.src = "../../images/Info.png";
+info.src = "images/Info.png";
 info.onclick = () => {
   window.open("https://arcangeloinfo.com.br", "_blank");
 };
 
 let lna = document.createElement("img");
-lna.src = "../../images/Lna.png";
+lna.src = "images/Lna.png";
 lna.onclick = () => {
   window.open("https://lnaassessoriadigital.com", "_blank");
 };
@@ -503,7 +503,7 @@ type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars
 
       const gifImage2 = document.createElement("img");
       
-		gifImage2.src = "../../images/Dog.gif";
+		gifImage2.src = "images/Dog.gif";
 
 gifImage2.style.height = "70px"
 
@@ -805,7 +805,7 @@ type([backLang,port, eng, spa, fre], { processChars: false , wait: 10 }, outro);
 		logout.innerText = "[LOGOUT]";
 		logout.href = "#";
 		logout.onclick = () => {
-			outro.remove();
+			
 			new Game({onQuit: resolve});
 		};
 
