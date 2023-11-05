@@ -302,7 +302,9 @@ galeria.classList.add("btn-gal")
     idioma.remove();
     terminal.remove() 
     logout.remove()
-    
+    divsites.remove();
+  btnVid.remove();
+  
     var divgallery = document.getElementsByClassName("typer")[4];
     
 
@@ -322,8 +324,38 @@ galeria.classList.add("btn-gal")
         backGal.remove();
         // outro.appendChild(logout);
         // outro.appendChild(contato);
-type([inicio, sobre, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
+type([divbuttons, dvid, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
     };
+
+
+const btnSites = document.createElement("a");
+    btnSites.innerText = btnreturn;
+    btnSites.style.marginTop = "10px"
+    btnSites.classList.add("btnReturn")
+    btnSites.href = "#";
+    btnSites.onclick = () => {
+        // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
+       divbuttons.remove()
+        dvid.remove();
+        btnSites.remove();
+        // outro.appendChild(logout);
+        // outro.appendChild(contato);
+type([divsites, btnVid], { processChars: false , wait: 10 }, outro);
+    };
+const btnVid = document.createElement("a");
+    btnVid.innerText = btnreturn;
+    btnVid.style.marginTop = "10px"
+    btnVid.classList.add("btnReturn")
+    btnVid.href = "#";
+    btnVid.onclick = () => {
+        // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
+  divsites.remove();
+  btnVid.remove();
+        // outro.appendChild(logout);
+        // outro.appendChild(contato);
+type([divbuttons, dvid,btnSites ], { processChars: false , wait: 10 }, outro);
+    };
+
 
 		  
 		// Array de URLs de imagens
@@ -434,7 +466,7 @@ let sitestxt = document.createElement("a");
 sitestxt.innerText = sitext
 sitestxt.classList.add("sitesheader")
 sitestxt.style.marginTop="6%"
-dvid.appendChild(sitestxt)
+divsites.appendChild(sitestxt)
 divsites.appendChild(escoteiro);
 divsites.appendChild(arc);
 divsites.appendChild(info);
