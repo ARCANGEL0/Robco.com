@@ -302,8 +302,8 @@ galeria.classList.add("btn-gal")
     idioma.remove();
     terminal.remove() 
     logout.remove()
-    divsites.remove();
-  btnVid.remove();
+    
+  
   
     var divgallery = document.getElementsByClassName("typer")[4];
     
@@ -355,7 +355,7 @@ const btnVid = document.createElement("a");
         // outro.appendChild(contato);
 type([divbuttons, dvid,btnSites ], { processChars: false , wait: 10 }, outro);
     };
-
+btnVid.remove()
 
 		  
 		// Array de URLs de imagens
@@ -475,7 +475,7 @@ divsites.appendChild(lna);
 divsites.style.display = "flex";
 
 divgallery.appendChild(divsites);
-
+divsites.remove()
 		}; // function end fim galeriq
 		
 		let sobre = document.createElement("a");
