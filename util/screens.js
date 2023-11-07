@@ -28,7 +28,11 @@ function addStylesheet(href) {
 
 /** Boot screen */
 export async function boot() {
-intro()
+if (window.location.href.includes("/tr")) {
+        login();
+    } else {
+        intro();
+    }
 }
 
 /** Login screen */
