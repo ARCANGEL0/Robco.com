@@ -134,6 +134,8 @@ function changeLanguage(language) {
  btnlang = '[LANGUAGE/LANGUE]';
  btnreturn = '[VOLTAR]';
  sitext = 'WEBSITES QUE FIZ';
+ bbnsite = '[WEBSITES]';
+ bbnvid = "[GALERIA]"
  sobretexto = [
   `\n>// Eu sou o Henry! Tenho ${age} anos. Sou ilustrador e desenvolvedor, apaixonado por Tecnologia, Design e tópicos em alta como IA ou Big Data.`,
   `Sou formado em Desenvolvimento de Software e Design Digital e trabalho como desenvolvedor fullstack. \n Crio ilustrações digitais e softwares, aplicativos, websites e outros. Algumas das tecnologias que geralmente uso incluem:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript\n\nBackend: PHP (incluindo Laravel e CakePHP), Python & Flask, Node & Electron (para desenvolvimento de aplicativos desktop), e em relação a bancos de dados, geralmente trabalho com MySql, MongoDB ou Firebase.`,
@@ -151,6 +153,8 @@ function changeLanguage(language) {
  btnlang = '[IDIOMA/LANGUAGE]';
  btnreturn = '[VOLVER]';
  sitext = 'SITIOS WEB QUE HE CREADO';
+bbnsite = '[SITIOS WEB]';
+ bbnvid = "[GALERIA]"
  sobretexto = [
   `\n>// ¡Soy Henry! Tengo ${age} años. Soy ilustrador y desarrollador, apasionado por la Tecnología, el Diseño y temas de vanguardia como la IA o el Big Data.`,
   `Soy graduado en Desarrollo de Software y Diseño Digital y trabajo como desarrollador fullstack. Creo ilustraciones digitales y software, aplicaciones, sitios web y más. Algunas de las tecnologías que suelo utilizar incluyen:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React y Typescript\n\nBackend: PHP (incluyendo Laravel y CakePHP), Python y Flask, Node y Electron (para el desarrollo de aplicaciones de escritorio), y en cuanto a bases de datos, suelo trabajar con MySql, MongoDB o Firebase.`,
@@ -169,6 +173,8 @@ function changeLanguage(language) {
  btnlang = '[LANGUE]';
  btnreturn = '[RETOUR]';
  sitext = 'LES SITES WEB QUE J\'AI CRÉÉS';
+ bbnsite = '[SITES INTERNET]';
+ bbnvid = "[GALERIE]"
  sobretexto = [
   `\n>// Je suis Henry ! J'ai ${age} ans. Je suis illustrateur et développeur, passionné par la technologie, le design et des sujets avancés tels que l'IA ou le Big Data.`,
   `Je suis diplômé en développement logiciel et design numérique, et je travaille en tant que développeur fullstack. Je crée des illustrations numériques et des logiciels, des applications, des sites web, et plus encore. Certaines des technologies que j'utilise généralement incluent :`, `Frontend : Javascript ES6+, Vue.JS, Bootstrap, React et Typescript\n\nBackend : PHP (y compris Laravel et CakePHP), Python et Flask, Node et Electron (pour le développement d'applications de bureau), et en ce qui concerne les bases de données, je travaille généralement avec MySql, MongoDB ou Firebase.`,
@@ -333,7 +339,7 @@ type([ inicio,sobre,galeria, contato,idioma, terminal, logout ], { processChars:
 
 
 const btnSites = document.createElement("a");
-    btnSites.innerText = btnreturn;
+    btnSites.innerText = bbnsite;
     btnSites.style.marginTop = "10px"
     btnSites.classList.add("btnReturn")
     btnSites.href = "#";
@@ -347,7 +353,7 @@ const btnSites = document.createElement("a");
 type([btnVid,divsites], { processChars: false , wait: 10 }, outro);
     };
 const btnVid = document.createElement("a");
-    btnVid.innerText = btnreturn;
+    btnVid.innerText = bbnvid;
     btnVid.style.marginTop = "10px"
     btnVid.classList.add("btnReturn")
     btnVid.href = "#";
@@ -359,7 +365,7 @@ const btnVid = document.createElement("a");
         // outro.appendChild(contato);
 type([btnSites,divbuttons, dvid ], { processChars: false , wait: 10 }, outro);
     };
-btnVid.remove()
+
 
 		  
 		// Array de URLs de imagens
@@ -379,6 +385,9 @@ const VideosUrl = [
 divgallery.appendChild(backGal);
 divgallery.appendChild(btnSites)
 divgallery.appendChild(btnVid)
+
+btnVid.remove()
+
 const divbuttons = document.createElement("div");
 divbuttons.classList.add("galbtns")
 
