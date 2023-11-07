@@ -139,7 +139,7 @@ function changeLanguage(language) {
   `Sou formado em Desenvolvimento de Software e Design Digital e trabalho como desenvolvedor fullstack. \n Crio ilustrações digitais e softwares, aplicativos, websites e outros. Algumas das tecnologias que geralmente uso incluem:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript\n\nBackend: PHP (incluindo Laravel e CakePHP), Python & Flask, Node & Electron (para desenvolvimento de aplicativos desktop), e em relação a bancos de dados, geralmente trabalho com MySql, MongoDB ou Firebase.`,
   `Realizo projetos que vão desde websites dinâmicos simples até aplicativos móveis, softwares sob demanda e sistemas de gerenciamento administrativo. Atualmente, estou estudando e me especializando em Cibersegurança e Ciência de Dados.`
 ];
- hometexto = "🚀 Bem-vindo ao meu parque de diversões digital! 🌟 Não sou apenas um desenvolvedor; sou um criador de experiências online que deixam uma marca. ☄ Com uma pitada de inovação e uma dose de código, transformo sonhos em pixels e pixels em realidade.";
+ hometexto = "? Bem-vindo ao meu parque de diversões digital! ? Não sou apenas um desenvolvedor; sou um criador de experiências online que deixam uma marca. ? Com uma pitada de inovação e uma dose de código, transformo sonhos em pixels e pixels em realidade.";
   } else if (language === 'es') {
     // Add translations in Spanish here
     
@@ -156,7 +156,7 @@ function changeLanguage(language) {
   `Soy graduado en Desarrollo de Software y Diseño Digital y trabajo como desarrollador fullstack. Creo ilustraciones digitales y software, aplicaciones, sitios web y más. Algunas de las tecnologías que suelo utilizar incluyen:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React y Typescript\n\nBackend: PHP (incluyendo Laravel y CakePHP), Python y Flask, Node y Electron (para el desarrollo de aplicaciones de escritorio), y en cuanto a bases de datos, suelo trabajar con MySql, MongoDB o Firebase.`,
   `Realizo proyectos que van desde sitios web dinámicos simples hasta aplicaciones móviles, software a medida y sistemas de administración. Actualmente, estoy estudiando y especializándome en Ciberseguridad y Ciencia de Datos.`
 ];
- hometexto = "🚀 ¡Bienvenido a mi parque de diversiones digital! 🌟 No soy solo un desarrollador; soy un creador de experiencias en línea que dejan huella. ☄ Con un toque de innovación y una dosis de código, convierto sueños en píxeles y píxeles en realidad.";
+ hometexto = "? ¡Bienvenido a mi parque de diversiones digital! ? No soy solo un desarrollador; soy un creador de experiencias en línea que dejan huella. ? Con un toque de innovación y una dosis de código, convierto sueños en píxeles y píxeles en realidad.";
 
   } else if (language === 'fr') {
     // Add translations in French here
@@ -174,7 +174,7 @@ function changeLanguage(language) {
   `Je suis diplômé en développement logiciel et design numérique, et je travaille en tant que développeur fullstack. Je crée des illustrations numériques et des logiciels, des applications, des sites web, et plus encore. Certaines des technologies que j'utilise généralement incluent :`, `Frontend : Javascript ES6+, Vue.JS, Bootstrap, React et Typescript\n\nBackend : PHP (y compris Laravel et CakePHP), Python et Flask, Node et Electron (pour le développement d'applications de bureau), et en ce qui concerne les bases de données, je travaille généralement avec MySql, MongoDB ou Firebase.`,
   `Je réalise des projets allant de simples sites web dynamiques à des applications mobiles, des logiciels sur mesure et des systèmes de gestion. Actuellement, j'étudie et me spécialise en cybersécurité et en science des données.`
 ];
- hometexto = "🚀 Bienvenue dans mon parc d'attractions numérique ! 🌟 Je ne suis pas seulement un développeur ; je suis un créateur d'expériences en ligne qui laissent une empreinte. ☄ Avec une touche d'innovation et une dose de code, je transforme les rêves en pixels et les pixels en réalité.";
+ hometexto = "? Bienvenue dans mon parc d'attractions numérique ! ? Je ne suis pas seulement un développeur ; je suis un créateur d'expériences en ligne qui laissent une empreinte. ? Avec une touche d'innovation et une dose de code, je transforme les rêves en pixels et les pixels en réalité.";
 
 
   } else {
@@ -193,7 +193,7 @@ function changeLanguage(language) {
 				`I do projects from simple dynamic websites to mobile app's, on-demand softwares and admin management system's \nCurrently, I'm studying and specializing myself in Cybersecurity and Data Science`
 			]
     //Update other text as needed
-    hometexto = "🚀 Welcome to my digital playground! 🌟 I'm not just a developer; I'm a creator of online experiences that leave a mark. ☄ With a dash of innovation and a sprinkle of code, I turn dreams into pixels, and pixels into reality."; // Update other text as needed
+    hometexto = "? Welcome to my digital playground! ? I'm not just a developer; I'm a creator of online experiences that leave a mark. ? With a dash of innovation and a sprinkle of code, I turn dreams into pixels, and pixels into reality."; // Update other text as needed
   }
 
 
@@ -322,9 +322,13 @@ galeria.classList.add("btn-gal")
         // Remove the message and "Go Back" link and restore the "Logout" and "Contact" buttons
         divgallery.remove();
         backGal.remove();
-        // outro.appendChild(logout);
+        divsites.remove()
+        btnVid.remove()
+        dvid.remove()
+        divbuttons.remove()
+   // outro.appendChild(logout);
         // outro.appendChild(contato);
-type([divbuttons, dvid, galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
+type([ inicio,sobre,galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
     };
 
 
@@ -340,7 +344,7 @@ const btnSites = document.createElement("a");
         btnSites.remove();
         // outro.appendChild(logout);
         // outro.appendChild(contato);
-type([divsites, btnVid], { processChars: false , wait: 10 }, outro);
+type([btnVid,divsites], { processChars: false , wait: 10 }, outro);
     };
 const btnVid = document.createElement("a");
     btnVid.innerText = btnreturn;
@@ -353,7 +357,7 @@ const btnVid = document.createElement("a");
   btnVid.remove();
         // outro.appendChild(logout);
         // outro.appendChild(contato);
-type([divbuttons, dvid,btnSites ], { processChars: false , wait: 10 }, outro);
+type([btnSites,divbuttons, dvid ], { processChars: false , wait: 10 }, outro);
     };
 btnVid.remove()
 
@@ -373,7 +377,8 @@ const VideosUrl = [
 ];
 
 divgallery.appendChild(backGal);
-
+divgallery.appendChild(btnSites)
+divgallery.appendChild(btnVid)
 const divbuttons = document.createElement("div");
 divbuttons.classList.add("galbtns")
 
@@ -381,12 +386,12 @@ const dvid = document.createElement("div");
 dvid.classList.add("dvid")
 
 const prevBtn = document.createElement("button");
-prevBtn.textContent = "《";
+prevBtn.textContent = "?";
 prevBtn.classList.add('carousel-button')
 divbuttons.appendChild(prevBtn);
 
 const nextBtn = document.createElement("button");
-nextBtn.textContent = "》";
+nextBtn.textContent = "?";
 nextBtn.classList.add('carousel-button')
 divbuttons.appendChild(nextBtn);
 
