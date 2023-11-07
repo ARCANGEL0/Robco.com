@@ -333,6 +333,8 @@ galeria.classList.add("btn-gal")
         btnVid.remove()
         dvid.remove()
         divbuttons.remove()
+        btnSites.remove()
+        btnVid.remove()
    // outro.appendChild(logout);
         // outro.appendChild(contato);
 type([ inicio,sobre,galeria, contato,idioma, terminal, logout ], { processChars: false , wait: 10 }, outro);
