@@ -34,7 +34,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const triggerParam = urlParams.get("tr");
 
 if (triggerParam=='m') {
-  // Call your special function
+  // start terminal
   login();
 
 }
