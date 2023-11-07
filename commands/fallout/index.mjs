@@ -134,7 +134,7 @@ function changeLanguage(language) {
  btnreturn = '[VOLTAR]';
  sitext = 'WEBSITES QUE FIZ';
  bbnsite = '[WEBSITES]';
- bbnvid = "[GALERIA]"
+ bbnvid = "[GALERIA]";
  sobretexto = [
   `\n>// Eu sou o Henry! Tenho ${age} anos. Sou ilustrador e desenvolvedor, apaixonado por Tecnologia, Design e tópicos em alta como IA ou Big Data.`,
   `Sou formado em Desenvolvimento de Software e Design Digital e trabalho como desenvolvedor fullstack. \n Crio ilustrações digitais e softwares, aplicativos, websites e outros. Algumas das tecnologias que geralmente uso incluem:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript\n\nBackend: PHP (incluindo Laravel e CakePHP), Python & Flask, Node & Electron (para desenvolvimento de aplicativos desktop), e em relação a bancos de dados, geralmente trabalho com MySql, MongoDB ou Firebase.`,
@@ -192,6 +192,8 @@ bbnsite = '[SITIOS WEB]';
     btnlang = '[IDIOMA/LANGUE]';
     btnreturn = '[RETURN]';
     sitext = 'WEBSITES I\'VE DONE';
+    bbnsite = '[WEBSITES]';
+ bbnvid = "[GALLERY]"
     sobretexto = [
 				`\n>// I'm Henry! I'm ${age} years old. I'm an illustrator and developer, deeply in love for Technology, Design & Trending topics like AI or Big Data `,
 				`I'm graduated in Software Development & Digital Design and I work as a fullstack dev. \n I create digital illustrations & arts and softwares, app's, websites and others. Some of the technologies I generally use are:`, `Frontend: Javascript ES6+, Vue.JS, Bootstrap, React & Typescript\n\nBackend: PHP (Including Laravel and CakePHP), Python & Flask, Node & Electron (for desktop build),and for databases I usually work with MySql, MongoDB, or Firebase`, 
@@ -449,8 +451,9 @@ divgallery.appendChild(dvid)
 
 let divsites = document.createElement("div");
 divsites.classList.add("divsites");
-divsites.style.display = "flex";
-divsites.style.flexWrap = "wrap"; // Allow elements to wrap to the next line
+divsimages = document.createElement("div")
+divsimages.style.display = "flex";
+divsimages.style.flexWrap = "wrap"; // Allow elements to wrap to the next line
 
 let escoteiro = document.createElement("img");
 escoteiro.src = "images/Escoteiros.png";
@@ -480,13 +483,13 @@ sitestxt.innerText = sitext
 sitestxt.classList.add("sitesheader")
 sitestxt.style.marginTop="6%"
 divsites.appendChild(sitestxt)
-divsites.appendChild(escoteiro);
-divsites.appendChild(arc);
-divsites.appendChild(info);
-divsites.appendChild(lna);
+divsimages.appendChild(escoteiro);
+divsimages.appendChild(arc);
+divsimages.appendChild(info);
+divsimages.appendChild(lna);
 
-divsites.style.display = "flex";
-
+divsimages.style.display = "flex";
+divsites.appendChild(divsimages)
 divgallery.appendChild(divsites);
 divsites.remove()
 		}; // function end fim galeriq
