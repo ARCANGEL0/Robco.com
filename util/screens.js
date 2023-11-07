@@ -36,7 +36,7 @@ const triggerParam = urlParams.get("tr");
 if (triggerParam=='m') {
   // Call your special function
   login();
-  break
+
 }
  else {
         intro();
