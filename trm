@@ -1,0 +1,3 @@
+import { login } from "./util/screenslogin
+
+login()
