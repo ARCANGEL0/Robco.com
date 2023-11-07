@@ -28,9 +28,16 @@ function addStylesheet(href) {
 
 /** Boot screen */
 export async function boot() {
-if (window.location.href.includes("/tr")) {
-        login();
-    } else {
+
+// Check for the "trigger" URL parameter
+const urlParams = new URLSearchParams(window.location.search);
+const triggerParam = urlParams.get("tr");
+
+if (triggerParam) {
+  // Call your special function
+  login();
+}
+ else {
         intro();
     }
 }
