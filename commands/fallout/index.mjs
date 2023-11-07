@@ -453,7 +453,7 @@ divgallery.appendChild(dvid)
 
 let divsites = document.createElement("div");
 divsites.classList.add("divsites");
-divsimages = document.createElement("div")
+let divsimages = document.createElement("div")
 divsimages.style.display = "flex";
 divsimages.style.flexWrap = "wrap"; // Allow elements to wrap to the next line
 
