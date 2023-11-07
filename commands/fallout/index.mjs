@@ -111,8 +111,7 @@ function calculateAge(birthdate) {
 
 const birthdate = '2000-11-09'; // Replace with your birthdate in 'YYYY-MM-DD' format
 const age = calculateAge(birthdate);
-let btnhome, btnsobre, btngal, btncontact, btnlang, btnreturn, sitext,sobretexto,hometexto,contactinfo
-
+let btnhome, btnsobre, btngal, btncontact, btnlang, btnreturn, sitext,sobretexto,hometexto,contactinfo, bbnsite, bbnvid
 function updateTexts() {
 		  inicio.innerText = btnhome
 		  sobre.innerText = btnsobre
