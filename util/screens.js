@@ -149,8 +149,8 @@ const response = await fetch(endpoint, {
 });
 
 const result = await response.json();
-console.log(result.choices[0]);
-  return result.choices[0].message
+console.log(result);
+  return result
     
 }
 export function addClasses(el, ...cls) {
