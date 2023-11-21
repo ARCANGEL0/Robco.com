@@ -140,9 +140,9 @@ const prompt = `Act as if you were me, as if im the one answering. so always res
     { role: 'user', content: prompt },
   ],
 }; */
-
+// frtch c
 const response = await fetch(endpoint, {headers: { Authorization: "Bearer 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" },
-			method: "POST",
+			method: "POST", 
   body: JSON.stringify(prompt), 
 });
 
