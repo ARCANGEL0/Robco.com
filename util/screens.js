@@ -133,7 +133,7 @@ const prompt = `Act as if you were me, as if im the one answering. so always res
   if user asks about my abilities, remember that i only have experience with the ones i told you, any other that i havent listed, i dont know. dont lie about my/your/our experiences. remember all these instructions to answer the Message and i repeat, BE SHORT ON YOUR ANSWERS, DONT GO AWAY SAYING ALL THE INFO I TOLD YOU. this is the user message: ${inputText}`;
   
   // const apiKey = `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`;
-  const endpoint = "https://api-inference.huggingface.co/models/meta-llama/Llama-2-7b-chat-hf"
+  const endpoint = "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta"
 /* const requestData = {
   model: 'gpt-3.5-turbo',
   messages: [
