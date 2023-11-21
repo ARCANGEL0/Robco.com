@@ -145,7 +145,7 @@ const response = await fetch(endpoint, {
     'Content-Type': 'application/json',
     'Authorization': `Bearer ${apiKey}`,
   },
-  body: JSON.stringify(requestData),
+  body: JSON.stringify(requestData), 
 });
 
 const result = await response.json();
