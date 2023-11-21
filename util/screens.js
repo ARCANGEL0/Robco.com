@@ -152,7 +152,7 @@ const response = await fetch(endpoint, {
 });
 
 const result = await response.json();
-console.log(result);
+console.log(result.choices[0].message.content);
   return result.choices[0].message.content
     
 }
