@@ -153,7 +153,7 @@ const response = await fetch(endpoint, {
 
 const result = await response.json();
 console.log(result);
-  return result
+  return result.choices[0].message.content
     
 }
 export function addClasses(el, ...cls) {
