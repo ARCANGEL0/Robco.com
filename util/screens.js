@@ -143,12 +143,12 @@ const requestData = {
 
 const response = await fetch(endpoint, {headers: { Authorization: "Bearer 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" },
 			method: "POST",
-  body: JSON.stringify(requestData), 
+  body: JSON.stringify(prompt), 
 });
 
 const result = await response.json();
 console.log(result);
-  return result.choices[0].message.content
+  return result
     
 }
 export function addClasses(el, ...cls) {
