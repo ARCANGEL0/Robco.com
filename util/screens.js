@@ -133,7 +133,7 @@ const prompt = `Act as if you were me, as if im the one answering. so always res
   if user asks about my abilities, remember that i only have experience with the ones i told you, any other that i havent listed, i dont know. dont lie about my/your/our experiences. remember all these instructions to answer the Message and i repeat, BE SHORT ON YOUR ANSWERS, DONT GO AWAY SAYING ALL THE INFO I TOLD YOU. this is the user message: ${inputText}`;
   
   const apiKey = `muhC93zOEWacWfwoyjQvKzUb7zWnzLSr9WsfuSqZW_c`;
-  const endpoint = "https://api.mmw1984.link/v1"
+  const endpoint = "https://api.naga.ac/v1/chat/completions"
   // ////
  const requestData = {
   model: 'gpt-3.5-turbo',
@@ -142,8 +142,12 @@ const prompt = `Act as if you were me, as if im the one answering. so always res
   ],
 }; 
 // frtch c
-const response = await fetch(endpoint, {headers: { Authorization: "Bearer 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" },
-			method: "POST", 
+const response = await fetch(endpoint, {
+  method: "POST",
+  headers: { 
+    'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}`,
+    
+  },
   body: JSON.stringify(requestData), 
 });
 
